@@ -57,7 +57,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Si eres extremo o delantero con pie estrecho, juegas en hierba y tu prioridad es la velocidad, es la referencia del mercado. Para pies anchos o superficies duras, busca otra opción.",
 
-    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a0a-ad76-5b57f66e2ae7,c_scale,fl_relative,w_1.0/l_126ab356-44d8-4a0a-ad76-5b57f66e2ae7,fl_relative,w_1.0/8720e5ef-1bc3-4ab4-9946-e39c95d56f63/mercurial-superfly-10-elite-fg-football-boot-PCsBj5.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Mercurial+Superfly+10",
     imagenes: [],
 
     fuentes: [
@@ -129,7 +129,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para cualquier jugador técnico que priorice control en el pase y disparo. Mediapuntas y centrocampistas la adorarán. Si tu fútbol es más de velocidad pura, mira las Mercurial.",
 
-    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b3e3a52f6f014abe9f55af1e00f4f4c8_9366/Predator_24_Elite_Firm_Ground_Boots_Black_IF3208_01_standard.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Predator+24+Elite",
     imagenes: [],
 
     fuentes: [
@@ -200,7 +200,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador clásico que valora confort y durabilidad sobre velocidad. Si eres mediocentro o defensa y juegas en hierba natural, la Copa Pure 2 es difícilmente superable en comodidad.",
 
-    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7b8a0d7aca4b4b0a8a88af1e00e6f9b3_9366/Copa_Pure_2_Elite_Firm_Ground_Boots_White_HQ8901_01_standard.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Copa+Pure+2+Elite",
     imagenes: [],
 
     fuentes: [
@@ -271,7 +271,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La opción Nike para jugadores técnicos que no quieren sacrificar velocidad. Perfecta para mediapuntas y extremos técnicos. Si eres más de velocidad pura, la Mercurial sigue siendo mejor.",
 
-    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/97e32b1e-2073-4ab5-9ae2-53e46b8b3f16/phantom-gx-2-elite-fg-high-top-football-boot-N0L7Zg.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Phantom+GX+2+Elite",
     imagenes: [],
 
     fuentes: [
@@ -341,7 +341,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La mejor opción para jugadores versátiles que mezclan estilos. Si no sabes exactamente qué necesitas, la Future 7 rara vez decepciona. La banda adaptativa es un plus real para pies difíciles.",
 
-    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/107786/01/sv01/fnd/EUR/fmt/png/FUTURE_7_ULTIMATE_FG_AG_Football_Boots.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+Future+7+Ultimate",
     imagenes: [],
 
     fuentes: [
@@ -413,7 +413,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Ideal si buscas velocidad pero encuentras la Mercurial demasiado estrecha. Ofrece 90% del rendimiento de la Mercurial a un precio más razonable y con una horma más amigable.",
 
-    imagen_principal: "https://nb.scene7.com/is/image/NB/MSF3FBB7_CR1_iy?$pdpflexf2$&qlt=80&fmt=webp&wid=440&hei=440",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=New+Balance+Furon+V7+Pro",
     imagenes: [],
 
     fuentes: [
@@ -486,7 +486,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el futbolero purista que juega solo en hierba natural y valora la artesanía por encima de todo. Si puedes permitirte el precio y tienes el pie estrecho, es una experiencia única.",
 
-    imagen_principal: "https://shop.mizuno.com/dw/image/v2/BBDH_PRD/on/demandware.static/-/Sites-master-catalog/default/dw9f3bdf34/images/large/P1GA2215_09_1.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Mizuno+Morelia+Neo+IV",
     imagenes: [],
 
     fuentes: [
@@ -557,7 +557,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Perfecta para porteros, defensas y centrocampistas que priorizan durabilidad y protección. Si pesas más de 80kg o tienes molestias en las rodillas, es una de las mejores opciones del mercado.",
 
-    imagen_principal: "https://underarmour.scene7.com/is/image/underarmour/3026727-001_PAIR?rp=standard-0pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=566&hei=566&size=536,536",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Under+Armour+Magnetico+Pro+3",
     imagenes: [],
 
     fuentes: [
@@ -630,7 +630,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Solo para extremos y delanteros con pie estrecho cuyo único objetivo es ser los más rápidos en el campo. Si tienes alguna molestia articular o pie ancho, elige otra bota.",
 
-    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4f17d8b0c7354d28a0e3af2000e0a08b_9366/X_Crazyfast_1_Firm_Ground_Boots_Black_HQ4517_01_standard.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+X+Crazyfast.1",
     imagenes: [],
 
     fuentes: [
@@ -702,7 +702,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para defensas, porteros y centrocampistas con pie ancho que buscan comodidad y durabilidad en hierba natural. Si tienes el pie ancho y nadie más encaja, la King es tu bota.",
 
-    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/107030/01/sv01/fnd/EUR/fmt/png/KING_PLATINUM_21_FG_AG_Football_Boots.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+King+Platinum+21",
     imagenes: [],
 
     fuentes: [
@@ -775,7 +775,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para mediocentros y defensas que quieren la sensación clásica del cuero con tecnología moderna. Si valoras el tacto natural por encima de la velocidad, la Tiempo Legend 10 Elite es la respuesta de Nike.",
 
-    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b82a3fa5-aa8e-4bd2-9cfb-fb7b8b37e78f/tiempo-legend-10-elite-fg-football-boot-JkJ1Vf.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Tiempo+Legend+10+Elite",
     imagenes: [],
 
     fuentes: [
@@ -848,7 +848,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Alternativa más asequible a la X Crazyfast.1 para extremos y delanteros que buscan velocidad pura con placa de carbono. Si la Crazyfast se sale del presupuesto, la Speedportal.1 ofrece experiencia similar a menor precio.",
 
-    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8e4e1c5ca5b94bb1b14daf5c01338949_9366/X_Speedportal.1_Firm_Ground_Boots_Black_GZ5109_01_standard.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+X+Speedportal.1",
     imagenes: [],
 
     fuentes: [
@@ -920,7 +920,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La alternativa Puma a la Copa Pure para técnicos que juegan en hierba natural. Si ya tienes la Copa y quieres explorar otra marca con la misma filosofía, la King Platinum es tu opción.",
 
-    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/106886/02/sv01/fnd/EUR/fmt/png/KING_Platinum_21_FG_Football_Boot.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+King+Platinum+21+FG",
     imagenes: [],
 
     fuentes: [
@@ -992,7 +992,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La entrada perfecta al mundo Mercurial para jugadores con presupuesto ajustado. No iguala a la Elite, pero ofrece el perfil de velocidad a una fracción del precio. Ideal para jóvenes y amateurs.",
 
-    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c6e48ebe-af48-4b1d-99e7-0c4fcba9f94e/mercurial-vapor-15-club-multi-ground-football-boot-W0dFfc.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Mercurial+Vapor+15+Club",
     imagenes: [],
 
     fuentes: [
@@ -1063,7 +1063,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La mejor opción de control por debajo de 50€. Para mediocampistas y técnicos con presupuesto limitado que quieren algo del DNA Predator sin pagar precio élite.",
 
-    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2a97cf9e4e4a4b7b9f64afab00f5e2c1_9366/Predator_Club_Flexible_Ground_Boots_Black_IG5427_01_standard.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Predator+Club",
     imagenes: [],
 
     fuentes: [
@@ -1137,7 +1137,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el purista del fútbol que quiere lo mejor en cuero japonés. Si juegas en hierba natural, tienes pie estrecho y valoras la artesanía, la Morelia Neo III Beta JP es una de las botas más especiales del mercado.",
 
-    imagen_principal: "https://shop.mizuno.com/dw/image/v2/BBDH_PRD/on/demandware.static/-/Sites-master-catalog/default/dw6e1b2c8d/images/large/P1GA206009_01_1.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Mizuno+Morelia+Neo+III+JP",
     imagenes: [],
 
     fuentes: [
@@ -1209,7 +1209,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador que quiere calidad italiana de cuero sin pagar precios de Copa Pure o Tiempo Elite. Una bota de culto para conocedores que juegan en hierba y no necesitan velocidad.",
 
-    imagen_principal: "https://www.lotto-sport.com/media/catalog/product/cache/5bc3b6b7a01c0d8eaabb0f3b90e0a1c4/5/9/59c-213634_1.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Lotto+Maestro+100+IV",
     imagenes: [],
 
     fuentes: [
@@ -1281,7 +1281,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador amateur, veterano o de empresa que necesita una bota fiable sin gastar mucho. Si juegas los fines de semana y no quieres invertir más de 30€, la Kelme Star 360 cumple sobradamente.",
 
-    imagen_principal: "https://www.kelme.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/k/e/kelme-star-360-botas-futbol-fg.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Kelme+Star+360",
     imagenes: [],
 
     fuentes: [
@@ -1353,7 +1353,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La puerta de entrada al mundo Phantom para técnicos con presupuesto. No iguala a la Elite pero ofrece el perfil correcto a una fracción del precio. Para jugadores jóvenes y amateurs técnicos.",
 
-    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c36b8f7f-9b22-461e-8e76-1d0e2a6fdc87/phantom-gx-club-fg-mg-football-boot-dZJMjw.png",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Phantom+Club",
     imagenes: [],
 
     fuentes: [
@@ -1425,7 +1425,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Si la Copa Pure 2 Elite se sale del presupuesto, la Copa Pure .1 ofrece prácticamente la misma experiencia de cuero y tacto a un precio algo menor. La opción perfecta para técnicos que priorizan confort y precisión.",
 
-    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9f6b7d5c8b3a4e2da1f0af1e00c7a9b2_9366/Copa_Pure.1_Firm_Ground_Boots_White_GZ2520_01_standard.jpg",
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Copa+Pure+.1",
     imagenes: [],
 
     fuentes: [
@@ -1438,6 +1438,572 @@ const _rawBotas: Bota[] = [
       { tienda: "adidas_es", url: "https://www.adidas.es/copa-pure-1-fg", precio_actual: 200.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
       { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+1+fg", precio_actual: 179.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
       { tienda: "zalando_es", url: "https://www.zalando.es/adidas-copa-pure/", precio_actual: 190.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+  // ───────────────────────────────────────────────
+  // 21. JOMA PROPULSION CUP FG — Marca española técnica
+  // ───────────────────────────────────────────────
+  {
+    id: "joma-propulsion-cup-fg",
+    slug: "joma-propulsion-cup-fg",
+    marca: "Joma",
+    modelo: "Propulsion Cup FG",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Synthetic leather upper", "Classic FG outsole", "EVA midsole"],
+    peso_real_g: 250,
+    horma: "normal",
+    superficies_compatibles: ["fg"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 7,
+      control_balon: 8,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 6,
+      durabilidad: 8,
+      confort: 8,
+    },
+    categoria_principal: "control",
+    tags: ["espanola", "tecnica", "fg", "relacion-calidad-precio", "joma"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "defensa"],
+      peso_jugador_kg: [60, 90],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "Joma es una de las marcas españolas más populares en fútbol amateur y semiprofesional. La Propulsion Cup ofrece un upper técnico con excelente control de balón a un precio muy competitivo. Perfecta para mediocampistas técnicos que juegan en hierba natural.",
+    pros: [
+      "Marca española — gran disponibilidad en tiendas nacionales",
+      "Buena relación calidad-precio para control y técnica",
+      "Confort sólido desde el primer uso",
+      "Durabilidad superior a botas de precio similar",
+    ],
+    contras: [
+      "Solo FG — no compatible con AG ni TF",
+      "No apta para perfiles de velocidad",
+      "Menos reconocimiento de marca que Nike/Adidas",
+    ],
+    veredicto:
+      "Una de las mejores opciones españolas para mediocampistas técnicos con presupuesto ajustado. Si juegas en hierba y valoras técnica a buen precio, la Joma Propulsion Cup es una apuesta segura.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Joma+Propulsion+Cup+FG",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 80,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=joma+propulsion+cup+fg", precio_actual: 74.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=joma+propulsion+cup", precio_actual: 79.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 22. MUNICH G-3 FG — Icono del fútbol amateur español
+  // ───────────────────────────────────────────────
+  {
+    id: "munich-g3-fg",
+    slug: "munich-g3-fg",
+    marca: "Munich",
+    modelo: "G-3 FG",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Synthetic upper", "FG outsole", "OrthoLite insole"],
+    peso_real_g: 260,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 7,
+      control_balon: 7,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 6,
+      durabilidad: 8,
+      confort: 8,
+    },
+    categoria_principal: "equilibrada",
+    tags: ["espanola", "amateur", "fg", "ag", "popular", "munich"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "defensa", "lateral", "delantero"],
+      peso_jugador_kg: [60, 90],
+      estilos: ["equilibrado", "tecnico"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "Munich es la marca catalana por excelencia del fútbol amateur español. La G-3 es su modelo más icónico: equilibrada, cómoda y con un estilo muy reconocible. Muy popular en ligas amateur, veteranos y fútbol 7 por toda España.",
+    pros: [
+      "Icono del fútbol amateur español — muy reconocible",
+      "Equilibrio excelente entre confort y técnica",
+      "Compatible con FG y AG",
+      "Durabilidad muy por encima del precio",
+    ],
+    contras: [
+      "No apta para velocidad pura",
+      "Peso algo elevado para los estándares modernos",
+      "Menos tecnología moderna que marcas internacionales",
+    ],
+    veredicto:
+      "El clásico del fútbol amateur español. Si juegas en ligas locales y quieres una bota fiable, con estilo y sin complicaciones, la Munich G-3 es una elección infalible.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Munich+G-3+FG",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 70,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=munich+g3+fg+futbol", precio_actual: 64.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "sprinter_es", url: "https://www.sprinter.es/busqueda?q=munich+g3", precio_actual: 69.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 23. DIADORA BRASIL ELITE 2 FG — Cuero italiano premium
+  // ───────────────────────────────────────────────
+  {
+    id: "diadora-brasil-elite-2-fg",
+    slug: "diadora-brasil-elite-2-fg",
+    marca: "Diadora",
+    modelo: "Brasil Elite 2 FG",
+    año_lanzamiento: 2022,
+    genero: "unisex",
+    tecnologia_clave: ["Full-grain leather upper", "Classic FG outsole", "OrthoLite insole"],
+    peso_real_g: 240,
+    horma: "normal",
+    superficies_compatibles: ["fg"],
+    material_superior: "cuero",
+
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 7,
+      control_balon: 9,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 6,
+      durabilidad: 9,
+      confort: 10,
+    },
+    categoria_principal: "control",
+    tags: ["cuero", "italiana", "fg", "tecnica", "confort", "clasica"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "defensa"],
+      peso_jugador_kg: [65, 95],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg"],
+      lesiones_compatibles: ["fascia", "tobillos"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "La Diadora Brasil Elite 2 es una joya del cuero italiano. Upper de piel de grano completo con un tacto excepcional y un confort que rivaliza con las mejores botas de cuero del mercado. Para jugadores técnicos que valoran la artesanía italiana y el clásico tacto de cuero.",
+    pros: [
+      "Cuero italiano de grano completo — confort de primera clase",
+      "Tacto de balón excepcional y natural",
+      "Durabilidad legendaria del cuero italiano",
+      "Precio más accesible que Copa Pure o Tiempo Elite",
+    ],
+    contras: [
+      "Solo FG — no compatible con AG ni TF",
+      "Disponibilidad limitada en España",
+      "El cuero requiere mantenimiento regular",
+    ],
+    veredicto:
+      "Para el jugador técnico que quiere calidad italiana de cuero sin pagar precios de Copa Pure o Tiempo Elite. Una bota de culto para conocedores que juegan en hierba y priorizan confort y tacto.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Diadora+Brasil+Elite+2",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 150,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=diadora+brasil+elite+2+fg", precio_actual: 139.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 24. NIKE MERCURIAL VAPOR 15 PRO FG — Nivel intermedio Mercurial
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-mercurial-vapor-15-pro-fg",
+    slug: "nike-mercurial-vapor-15-pro-fg",
+    marca: "Nike",
+    modelo: "Mercurial Vapor 15 Pro FG",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Speed synthetic upper", "ACC", "Nike Aerotrak plate", "FG outsole"],
+    peso_real_g: 200,
+    horma: "estrecha",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 5,
+      control_balon: 8,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 9,
+      durabilidad: 7,
+      confort: 7,
+    },
+    categoria_principal: "velocidad",
+    tags: ["velocidad", "fg", "ag", "mercurial", "intermedio", "acc"],
+
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral"],
+      peso_jugador_kg: [55, 80],
+      estilos: ["velocidad", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia"],
+    },
+
+    resumen:
+      "La Mercurial Vapor 15 Pro es el punto intermedio de la gama Mercurial: más tecnología que la Club, sin llegar al precio de la Elite. Incluye ACC para tacto consistente en cualquier clima y una placa propulsora real. La opción para extremos y delanteros con presupuesto medio.",
+    pros: [
+      "ACC incluido — tacto consistente en seco y mojado",
+      "Ligera (200g) con placa propulsora real",
+      "Buena tracción FG y AG",
+      "Estética Mercurial premium a precio intermedio",
+    ],
+    contras: [
+      "Horma estrecha — no apta para pies anchos",
+      "Sin placa de carbono completa de la Elite",
+      "Amortiguación mínima",
+    ],
+    veredicto:
+      "El punto dulce de la gama Mercurial. Si quieres velocidad real con ACC y placa propulsora sin pagar precio élite, la Vapor 15 Pro es la elección perfecta para extremos y delanteros.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Mercurial+Vapor+15+Pro",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 130,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/w?q=mercurial+vapor+15+pro+fg", precio_actual: 130.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+pro+fg", precio_actual: 114.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "jd_sports_es", url: "https://www.jdsports.es/search/mercurial+vapor+15+pro", precio_actual: 130.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 25. ADIDAS COPA PURE 2.3 FG — Versión económica Copa
+  // ───────────────────────────────────────────────
+  {
+    id: "adidas-copa-pure-2-3-fg",
+    slug: "adidas-copa-pure-2-3-fg",
+    marca: "Adidas",
+    modelo: "Copa Pure 2.3 FG",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Synthetic leather upper", "FG/AG outsole", "OrthoLite sockliner"],
+    peso_real_g: 280,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 6,
+      control_balon: 8,
+      soporte_lateral: 6,
+      estabilidad: 7,
+      peso_score: 5,
+      durabilidad: 8,
+      confort: 7,
+    },
+    categoria_principal: "control",
+    tags: ["economica", "control", "fg", "ag", "presupuesto", "copa"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "defensa"],
+      peso_jugador_kg: [60, 90],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "La Copa Pure 2.3 es la versión más económica de la familia Copa. Con upper de cuero sintético inspirado en la Copa, ofrece el perfil técnico de la línea a un precio muy accesible. Para mediocampistas técnicos con presupuesto ajustado que quieren el DNA Copa.",
+    pros: [
+      "Precio muy accesible (~60€) con perfil Copa",
+      "Upper sintético tipo cuero — mejor control que uppers lisos",
+      "Horma normal — apta para la mayoría de pies",
+      "Compatible FG y AG",
+    ],
+    contras: [
+      "Sin cuero real — se pierde la sensación premium",
+      "Más pesada que versiones superiores",
+      "Sin SKYSENSOR insole ni OrthoLite premium",
+    ],
+    veredicto:
+      "La entrada al mundo Copa para jugadores técnicos con presupuesto. No iguala a la Copa Pure 2 Elite pero ofrece el perfil correcto a una fracción del precio. Ideal para amateurs técnicos.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Copa+Pure+2.3+FG",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 60,
+    links_compra: [
+      { tienda: "adidas_es", url: "https://www.adidas.es/copa-pure-2-3-fg", precio_actual: 59.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+2.3+fg", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=adidas+copa+pure+2.3", precio_actual: 59.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 26. PUMA ULTRA 5 PRO FG — Velocidad media gama
+  // ───────────────────────────────────────────────
+  {
+    id: "puma-ultra-5-pro-fg",
+    slug: "puma-ultra-5-pro-fg",
+    marca: "Puma",
+    modelo: "Ultra 5 Pro FG",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["ULTRA-lite synthetic upper", "PWRTAPE zones", "SpeedUnit suela"],
+    peso_real_g: 210,
+    horma: "estrecha",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 5,
+      control_balon: 7,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 8,
+      durabilidad: 7,
+      confort: 7,
+    },
+    categoria_principal: "velocidad",
+    tags: ["velocidad", "fg", "ag", "media-gama", "puma", "ultra"],
+
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral"],
+      peso_jugador_kg: [55, 80],
+      estilos: ["velocidad", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia"],
+    },
+
+    resumen:
+      "La Puma Ultra 5 Pro es la alternativa de velocidad de media gama de Puma. Upper ULTRA-lite para máxima ligereza, suela SpeedUnit para propulsión y zonas PWRTAPE para soporte lateral en los cambios de dirección. La opción Puma para extremos y delanteros con presupuesto intermedio.",
+    pros: [
+      "Ligera (210g) con buena propulsión",
+      "Buena tracción FG y AG",
+      "Precio intermedio más accesible que la Future Ultimate",
+      "Soporte lateral sólido para cambios de dirección",
+    ],
+    contras: [
+      "Horma estrecha — no para pies anchos",
+      "Amortiguación básica",
+      "Sin la adaptabilidad FUZIONFIT+ de la Future",
+    ],
+    veredicto:
+      "La opción de velocidad de Puma para presupuesto intermedio. Si buscas velocidad con el sello Puma sin pagar precio élite, la Ultra 5 Pro ofrece muy buen rendimiento a 100€.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+Ultra+5+Pro+FG",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 100,
+    links_compra: [
+      { tienda: "puma_es", url: "https://es.puma.com/es/es/pd/ultra-5-pro-fg-ag", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+ultra+5+pro+fg", precio_actual: 89.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "footlocker_es", url: "https://www.footlocker.es/es/search?query=puma+ultra+5+pro", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 27. NIKE PHANTOM GX 2 ACADEMY FG — Phantom económica
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-phantom-gx2-academy-fg",
+    slug: "nike-phantom-gx2-academy-fg",
+    marca: "Nike",
+    modelo: "Phantom GX 2 Academy FG",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Textured synthetic upper", "FG/MG outsole", "Ghost Lace (simplificado)"],
+    peso_real_g: 265,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 6,
+      control_balon: 8,
+      soporte_lateral: 6,
+      estabilidad: 6,
+      peso_score: 6,
+      durabilidad: 7,
+      confort: 7,
+    },
+    categoria_principal: "control",
+    tags: ["economica", "control", "fg", "ag", "phantom", "academy", "presupuesto"],
+
+    ideal_para: {
+      posiciones: ["mediapunta", "mediocentro", "extremo"],
+      peso_jugador_kg: [55, 85],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia", "velocidad"],
+    },
+
+    resumen:
+      "La Phantom GX 2 Academy es la versión más económica de la familia Phantom de Nike. Hereda el perfil técnico de la gama con un upper texturizado para mejor control, horma normal y compatibilidad FG/AG. La entrada perfecta al mundo Phantom para jugadores técnicos con presupuesto ajustado.",
+    pros: [
+      "Precio muy accesible (~65€) con perfil Phantom técnico",
+      "Upper texturizado para control mejorado",
+      "Horma normal — apta para la mayoría de pies",
+      "Compatible FG y AG",
+    ],
+    contras: [
+      "Sin Gripknit ni ACC de las versiones Elite",
+      "Más pesada que las versiones superiores",
+      "Control de balón inferior a la Elite",
+    ],
+    veredicto:
+      "La opción Nike técnica por excelencia por debajo de 70€. Para mediapuntas y centrocampistas jóvenes o amateurs que quieren el ADN Phantom sin el desembolso de la Elite.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Phantom+GX+2+Academy",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 65,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/w?q=phantom+gx+2+academy+fg", precio_actual: 64.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx+2+academy+fg", precio_actual: 59.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=nike+phantom+gx+2+academy", precio_actual: 0, disponible: false, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 28. UMBRO TOCCO III PRO FG — Cuero clásico británico
+  // ───────────────────────────────────────────────
+  {
+    id: "umbro-tocco-iii-pro-fg",
+    slug: "umbro-tocco-iii-pro-fg",
+    marca: "Umbro",
+    modelo: "Tocco III Pro FG",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Synthetic leather upper", "Classic FG outsole", "OrthoLite insole"],
+    peso_real_g: 255,
+    horma: "normal",
+    superficies_compatibles: ["fg"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 7,
+      control_balon: 8,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 6,
+      durabilidad: 8,
+      confort: 8,
+    },
+    categoria_principal: "control",
+    tags: ["britanica", "clasica", "fg", "tecnica", "umbro"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "defensa", "mediapunta"],
+      peso_jugador_kg: [65, 95],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg"],
+      lesiones_compatibles: ["fascia", "tobillos"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "Umbro es la marca inglesa de fútbol con más historia. La Tocco III Pro combina el ADN clásico británico con una construcción moderna: upper tipo cuero para buen tacto de balón, horma normal cómoda y suela FG clásica. Para jugadores técnicos que valoran la tradición futbolística inglesa.",
+    pros: [
+      "Marca histórica del fútbol inglés — calidad y tradición",
+      "Buen tacto de balón con upper tipo cuero",
+      "Horma normal — cómoda para la mayoría de pies",
+      "Confort sólido desde el primer día",
+    ],
+    contras: [
+      "Solo FG — no compatible con AG",
+      "Disponibilidad limitada en España",
+      "Sin tecnologías modernas de propulsión",
+    ],
+    veredicto:
+      "Para el jugador técnico que quiere una alternativa clásica con tradición británica. La Umbro Tocco III Pro ofrece buen tacto y confort a un precio razonable para hierba natural.",
+
+    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Umbro+Tocco+III+Pro+FG",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 90,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=umbro+tocco+iii+pro+fg", precio_actual: 84.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
     ],
   },
 ];
