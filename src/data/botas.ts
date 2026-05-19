@@ -57,7 +57,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Si eres extremo o delantero con pie estrecho, juegas en hierba y tu prioridad es la velocidad, es la referencia del mercado. Para pies anchos o superficies duras, busca otra opción.",
 
-    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a0a-ad76-5b57f66e2ae7/football-boots-placeholder.png",
+    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a0a-ad76-5b57f66e2ae7,c_scale,fl_relative,w_1.0/l_126ab356-44d8-4a0a-ad76-5b57f66e2ae7,fl_relative,w_1.0/8720e5ef-1bc3-4ab4-9946-e39c95d56f63/mercurial-superfly-10-elite-fg-football-boot-PCsBj5.png",
     imagenes: [],
 
     fuentes: [
@@ -129,7 +129,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para cualquier jugador técnico que priorice control en el pase y disparo. Mediapuntas y centrocampistas la adorarán. Si tu fútbol es más de velocidad pura, mira las Mercurial.",
 
-    imagen_principal: "https://assets.adidas.com/images/w_600,f_auto,q_auto/placeholder-predator-24.jpg",
+    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b3e3a52f6f014abe9f55af1e00f4f4c8_9366/Predator_24_Elite_Firm_Ground_Boots_Black_IF3208_01_standard.jpg",
     imagenes: [],
 
     fuentes: [
@@ -200,7 +200,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador clásico que valora confort y durabilidad sobre velocidad. Si eres mediocentro o defensa y juegas en hierba natural, la Copa Pure 2 es difícilmente superable en comodidad.",
 
-    imagen_principal: "https://assets.adidas.com/images/w_600,f_auto,q_auto/placeholder-copa-pure2.jpg",
+    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7b8a0d7aca4b4b0a8a88af1e00e6f9b3_9366/Copa_Pure_2_Elite_Firm_Ground_Boots_White_HQ8901_01_standard.jpg",
     imagenes: [],
 
     fuentes: [
@@ -271,7 +271,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La opción Nike para jugadores técnicos que no quieren sacrificar velocidad. Perfecta para mediapuntas y extremos técnicos. Si eres más de velocidad pura, la Mercurial sigue siendo mejor.",
 
-    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/placeholder-phantom-gx2.png",
+    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/97e32b1e-2073-4ab5-9ae2-53e46b8b3f16/phantom-gx-2-elite-fg-high-top-football-boot-N0L7Zg.png",
     imagenes: [],
 
     fuentes: [
@@ -341,7 +341,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La mejor opción para jugadores versátiles que mezclan estilos. Si no sabes exactamente qué necesitas, la Future 7 rara vez decepciona. La banda adaptativa es un plus real para pies difíciles.",
 
-    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/107786/01/sv01/fnd/EUR/placeholder-future7.jpg",
+    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/107786/01/sv01/fnd/EUR/fmt/png/FUTURE_7_ULTIMATE_FG_AG_Football_Boots.png",
     imagenes: [],
 
     fuentes: [
@@ -413,7 +413,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Ideal si buscas velocidad pero encuentras la Mercurial demasiado estrecha. Ofrece 90% del rendimiento de la Mercurial a un precio más razonable y con una horma más amigable.",
 
-    imagen_principal: "https://nb.scene7.com/is/image/NB/placeholder-furon-v7.jpg",
+    imagen_principal: "https://nb.scene7.com/is/image/NB/MSF3FBB7_CR1_iy?$pdpflexf2$&qlt=80&fmt=webp&wid=440&hei=440",
     imagenes: [],
 
     fuentes: [
@@ -486,7 +486,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el futbolero purista que juega solo en hierba natural y valora la artesanía por encima de todo. Si puedes permitirte el precio y tienes el pie estrecho, es una experiencia única.",
 
-    imagen_principal: "https://shop.mizuno.com/dw/image/v2/placeholder-morelia-neo4.jpg",
+    imagen_principal: "https://shop.mizuno.com/dw/image/v2/BBDH_PRD/on/demandware.static/-/Sites-master-catalog/default/dw9f3bdf34/images/large/P1GA2215_09_1.jpg",
     imagenes: [],
 
     fuentes: [
@@ -557,7 +557,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Perfecta para porteros, defensas y centrocampistas que priorizan durabilidad y protección. Si pesas más de 80kg o tienes molestias en las rodillas, es una de las mejores opciones del mercado.",
 
-    imagen_principal: "https://underarmour.scene7.com/is/image/underarmour/placeholder-magnetico-pro3.jpg",
+    imagen_principal: "https://underarmour.scene7.com/is/image/underarmour/3026727-001_PAIR?rp=standard-0pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=566&hei=566&size=536,536",
     imagenes: [],
 
     fuentes: [
@@ -630,7 +630,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Solo para extremos y delanteros con pie estrecho cuyo único objetivo es ser los más rápidos en el campo. Si tienes alguna molestia articular o pie ancho, elige otra bota.",
 
-    imagen_principal: "https://assets.adidas.com/images/w_600,f_auto,q_auto/placeholder-xcrazyfast1.jpg",
+    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4f17d8b0c7354d28a0e3af2000e0a08b_9366/X_Crazyfast_1_Firm_Ground_Boots_Black_HQ4517_01_standard.jpg",
     imagenes: [],
 
     fuentes: [
@@ -702,7 +702,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para defensas, porteros y centrocampistas con pie ancho que buscan comodidad y durabilidad en hierba natural. Si tienes el pie ancho y nadie más encaja, la King es tu bota.",
 
-    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/placeholder-king-platinum.jpg",
+    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/107030/01/sv01/fnd/EUR/fmt/png/KING_PLATINUM_21_FG_AG_Football_Boots.png",
     imagenes: [],
 
     fuentes: [
@@ -715,6 +715,729 @@ const _rawBotas: Bota[] = [
       { tienda: "puma_es", url: "https://es.puma.com/es/es/pd/king-platinum-21-fg-ag", precio_actual: 180.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
       { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+king+platinum+21", precio_actual: 159.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
       { tienda: "sprinter_es", url: "https://www.sprinter.es/busqueda?q=puma+king+platinum", precio_actual: 175.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 11. NIKE TIEMPO LEGEND 10 ELITE — Cuero técnico premium
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-tiempo-legend-10-elite",
+    slug: "nike-tiempo-legend-10-elite",
+    marca: "Nike",
+    modelo: "Tiempo Legend 10 Elite",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Full-grain leather upper", "ACC", "Nike Aerotrak plate", "Quadfit mesh lining"],
+    peso_real_g: 225,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "cuero",
+
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 7,
+      control_balon: 9,
+      soporte_lateral: 8,
+      estabilidad: 8,
+      peso_score: 7,
+      durabilidad: 9,
+      confort: 9,
+    },
+    categoria_principal: "control",
+    tags: ["cuero", "control", "fg", "ag", "mediocentro", "defensa", "clasica"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "defensa", "mediapunta"],
+      peso_jugador_kg: [65, 95],
+      estilos: ["tecnico", "equilibrado", "potencia"],
+      superficies: ["fg", "ag"],
+      lesiones_compatibles: ["tobillos"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "La Tiempo Legend 10 Elite es la bota de cuero de Nike para quienes no quieren renunciar a la sensación artesanal. El upper de piel de grano completo ofrece un tacto suave y preciso desde el primer uso, con ACC para que el cuero funcione igual en mojado. La opción Nike más completa para mediocentros y defensas técnicos.",
+    pros: [
+      "Upper de cuero de grano completo — sensación artesanal premium",
+      "ACC garantiza tacto constante en seco y mojado",
+      "Confort excepcional desde el primer uso",
+      "Aerotrak plate para mejor propulsión que suela cuero clásica",
+    ],
+    contras: [
+      "Más pesada que opciones sintéticas",
+      "Precio de élite para una bota de cuero",
+      "El cuero absorbe agua en lluvias muy intensas",
+    ],
+    veredicto:
+      "Para mediocentros y defensas que quieren la sensación clásica del cuero con tecnología moderna. Si valoras el tacto natural por encima de la velocidad, la Tiempo Legend 10 Elite es la respuesta de Nike.",
+
+    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b82a3fa5-aa8e-4bd2-9cfb-fb7b8b37e78f/tiempo-legend-10-elite-fg-football-boot-JkJ1Vf.png",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "football-boots-guru", url: "https://www.football-boots-guru.com/nike-tiempo-legend-10-elite-review/" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 230,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/w?q=tiempo+legend+10+elite&vst=tiempo+legend+10+elite", precio_actual: 230.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+tiempo+legend+10+elite+fg", precio_actual: 209.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "jd_sports_es", url: "https://www.jdsports.es/search/nike+tiempo+legend+10+elite", precio_actual: 230.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 12. ADIDAS X SPEEDPORTAL.1 — Velocidad pura Adidas generación anterior
+  // ───────────────────────────────────────────────
+  {
+    id: "adidas-x-speedportal-1",
+    slug: "adidas-x-speedportal-1",
+    marca: "Adidas",
+    modelo: "X Speedportal.1",
+    año_lanzamiento: 2022,
+    genero: "unisex",
+    tecnologia_clave: ["Speedportal upper", "Sprintframe plate", "Carbitex carbon fiber"],
+    peso_real_g: 180,
+    horma: "estrecha",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "mesh+tpu",
+
+    puntuaciones: {
+      traccion: 9,
+      amortiguacion: 5,
+      control_balon: 7,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 9,
+      durabilidad: 6,
+      confort: 7,
+    },
+    categoria_principal: "velocidad",
+    tags: ["velocidad", "fg", "ag", "ligera", "carbono"],
+
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral"],
+      peso_jugador_kg: [55, 80],
+      estilos: ["velocidad", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero", "defensa"],
+      estilos: ["potencia"],
+      lesiones: ["rodillas", "tobillos"],
+    },
+
+    resumen:
+      "La X Speedportal.1 fue la respuesta directa de Adidas a la Mercurial antes de la Crazyfast. Placa de carbono Carbitex para propulsión máxima, upper ligero y laceless para máximo contacto de balón sin interferencias. Rival directo de la Superfly en el campo de la velocidad pura.",
+    pros: [
+      "Placa Carbitex de carbono para propulsión real",
+      "Diseño laceless — área de contacto limpia",
+      "Tracción excelente FG y AG",
+      "Precio más ajustado que la Crazyfast por ser generación anterior",
+    ],
+    contras: [
+      "Horma muy estrecha — pies anchos fuera",
+      "Amortiguación mínima",
+      "Modelo de generación anterior — menos tecnología que Crazyfast",
+    ],
+    veredicto:
+      "Alternativa más asequible a la X Crazyfast.1 para extremos y delanteros que buscan velocidad pura con placa de carbono. Si la Crazyfast se sale del presupuesto, la Speedportal.1 ofrece experiencia similar a menor precio.",
+
+    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8e4e1c5ca5b94bb1b14daf5c01338949_9366/X_Speedportal.1_Firm_Ground_Boots_Black_GZ5109_01_standard.jpg",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "football-boots-guru", url: "https://www.football-boots-guru.com/adidas-x-speedportal-1-review/" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 180,
+    links_compra: [
+      { tienda: "adidas_es", url: "https://www.adidas.es/x-speedportal", precio_actual: 180.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+speedportal+1+fg", precio_actual: 149.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "zalando_es", url: "https://www.zalando.es/adidas-x-speedportal/", precio_actual: 175.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 13. PUMA KING PLATINUM 21 FG — Cuero clásico técnico
+  // ───────────────────────────────────────────────
+  {
+    id: "puma-king-platinum-21-fg",
+    slug: "puma-king-platinum-21-fg",
+    marca: "Puma",
+    modelo: "King Platinum 21 FG",
+    año_lanzamiento: 2021,
+    genero: "unisex",
+    tecnologia_clave: ["Premium kangaroo leather", "EvoFlex suela", "K-Better outsole", "OrthoLite sockliner"],
+    peso_real_g: 255,
+    horma: "normal",
+    superficies_compatibles: ["fg"],
+    material_superior: "cuero",
+
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 7,
+      control_balon: 9,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 5,
+      durabilidad: 9,
+      confort: 10,
+    },
+    categoria_principal: "control",
+    tags: ["cuero-canguro", "clasica", "fg", "tecnico", "confort", "durabilidad"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "defensa"],
+      peso_jugador_kg: [65, 95],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg"],
+      lesiones_compatibles: ["fascia", "tobillos"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "La King Platinum 21 FG es la versión más técnica de la icónica King de Puma. Con cuero de canguro premium y suela FG clásica, está diseñada para mediocampistas técnicos que buscan máximo confort y tacto. Una bota para jugadores que hacen del pase y la precisión su seña de identidad.",
+    pros: [
+      "Cuero de canguro de altísima calidad — confort 10/10",
+      "Control de balón excepcional para técnicos",
+      "Durabilidad superior a cualquier sintético",
+      "Precio más razonable que Copa/Copa Pure de Adidas",
+    ],
+    contras: [
+      "Solo FG — no sirve en hierba artificial",
+      "Bota más pesada del mercado actual",
+      "No apta para estilos de juego de velocidad",
+    ],
+    veredicto:
+      "La alternativa Puma a la Copa Pure para técnicos que juegan en hierba natural. Si ya tienes la Copa y quieres explorar otra marca con la misma filosofía, la King Platinum es tu opción.",
+
+    imagen_principal: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600/global/106886/02/sv01/fnd/EUR/fmt/png/KING_Platinum_21_FG_Football_Boot.png",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 160,
+    links_compra: [
+      { tienda: "puma_es", url: "https://es.puma.com/es/es/pd/king-platinum-21-fg", precio_actual: 160.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+king+platinum+21+fg", precio_actual: 139.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 14. NIKE MERCURIAL VAPOR 15 CLUB — Mercurial económica
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-mercurial-vapor-15-club",
+    slug: "nike-mercurial-vapor-15-club",
+    marca: "Nike",
+    modelo: "Mercurial Vapor 15 Club",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Speed upper sintético", "Multi-ground suela", "Contoured outsole"],
+    peso_real_g: 220,
+    horma: "estrecha",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 5,
+      control_balon: 7,
+      soporte_lateral: 6,
+      estabilidad: 6,
+      peso_score: 8,
+      durabilidad: 7,
+      confort: 6,
+    },
+    categoria_principal: "velocidad",
+    tags: ["economica", "velocidad", "fg", "ag", "presupuesto", "mercurial"],
+
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral"],
+      peso_jugador_kg: [50, 80],
+      estilos: ["velocidad", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia"],
+    },
+
+    resumen:
+      "La versión accesible de la familia Mercurial. Mismo ADN de velocidad y estética que la Superfly o Vapor Elite, pero con materiales más económicos que reducen el precio a menos de 55€. Perfecta para jugadores jóvenes o amateurs que quieren el look y el perfil Mercurial sin el desembolso de la versión Elite.",
+    pros: [
+      "Precio imbatible para un perfil de velocidad (<55€)",
+      "ADN Mercurial — estética y perfil de velocidad",
+      "Disponible en FG y AG",
+      "Buena durabilidad para el precio",
+    ],
+    contras: [
+      "Sin placa de carbono ni materiales premium",
+      "Confort básico — no llega al nivel Elite",
+      "Tracción correcta pero no excepcional",
+      "Horma estrecha — no para pies anchos",
+    ],
+    veredicto:
+      "La entrada perfecta al mundo Mercurial para jugadores con presupuesto ajustado. No iguala a la Elite, pero ofrece el perfil de velocidad a una fracción del precio. Ideal para jóvenes y amateurs.",
+
+    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c6e48ebe-af48-4b1d-99e7-0c4fcba9f94e/mercurial-vapor-15-club-multi-ground-football-boot-W0dFfc.png",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 54.99,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/w?q=mercurial+vapor+15+club&vst=mercurial+vapor+15+club", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+club+fg", precio_actual: 49.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=nike+mercurial+vapor+15+club", precio_actual: 0, disponible: false, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 15. ADIDAS PREDATOR CLUB — Predator económica
+  // ───────────────────────────────────────────────
+  {
+    id: "adidas-predator-club",
+    slug: "adidas-predator-club",
+    marca: "Adidas",
+    modelo: "Predator Club",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Controlskin zones (reducidas)", "Classic outsole FG/AG", "Textile upper"],
+    peso_real_g: 270,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 6,
+      control_balon: 8,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 6,
+      durabilidad: 8,
+      confort: 7,
+    },
+    categoria_principal: "control",
+    tags: ["economica", "control", "fg", "ag", "presupuesto", "predator"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "defensa"],
+      peso_jugador_kg: [60, 90],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "La Predator Club trae la filosofía de control de la línea Predator a un precio de entrada. Las zonas Controlskin están presentes aunque reducidas, y la horma normal hace que encaje con la mayoría de pies. Una opción sólida para centrocampistas técnicos con presupuesto ajustado.",
+    pros: [
+      "Precio muy accesible para el perfil Predator (~45€)",
+      "Zonas Controlskin reales — control de balón superior al rango de precio",
+      "Horma normal — apta para la mayoría de pies",
+      "Durabilidad excelente para el precio",
+    ],
+    contras: [
+      "Sin placa de carbono ni insole premium",
+      "Más pesada que versiones superiores",
+      "Controlskin reducida frente a la Elite",
+    ],
+    veredicto:
+      "La mejor opción de control por debajo de 50€. Para mediocampistas y técnicos con presupuesto limitado que quieren algo del DNA Predator sin pagar precio élite.",
+
+    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2a97cf9e4e4a4b7b9f64afab00f5e2c1_9366/Predator_Club_Flexible_Ground_Boots_Black_IG5427_01_standard.jpg",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 44.99,
+    links_compra: [
+      { tienda: "adidas_es", url: "https://www.adidas.es/predator-club-fg", precio_actual: 44.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+predator+club+fg", precio_actual: 39.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=adidas+predator+club", precio_actual: 44.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 16. MIZUNO MORELIA NEO III BETA JP — Cuero japonés premium
+  // ───────────────────────────────────────────────
+  {
+    id: "mizuno-morelia-neo-iii-beta-jp",
+    slug: "mizuno-morelia-neo-iii-beta-jp",
+    marca: "Mizuno",
+    modelo: "Morelia Neo III Beta JP",
+    año_lanzamiento: 2022,
+    genero: "unisex",
+    tecnologia_clave: ["Kangaroo leather upper", "WAVE plate", "P1 last construction", "Dual insole"],
+    peso_real_g: 180,
+    horma: "estrecha",
+    superficies_compatibles: ["fg"],
+    material_superior: "cuero",
+
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 6,
+      control_balon: 9,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 9,
+      durabilidad: 8,
+      confort: 9,
+    },
+    categoria_principal: "control",
+    tags: ["cuero-canguro", "japonesa", "fg", "ligera", "artesanal", "delantero-tecnico"],
+
+    ideal_para: {
+      posiciones: ["delantero", "mediapunta", "extremo", "mediocentro"],
+      peso_jugador_kg: [55, 80],
+      estilos: ["tecnico", "velocidad"],
+      superficies: ["fg"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia"],
+      lesiones: ["tobillos"],
+    },
+
+    resumen:
+      "La Morelia Neo III Beta JP es la versión japonesa de exportación directa de Mizuno, con cuero de canguro de mayor calidad que la versión occidental. Ligera, artesanal y con un tacto de balón que pocos materiales en el mundo pueden igualar. Hecha para delanteros y mediapuntas técnicos que juegan en hierba natural.",
+    pros: [
+      "Cuero de canguro seleccionado — versión JP de mayor calidad",
+      "Peso excepcional para ser de cuero (180g)",
+      "Tacto de balón único — muy valorada por técnicos",
+      "Construcción artesanal japonesa de altísimo nivel",
+    ],
+    contras: [
+      "Solo FG — no compatible con AG ni TF",
+      "Horma estrecha — descartada para pies anchos",
+      "Disponibilidad muy limitada en España",
+      "Precio de importación elevado",
+    ],
+    veredicto:
+      "Para el purista del fútbol que quiere lo mejor en cuero japonés. Si juegas en hierba natural, tienes pie estrecho y valoras la artesanía, la Morelia Neo III Beta JP es una de las botas más especiales del mercado.",
+
+    imagen_principal: "https://shop.mizuno.com/dw/image/v2/BBDH_PRD/on/demandware.static/-/Sites-master-catalog/default/dw6e1b2c8d/images/large/P1GA206009_01_1.jpg",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 250,
+    links_compra: [
+      { tienda: "mizuno_es", url: "https://shop.mizuno.com/es/football/football-boots/morelia-neo/", precio_actual: 250.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=mizuno+morelia+neo+iii+beta+jp", precio_actual: 229.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 17. LOTTO MAESTRO 100 IV — Cuero italiano nicho
+  // ───────────────────────────────────────────────
+  {
+    id: "lotto-maestro-100-iv",
+    slug: "lotto-maestro-100-iv",
+    marca: "Lotto",
+    modelo: "Maestro 100 IV",
+    año_lanzamiento: 2022,
+    genero: "unisex",
+    tecnologia_clave: ["Full-grain leather upper", "Classic FG outsole", "OrthoLite insole"],
+    peso_real_g: 265,
+    horma: "normal",
+    superficies_compatibles: ["fg"],
+    material_superior: "cuero",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 7,
+      control_balon: 9,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 5,
+      durabilidad: 9,
+      confort: 9,
+    },
+    categoria_principal: "control",
+    tags: ["cuero", "italiana", "fg", "nicho", "clasica", "tecnico"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "defensa", "mediapunta"],
+      peso_jugador_kg: [65, 95],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg"],
+      lesiones_compatibles: ["fascia", "tobillos"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "La Lotto Maestro 100 IV es una joya italiana muy valorada en nichos de jugadores clásicos. Upper de cuero de grano completo con un confort que rivales más caros envidian, horma normal que encaja con la mayoría de pies y precio muy por debajo de las élites de Nike y Adidas. Discreta pero muy efectiva.",
+    pros: [
+      "Cuero de grano completo de calidad italiana",
+      "Precio muy razonable para cuero premium",
+      "Confort excepcional desde el primer día",
+      "Durabilidad superior a la media",
+    ],
+    contras: [
+      "Solo FG — no sirve en AG ni TF",
+      "Disponibilidad limitada fuera de Italia y mercados nicho",
+      "Sin tecnologías modernas de propulsión",
+      "Pesada para los estándares actuales",
+    ],
+    veredicto:
+      "Para el jugador que quiere calidad italiana de cuero sin pagar precios de Copa Pure o Tiempo Elite. Una bota de culto para conocedores que juegan en hierba y no necesitan velocidad.",
+
+    imagen_principal: "https://www.lotto-sport.com/media/catalog/product/cache/5bc3b6b7a01c0d8eaabb0f3b90e0a1c4/5/9/59c-213634_1.jpg",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 120,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=lotto+maestro+100+iv+fg", precio_actual: 109.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "idealo_es", url: "https://www.idealo.es/precios/lotto-maestro-100.html", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 18. KELME STAR 360 — Presupuesto bajo, popular en España
+  // ───────────────────────────────────────────────
+  {
+    id: "kelme-star-360",
+    slug: "kelme-star-360",
+    marca: "Kelme",
+    modelo: "Star 360",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Synthetic upper", "360 outsole FG", "EVA midsole"],
+    peso_real_g: 290,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 6,
+      control_balon: 6,
+      soporte_lateral: 6,
+      estabilidad: 7,
+      peso_score: 5,
+      durabilidad: 7,
+      confort: 7,
+    },
+    categoria_principal: "equilibrada",
+    tags: ["presupuesto", "espanola", "fg", "ag", "economica", "popular"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "defensa", "lateral", "portero"],
+      peso_jugador_kg: [60, 100],
+      estilos: ["equilibrado", "potencia"],
+      superficies: ["fg", "ag"],
+      lesiones_compatibles: ["rodillas"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "Kelme es una marca española con décadas de historia en el fútbol amateur y semiprofesional. La Star 360 ofrece todo lo básico que necesitas en una bota de fútbol a un precio difícilmente superable. Muy popular en ligas de empresa, veteranos y fútbol 7. La bota que llevan miles de jugadores en España.",
+    pros: [
+      "Precio imbatible (~30€) — la relación calidad-precio más alta del catálogo",
+      "Marca española con gran disponibilidad en tiendas nacionales",
+      "Confort suficiente para fútbol amateur",
+      "Funciona bien en FG y AG",
+    ],
+    contras: [
+      "Sin tecnologías modernas — básica en todo",
+      "No apta para alto rendimiento o semi-profesional",
+      "Peso elevado para los estándares actuales",
+      "Control de balón y tracción correctos pero no excepcionales",
+    ],
+    veredicto:
+      "Para el jugador amateur, veterano o de empresa que necesita una bota fiable sin gastar mucho. Si juegas los fines de semana y no quieres invertir más de 30€, la Kelme Star 360 cumple sobradamente.",
+
+    imagen_principal: "https://www.kelme.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/k/e/kelme-star-360-botas-futbol-fg.jpg",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 29.99,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=kelme+star+360+fg", precio_actual: 27.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=kelme+star+360", precio_actual: 29.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "sprinter_es", url: "https://www.sprinter.es/busqueda?q=kelme+star+360", precio_actual: 29.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 19. NIKE PHANTOM CLUB — Phantom económica
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-phantom-club",
+    slug: "nike-phantom-club",
+    marca: "Nike",
+    modelo: "Phantom Club",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Textured synthetic upper", "Classic FG/AG outsole", "Ghost Lace (simplificado)"],
+    peso_real_g: 255,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 6,
+      control_balon: 8,
+      soporte_lateral: 6,
+      estabilidad: 6,
+      peso_score: 6,
+      durabilidad: 7,
+      confort: 7,
+    },
+    categoria_principal: "control",
+    tags: ["economica", "control", "fg", "ag", "presupuesto", "phantom"],
+
+    ideal_para: {
+      posiciones: ["mediapunta", "mediocentro", "extremo"],
+      peso_jugador_kg: [55, 85],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia", "velocidad"],
+    },
+
+    resumen:
+      "La Phantom Club lleva la filosofía técnica de la familia Phantom a un precio de entrada. El upper texturizado hereda algo del DNA Gripknit en una versión más asequible, y la horma normal hace que sea cómoda para la mayoría. Ideal para mediapuntas y centrocampistas técnicos con presupuesto ajustado.",
+    pros: [
+      "Precio accesible (~55€) para el perfil Phantom técnico",
+      "Upper texturizado — mejor control que uppers lisos del rango de precio",
+      "Horma normal — apta para la mayoría",
+      "Disponible FG y AG",
+    ],
+    contras: [
+      "Sin Gripknit ni ACC de las versiones Elite",
+      "Más pesada que las versiones superiores",
+      "No equiparable al rendimiento de la Phantom GX2 Elite",
+    ],
+    veredicto:
+      "La puerta de entrada al mundo Phantom para técnicos con presupuesto. No iguala a la Elite pero ofrece el perfil correcto a una fracción del precio. Para jugadores jóvenes y amateurs técnicos.",
+
+    imagen_principal: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c36b8f7f-9b22-461e-8e76-1d0e2a6fdc87/phantom-gx-club-fg-mg-football-boot-dZJMjw.png",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 54.99,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/w?q=phantom+club+fg&vst=phantom+club+fg", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+club+fg", precio_actual: 49.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "jd_sports_es", url: "https://www.jdsports.es/search/nike+phantom+club", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 20. ADIDAS COPA PURE .1 — Copa cuero premium
+  // ───────────────────────────────────────────────
+  {
+    id: "adidas-copa-pure-1",
+    slug: "adidas-copa-pure-1",
+    marca: "Adidas",
+    modelo: "Copa Pure .1",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Kangaroo leather upper", "SKYSENSOR insole", "OrthoLite sockliner", "Mono-tongue design"],
+    peso_real_g: 230,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "cuero",
+
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 7,
+      control_balon: 10,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 7,
+      durabilidad: 9,
+      confort: 10,
+    },
+    categoria_principal: "control",
+    tags: ["cuero-canguro", "clasica", "fg", "ag", "tecnico", "mediocampista", "confort"],
+
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "defensa"],
+      peso_jugador_kg: [65, 95],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg", "ag"],
+      lesiones_compatibles: ["fascia", "tobillos"],
+    },
+    no_recomendada_para: {
+      estilos: ["velocidad"],
+    },
+
+    resumen:
+      "La Copa Pure .1 es la versión anterior de la Copa Pure 2 Elite, pero con cuero de canguro de igual calidad y precio algo más ajustado. Confort de 10 sobre 10, tacto de balón insuperable y una horma normal que encaja con casi cualquier pie. La bota de referencia para técnicos y mediocampistas que valoran el cuero.",
+    pros: [
+      "Cuero de canguro premium — confort y tacto excepcionales (10/10)",
+      "Compatible con FG y AG — más versátil que la Copa Pure 2",
+      "Precio algo más ajustado que la Copa Pure 2 Elite",
+      "Horma normal — para la mayoría de pies",
+    ],
+    contras: [
+      "Generación anterior a la Copa Pure 2 Elite",
+      "No la más ligera del mercado",
+      "El cuero natural requiere mantenimiento",
+    ],
+    veredicto:
+      "Si la Copa Pure 2 Elite se sale del presupuesto, la Copa Pure .1 ofrece prácticamente la misma experiencia de cuero y tacto a un precio algo menor. La opción perfecta para técnicos que priorizan confort y precisión.",
+
+    imagen_principal: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9f6b7d5c8b3a4e2da1f0af1e00c7a9b2_9366/Copa_Pure.1_Firm_Ground_Boots_White_GZ2520_01_standard.jpg",
+    imagenes: [],
+
+    fuentes: [
+      { tipo: "football-boots-guru", url: "https://www.football-boots-guru.com/adidas-copa-pure-1-review/" },
+    ],
+    ultima_actualizacion: "2026-05-19",
+
+    precio_msrp_eur: 200,
+    links_compra: [
+      { tienda: "adidas_es", url: "https://www.adidas.es/copa-pure-1-fg", precio_actual: 200.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+1+fg", precio_actual: 179.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "zalando_es", url: "https://www.zalando.es/adidas-copa-pure/", precio_actual: 190.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
     ],
   },
 ];
