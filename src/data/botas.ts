@@ -57,7 +57,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Si eres extremo o delantero con pie estrecho, juegas en hierba y tu prioridad es la velocidad, es la referencia del mercado. Para pies anchos o superficies duras, busca otra opción.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Mercurial+Superfly+10",
+    imagen_principal: "https://m.media-amazon.com/images/I/71YFHNS7EgL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -129,7 +129,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para cualquier jugador técnico que priorice control en el pase y disparo. Mediapuntas y centrocampistas la adorarán. Si tu fútbol es más de velocidad pura, mira las Mercurial.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Predator+24+Elite",
+    imagen_principal: "https://m.media-amazon.com/images/I/51SuO-iJYlL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -200,7 +200,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador clásico que valora confort y durabilidad sobre velocidad. Si eres mediocentro o defensa y juegas en hierba natural, la Copa Pure 2 es difícilmente superable en comodidad.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Copa+Pure+2+Elite",
+    imagen_principal: "https://m.media-amazon.com/images/I/51thhjFxQnL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -271,7 +271,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La opción Nike para jugadores técnicos que no quieren sacrificar velocidad. Perfecta para mediapuntas y extremos técnicos. Si eres más de velocidad pura, la Mercurial sigue siendo mejor.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Phantom+GX+2+Elite",
+    imagen_principal: "https://m.media-amazon.com/images/I/71z5uqaMhcL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -341,7 +341,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La mejor opción para jugadores versátiles que mezclan estilos. Si no sabes exactamente qué necesitas, la Future 7 rara vez decepciona. La banda adaptativa es un plus real para pies difíciles.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+Future+7+Ultimate",
+    imagen_principal: "https://m.media-amazon.com/images/I/71GECgkNA6L._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -413,7 +413,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Ideal si buscas velocidad pero encuentras la Mercurial demasiado estrecha. Ofrece 90% del rendimiento de la Mercurial a un precio más razonable y con una horma más amigable.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=New+Balance+Furon+V7+Pro",
+    imagen_principal: "https://m.media-amazon.com/images/I/61k4zK6PuLL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -486,7 +486,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el futbolero purista que juega solo en hierba natural y valora la artesanía por encima de todo. Si puedes permitirte el precio y tienes el pie estrecho, es una experiencia única.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Mizuno+Morelia+Neo+IV",
+    imagen_principal: "https://m.media-amazon.com/images/I/41akE-8s5HL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -557,7 +557,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Perfecta para porteros, defensas y centrocampistas que priorizan durabilidad y protección. Si pesas más de 80kg o tienes molestias en las rodillas, es una de las mejores opciones del mercado.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Under+Armour+Magnetico+Pro+3",
+    imagen_principal: "https://m.media-amazon.com/images/I/61idhu5XEpL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -630,7 +630,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Solo para extremos y delanteros con pie estrecho cuyo único objetivo es ser los más rápidos en el campo. Si tienes alguna molestia articular o pie ancho, elige otra bota.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+X+Crazyfast.1",
+    imagen_principal: "https://m.media-amazon.com/images/I/61zgBZashPL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -702,7 +702,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para defensas, porteros y centrocampistas con pie ancho que buscan comodidad y durabilidad en hierba natural. Si tienes el pie ancho y nadie más encaja, la King es tu bota.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+King+Platinum+21",
+    imagen_principal: "https://m.media-amazon.com/images/I/41+pq+cMSkL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -775,7 +775,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para mediocentros y defensas que quieren la sensación clásica del cuero con tecnología moderna. Si valoras el tacto natural por encima de la velocidad, la Tiempo Legend 10 Elite es la respuesta de Nike.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Tiempo+Legend+10+Elite",
+    imagen_principal: "https://m.media-amazon.com/images/I/71SEqpgFpEL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -848,7 +848,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Alternativa más asequible a la X Crazyfast.1 para extremos y delanteros que buscan velocidad pura con placa de carbono. Si la Crazyfast se sale del presupuesto, la Speedportal.1 ofrece experiencia similar a menor precio.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+X+Speedportal.1",
+    imagen_principal: "https://m.media-amazon.com/images/I/61zgBZashPL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -920,7 +920,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La alternativa Puma a la Copa Pure para técnicos que juegan en hierba natural. Si ya tienes la Copa y quieres explorar otra marca con la misma filosofía, la King Platinum es tu opción.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+King+Platinum+21+FG",
+    imagen_principal: "https://m.media-amazon.com/images/I/41+pq+cMSkL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -992,7 +992,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La entrada perfecta al mundo Mercurial para jugadores con presupuesto ajustado. No iguala a la Elite, pero ofrece el perfil de velocidad a una fracción del precio. Ideal para jóvenes y amateurs.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Mercurial+Vapor+15+Club",
+    imagen_principal: "https://m.media-amazon.com/images/I/71iEz3580zL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1063,7 +1063,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La mejor opción de control por debajo de 50€. Para mediocampistas y técnicos con presupuesto limitado que quieren algo del DNA Predator sin pagar precio élite.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Predator+Club",
+    imagen_principal: "https://m.media-amazon.com/images/I/61PsciNHLUL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1137,7 +1137,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el purista del fútbol que quiere lo mejor en cuero japonés. Si juegas en hierba natural, tienes pie estrecho y valoras la artesanía, la Morelia Neo III Beta JP es una de las botas más especiales del mercado.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Mizuno+Morelia+Neo+III+JP",
+    imagen_principal: "https://m.media-amazon.com/images/I/61ZY8WrPCUL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1209,7 +1209,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador que quiere calidad italiana de cuero sin pagar precios de Copa Pure o Tiempo Elite. Una bota de culto para conocedores que juegan en hierba y no necesitan velocidad.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Lotto+Maestro+100+IV",
+    imagen_principal: "https://m.media-amazon.com/images/I/61v+rvZo+1L._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1281,7 +1281,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador amateur, veterano o de empresa que necesita una bota fiable sin gastar mucho. Si juegas los fines de semana y no quieres invertir más de 30€, la Kelme Star 360 cumple sobradamente.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Kelme+Star+360",
+    imagen_principal: "https://m.media-amazon.com/images/I/71pLl1s-6eL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1353,7 +1353,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La puerta de entrada al mundo Phantom para técnicos con presupuesto. No iguala a la Elite pero ofrece el perfil correcto a una fracción del precio. Para jugadores jóvenes y amateurs técnicos.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Phantom+Club",
+    imagen_principal: "https://m.media-amazon.com/images/I/71B8c5-NZ-L._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1425,7 +1425,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Si la Copa Pure 2 Elite se sale del presupuesto, la Copa Pure .1 ofrece prácticamente la misma experiencia de cuero y tacto a un precio algo menor. La opción perfecta para técnicos que priorizan confort y precisión.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Copa+Pure+.1",
+    imagen_principal: "https://m.media-amazon.com/images/I/61dxCaVWqNL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1495,7 +1495,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Una de las mejores opciones españolas para mediocampistas técnicos con presupuesto ajustado. Si juegas en hierba y valoras técnica a buen precio, la Joma Propulsion Cup es una apuesta segura.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Joma+Propulsion+Cup+FG",
+    imagen_principal: "https://m.media-amazon.com/images/I/71z1227FcVL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1565,7 +1565,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "El clásico del fútbol amateur español. Si juegas en ligas locales y quieres una bota fiable, con estilo y sin complicaciones, la Munich G-3 es una elección infalible.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Munich+G-3+FG",
+    imagen_principal: "https://m.media-amazon.com/images/I/71kaKlkZfnL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1636,7 +1636,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador técnico que quiere calidad italiana de cuero sin pagar precios de Copa Pure o Tiempo Elite. Una bota de culto para conocedores que juegan en hierba y priorizan confort y tacto.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Diadora+Brasil+Elite+2",
+    imagen_principal: "https://m.media-amazon.com/images/I/71bsTEfGdAL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1706,7 +1706,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "El punto dulce de la gama Mercurial. Si quieres velocidad real con ACC y placa propulsora sin pagar precio élite, la Vapor 15 Pro es la elección perfecta para extremos y delanteros.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Mercurial+Vapor+15+Pro",
+    imagen_principal: "https://m.media-amazon.com/images/I/51FCaw0bbUL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1777,7 +1777,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La entrada al mundo Copa para jugadores técnicos con presupuesto. No iguala a la Copa Pure 2 Elite pero ofrece el perfil correcto a una fracción del precio. Ideal para amateurs técnicos.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Adidas+Copa+Pure+2.3+FG",
+    imagen_principal: "https://m.media-amazon.com/images/I/61dxCaVWqNL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1849,7 +1849,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La opción de velocidad de Puma para presupuesto intermedio. Si buscas velocidad con el sello Puma sin pagar precio élite, la Ultra 5 Pro ofrece muy buen rendimiento a 100€.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Puma+Ultra+5+Pro+FG",
+    imagen_principal: "https://m.media-amazon.com/images/I/61S6wM9p1tL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1921,7 +1921,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La opción Nike técnica por excelencia por debajo de 70€. Para mediapuntas y centrocampistas jóvenes o amateurs que quieren el ADN Phantom sin el desembolso de la Elite.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Nike+Phantom+GX+2+Academy",
+    imagen_principal: "https://m.media-amazon.com/images/I/71B8c5-NZ-L._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1993,7 +1993,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Para el jugador técnico que quiere una alternativa clásica con tradición británica. La Umbro Tocco III Pro ofrece buen tacto y confort a un precio razonable para hierba natural.",
 
-    imagen_principal: "https://placehold.co/400x300/0a1f0f/84cc16?text=Umbro+Tocco+III+Pro+FG",
+    imagen_principal: "https://m.media-amazon.com/images/I/718l7+LRrRL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
