@@ -1,0 +1,343 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Tus 5 botas · Campo"
+  description="Las 5 botas de fútbol que mejor encajan con tu perfil."
+>
+  <main class="min-h-screen text-white">
+    <!-- Header -->
+    <header class="px-6 py-5 border-b border-zinc-800/60 bg-[#0c0c0c]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">
+          CAMPO<span class="text-orange-500">.</span>
+        </a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
+        </nav>
+      </div>
+    </header>
+
+    <noscript>
+      <div class="px-6 py-20 text-center max-w-2xl mx-auto">
+        <p class="text-orange-500 font-black uppercase tracking-widest text-xs mb-4">⚠ JavaScript requerido</p>
+        <p class="text-zinc-400 mb-6">Esta página necesita JavaScript para mostrar tus resultados. Actívalo y recarga.</p>
+        <a href="/quiz" class="inline-block px-6 py-3 bg-orange-500 text-zinc-950 font-black uppercase tracking-wider">← Ir al quiz</a>
+      </div>
+    </noscript>
+
+    <!-- Estado: sin respuestas -->
+    <section id="estado-sin-respuestas" class="hidden px-6 py-20">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ Falta el quiz</p>
+        <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase mb-6">
+          Primero el quiz, luego los resultados.
+        </h1>
+        <p class="text-zinc-400 mb-8">
+          Necesitamos saber cómo juegas para recomendarte algo que valga la pena. Son 8 preguntas, menos de un minuto.
+        </p>
+        <a
+          href="/quiz"
+          class="inline-block px-8 py-4 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider transition-all shadow-[4px_4px_0_0_rgb(250,204,21)]"
+        >
+          → Empezar el quiz
+        </a>
+      </div>
+    </section>
+
+    <!-- Estado: con resultados -->
+    <section id="estado-resultados" class="hidden px-6 py-16">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-12">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ Tus resultados</p>
+          <h1 class="text-4xl md:text-6xl font-black tracking-tight uppercase mb-6 leading-[0.95]">
+            Tus <span class="text-orange-500">5 botas</span><br />ideales
+          </h1>
+          <p class="text-zinc-400 max-w-2xl">
+            Ordenadas por compatibilidad técnica con tu perfil. Las 5 son buenas opciones — elige la que más te entre por la vista.
+          </p>
+          <div id="resumen-perfil" class="flex flex-wrap gap-2 mt-6"></div>
+        </div>
+
+        <div id="recomendaciones" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+        <div id="estado-vacio" class="hidden text-center py-20">
+          <p class="text-5xl mb-4">🤔</p>
+          <p class="text-xl font-bold text-white mb-2">Sin resultados exactos</p>
+          <p class="text-zinc-400 text-sm mb-6">Tus criterios son muy específicos. Prueba a relajar algún filtro.</p>
+          <a href="/quiz" class="bg-orange-500 hover:bg-orange-400 text-white font-bold px-6 py-3 inline-block transition-colors">Repetir quiz</a>
+        </div>
+
+        <div class="text-center mt-12 py-8 border-t border-zinc-800">
+          <p class="text-zinc-400 text-sm mb-4">¿No encuentras exactamente lo que buscas?</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href="/botas" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-5 py-2.5 text-sm transition-colors">
+              Ver catálogo completo
+            </a>
+            <a href="/comparar" class="border border-zinc-700 hover:border-orange-500 text-zinc-300 hover:text-orange-400 font-bold px-5 py-2.5 text-sm transition-colors">
+              Comparar botas
+            </a>
+            <a href="/quiz" class="text-zinc-500 hover:text-zinc-300 font-bold px-5 py-2.5 text-sm underline">
+              Repetir quiz
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-16 flex flex-wrap gap-4 justify-center items-center">
+          <a id="cta-comparar-top3" href="#" class="hidden px-6 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(250,204,21)]">
+            Comparar las 3 primeras →
+          </a>
+          <a href="/quiz" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">
+            ↻ Rehacer quiz
+          </a>
+          <a href="/metodologia" class="px-6 py-3 text-zinc-500 hover:text-white font-bold uppercase tracking-widest text-xs transition-colors">
+            ¿Cómo calculamos esto?
+          </a>
+          <button id="btn-compartir" type="button" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">
+            🔗 Compartir
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-10 bg-black border-t-4 border-orange-500">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></a>
+        <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
+          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+        </nav>
+        <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    import { recomendar } from "../lib/scoring";
+    import { botas } from "../data/botas";
+    import type { RespuestasQuiz, Recomendacion } from "../lib/types";
+
+    const STORAGE_KEY = "campo-quiz-respuestas";
+
+    const LABELS_POSICION: Record<string, string> = {
+      portero: "🧤 Portero",
+      defensa: "🛡️ Defensa",
+      lateral: "↔️ Lateral",
+      mediocentro: "⚙️ Mediocentro",
+      mediapunta: "🎯 Mediapunta",
+      extremo: "⚡ Extremo",
+      delantero: "🥅 Delantero",
+    };
+    const LABELS_PESO: Record<string, string> = {
+      "menos-60": "< 60 kg",
+      "60-75": "60-75 kg",
+      "75-90": "75-90 kg",
+      "mas-90": "+90 kg",
+    };
+    const LABELS_ESTILO: Record<string, string> = {
+      velocidad: "⚡ Velocidad",
+      tecnico: "🎯 Técnico",
+      potencia: "💪 Potencia",
+      equilibrado: "⚖️ Equilibrado",
+    };
+    const LABELS_SUPERFICIE: Record<string, string> = {
+      fg: "🌿 FG — Hierba natural",
+      ag: "🏟️ AG — Artificial",
+      sg: "🌧️ SG — Barro/lluvia",
+      in: "🏢 IN — Interior",
+      tf: "🔸 TF — Turf",
+    };
+    const LABELS_LESION: Record<string, string> = {
+      rodillas: "🦵 Rodillas",
+      tobillos: "🦶 Tobillos",
+      fascia: "👣 Fascia",
+    };
+    const LABELS_PRIORIDAD: Record<string, string> = {
+      agarre: "🔒 Agarre",
+      velocidad: "⚡ Velocidad",
+      control: "🎯 Control",
+      durabilidad: "🪨 Durabilidad",
+      precio: "💰 Mejor precio",
+    };
+    const LABELS_TIENDA: Record<string, string> = {
+      amazon_es: "Amazon",
+      decathlon: "Decathlon",
+      nike_es: "Nike",
+      adidas_es: "Adidas",
+      puma_es: "Puma",
+      ua_es: "Under Armour",
+      nb_es: "New Balance",
+      mizuno_es: "Mizuno",
+      footlocker_es: "Foot Locker",
+      jd_sports_es: "JD Sports",
+      zalando_es: "Zalando",
+      sprinter_es: "Sprinter",
+      idealo_es: "Idealo",
+    };
+
+    function escapeHtml(s: string): string {
+      const div = document.createElement("div");
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function renderResumen(r: RespuestasQuiz): string {
+      const chips: string[] = [];
+      chips.push(
+        LABELS_POSICION[r.posicion],
+        LABELS_PESO[r.peso],
+        LABELS_ESTILO[r.estilo],
+        LABELS_SUPERFICIE[r.superficie],
+        LABELS_PRIORIDAD[r.prioridad],
+      );
+      if (r.lesiones.length > 0) {
+        chips.push(...r.lesiones.map((l) => LABELS_LESION[l]));
+      }
+      if (r.presupuesto_max_eur !== null) {
+        chips.push(`≤ ${r.presupuesto_max_eur}€`);
+      } else {
+        chips.push("Sin tope");
+      }
+
+      return chips
+        .filter(Boolean)
+        .map(
+          (c) => `<span class="inline-flex items-center px-3 py-1 bg-zinc-900 border border-zinc-800 text-xs font-bold uppercase tracking-wider text-zinc-300">${escapeHtml(c)}</span>`
+        )
+        .join("");
+    }
+
+    function colorMatchPct(pct: number): string {
+      if (pct >= 80) return "text-orange-500";
+      if (pct >= 65) return "text-yellow-400";
+      return "text-zinc-400";
+    }
+
+    function renderCard(rec: Recomendacion, rank: number): string {
+      const b = rec.bota;
+      const matchColor = colorMatchPct(rec.match_pct);
+      const mejorPrecio = rec.mejor_precio;
+      const precioActual = mejorPrecio?.precio_actual ?? b.precio_msrp_eur;
+      const tiendaNombre = mejorPrecio
+        ? LABELS_TIENDA[mejorPrecio.tienda] || mejorPrecio.tienda
+        : "";
+
+      const razonesHtml = rec.razones
+        .map(
+          (r) => `<li class="flex gap-2 text-sm text-zinc-300"><span class="text-orange-500 font-black">✓</span><span>${escapeHtml(r)}</span></li>`
+        )
+        .join("");
+
+      const fichaHref = `/bota/${escapeHtml(b.slug)}`;
+      const ctaHref = mejorPrecio?.url ?? fichaHref;
+      const ctaLabel = mejorPrecio ? `Ver en ${tiendaNombre} →` : `Ver ficha →`;
+
+      return `
+        <article class="bg-zinc-900 border-2 border-zinc-800 hover:border-orange-500 transition-all flex flex-col">
+          <a href="${fichaHref}" class="relative block group">
+            <img
+              src="${escapeHtml(b.imagen_principal)}"
+              alt="${escapeHtml(b.marca + " " + b.modelo)}"
+              class="w-full aspect-[4/3] object-contain p-4 bg-gradient-to-b from-zinc-800 to-zinc-900"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='/placeholder-boot.svg'"
+            />
+            <span class="absolute top-3 left-3 px-3 py-1 bg-zinc-950 border border-orange-500 text-orange-500 text-xs font-black uppercase tracking-widest">
+              #${rank}
+            </span>
+            <span class="absolute top-3 right-3 px-3 py-1 bg-yellow-400 text-zinc-950 text-xs font-black uppercase tracking-widest">
+              ${rec.match_pct}% match
+            </span>
+          </a>
+
+          <div class="p-5 flex flex-col flex-1 gap-4">
+            <a href="${fichaHref}" class="group">
+              <p class="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-1">${escapeHtml(b.marca)}</p>
+              <h2 class="text-2xl font-black uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
+                ${escapeHtml(b.modelo)}
+              </h2>
+            </a>
+
+            <ul class="flex flex-col gap-2">${razonesHtml}</ul>
+
+            <div class="mt-auto pt-4 border-t border-zinc-800 flex items-end justify-between gap-3">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Mejor precio</p>
+                <p class="text-2xl font-black ${matchColor}">${precioActual}€</p>
+                ${tiendaNombre ? `<p class="text-xs text-zinc-500 uppercase tracking-wider">en ${escapeHtml(tiendaNombre)}</p>` : ""}
+              </div>
+              <div class="flex flex-col gap-2 items-end">
+                ${mejorPrecio ? `
+                <a href="${escapeHtml(ctaHref)}" target="_blank" rel="noopener noreferrer sponsored"
+                  class="px-4 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors shadow-[3px_3px_0_0_rgb(250,204,21)]">
+                  ${escapeHtml(ctaLabel)}
+                </a>
+                <a href="${fichaHref}" class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 hover:text-orange-500 transition-colors">Ver ficha →</a>
+                ` : `
+                <a href="${fichaHref}" class="px-4 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors shadow-[3px_3px_0_0_rgb(250,204,21)]">
+                  Ver ficha →
+                </a>`}
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    const raw = sessionStorage.getItem(STORAGE_KEY);
+
+    if (!raw) {
+      document.getElementById("estado-sin-respuestas")!.classList.remove("hidden");
+    } else {
+      try {
+        const respuestas = JSON.parse(raw) as RespuestasQuiz;
+        const recomendaciones = recomendar(respuestas, botas, 5);
+
+        document.getElementById("estado-resultados")!.classList.remove("hidden");
+        document.getElementById("resumen-perfil")!.innerHTML = renderResumen(respuestas);
+
+        const $list = document.getElementById("recomendaciones")!;
+        const $empty = document.getElementById("estado-vacio")!;
+
+        if (recomendaciones.length === 0) {
+          $list.classList.add("hidden");
+          $empty.classList.remove("hidden");
+        } else {
+          $list.innerHTML = recomendaciones
+            .map((rec, idx) => renderCard(rec, idx + 1))
+            .join("");
+
+          if (recomendaciones.length >= 2) {
+            const topIds = recomendaciones.slice(0, 3).map((r) => r.bota.slug).join(",");
+            const $cta = document.getElementById("cta-comparar-top3") as HTMLAnchorElement;
+            $cta.href = `/comparar?ids=${topIds}`;
+            $cta.classList.remove("hidden");
+          }
+        }
+      } catch (err) {
+        console.error("Error parseando respuestas:", err);
+        document.getElementById("estado-sin-respuestas")!.classList.remove("hidden");
+      }
+    }
+
+    const $share = document.getElementById("btn-compartir");
+    if ($share) {
+      $share.addEventListener("click", () => {
+        const url = window.location.href;
+        if (navigator.share) {
+          navigator.share({ title: "Mis 5 botas · Campo", url });
+        } else {
+          navigator.clipboard.writeText(url).then(() => {
+            $share.textContent = "✓ Enlace copiado";
+            setTimeout(() => { $share.textContent = "🔗 Compartir"; }, 2000);
+          });
+        }
+      });
+    }
+  </script>
+</Base>

@@ -1,0 +1,483 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Quiz: Encuentra tus botas de fútbol ideales | CAMPO"
+  description="Quiz gratuito: responde 8 preguntas y te recomendamos las 5 botas de fútbol más compatibles con tu juego. Sin registro. Sin BS."
+>
+  <main class="min-h-screen text-white flex flex-col">
+    <!-- Header -->
+    <header class="px-6 py-5 border-b border-zinc-800/60 bg-[#0c0c0c]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">
+          CAMPO<span class="text-orange-500">.</span>
+        </a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
+          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Progress bar -->
+    <div class="px-6 py-4 border-b border-zinc-800 bg-zinc-950 sticky top-0 z-10">
+      <div class="max-w-2xl mx-auto">
+        <div class="flex items-center justify-between mb-2 text-xs font-bold uppercase tracking-widest">
+          <span id="quiz-step-label" class="text-orange-500">Pregunta 1 de 8</span>
+          <span id="quiz-step-percent" class="text-zinc-500">13%</span>
+        </div>
+        <div class="h-1.5 bg-zinc-800 overflow-hidden">
+          <div
+            id="quiz-progress"
+            class="h-full bg-orange-500 transition-all duration-300"
+            style="width: 13%;"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz steps -->
+    <section class="flex-1 px-6 py-12">
+      <div class="max-w-2xl mx-auto">
+
+        <!-- ─── STEP 1: Posición ─── -->
+        <div class="quiz-step" data-step="1">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 01 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            ¿En qué posición<br />juegas?
+          </h2>
+          <p class="text-zinc-400 mb-8">Elige la que mejor te describa.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button class="quiz-option" data-field="posicion" data-value="portero">
+              <span class="quiz-option-title">🧤 Portero</span>
+            </button>
+            <button class="quiz-option" data-field="posicion" data-value="defensa">
+              <span class="quiz-option-title">🛡️ Defensa</span>
+              <span class="quiz-option-sub">Central · CB</span>
+            </button>
+            <button class="quiz-option" data-field="posicion" data-value="lateral">
+              <span class="quiz-option-title">↔️ Lateral</span>
+              <span class="quiz-option-sub">Lateral izq/dcho · LB/RB</span>
+            </button>
+            <button class="quiz-option" data-field="posicion" data-value="mediocentro">
+              <span class="quiz-option-title">⚙️ Mediocentro</span>
+              <span class="quiz-option-sub">CM · DM · Box-to-box</span>
+            </button>
+            <button class="quiz-option" data-field="posicion" data-value="mediapunta">
+              <span class="quiz-option-title">🎯 Mediapunta</span>
+              <span class="quiz-option-sub">CAM · 10</span>
+            </button>
+            <button class="quiz-option" data-field="posicion" data-value="extremo">
+              <span class="quiz-option-title">⚡ Extremo</span>
+              <span class="quiz-option-sub">LW / RW · Banda</span>
+            </button>
+            <button class="quiz-option sm:col-span-2" data-field="posicion" data-value="delantero">
+              <span class="quiz-option-title">🥅 Delantero</span>
+              <span class="quiz-option-sub">Punta · CF · ST</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── STEP 2: Peso ─── -->
+        <div data-step="2" class="quiz-step hidden">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 02 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            ¿Cuánto pesas?
+          </h2>
+          <p class="text-zinc-400 mb-8">Influye en cuánta amortiguación y estabilidad necesitas.</p>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-option" data-field="peso" data-value="menos-60">
+              <span class="quiz-option-title">&lt; 60 kg</span>
+            </button>
+            <button class="quiz-option" data-field="peso" data-value="60-75">
+              <span class="quiz-option-title">60 – 75 kg</span>
+            </button>
+            <button class="quiz-option" data-field="peso" data-value="75-90">
+              <span class="quiz-option-title">75 – 90 kg</span>
+            </button>
+            <button class="quiz-option" data-field="peso" data-value="mas-90">
+              <span class="quiz-option-title">+ 90 kg</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── STEP 3: Estilo ─── -->
+        <div data-step="3" class="quiz-step hidden">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 03 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            ¿Cómo describirías<br />tu juego?
+          </h2>
+          <p class="text-zinc-400 mb-8">Sé honesto, no hay respuesta mala.</p>
+          <div class="grid grid-cols-1 gap-3">
+            <button class="quiz-option" data-field="estilo" data-value="velocidad">
+              <span class="quiz-option-title">⚡ Velocidad</span>
+              <span class="quiz-option-sub">Sprints, desborde, primer toque largo</span>
+            </button>
+            <button class="quiz-option" data-field="estilo" data-value="tecnico">
+              <span class="quiz-option-title">🎯 Técnico</span>
+              <span class="quiz-option-sub">Pase, toque, efecto, precisión</span>
+            </button>
+            <button class="quiz-option" data-field="estilo" data-value="potencia">
+              <span class="quiz-option-title">💪 Potencia</span>
+              <span class="quiz-option-sub">Duelos aéreos, físico, disparo fuerte</span>
+            </button>
+            <button class="quiz-option" data-field="estilo" data-value="equilibrado">
+              <span class="quiz-option-title">⚖️ Equilibrado</span>
+              <span class="quiz-option-sub">Mezclo todo según el partido</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── STEP 4: Superficie ─── -->
+        <div data-step="4" class="quiz-step hidden">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 04 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            ¿Dónde juegas<br />habitualmente?
+          </h2>
+          <p class="text-zinc-400 mb-8">La superficie cambia todo en las botas de fútbol.</p>
+          <div class="grid grid-cols-1 gap-3">
+            <button class="quiz-option" data-field="superficie" data-value="fg">
+              <span class="quiz-option-title">🌿 Hierba natural · FG</span>
+              <span class="quiz-option-sub">Campo de hierba real — tacos largos</span>
+            </button>
+            <button class="quiz-option" data-field="superficie" data-value="ag">
+              <span class="quiz-option-title">🏟️ Hierba artificial · AG</span>
+              <span class="quiz-option-sub">Césped sintético de 3ª/4ª generación</span>
+            </button>
+            <button class="quiz-option" data-field="superficie" data-value="sg">
+              <span class="quiz-option-title">🌧️ Barro / lluvia · SG</span>
+              <span class="quiz-option-sub">Hierba natural en mal estado, barro</span>
+            </button>
+            <button class="quiz-option" data-field="superficie" data-value="in">
+              <span class="quiz-option-title">🏢 Interior / Futsal · IN</span>
+              <span class="quiz-option-sub">Parqué, tatami, pabellón</span>
+            </button>
+            <button class="quiz-option" data-field="superficie" data-value="tf">
+              <span class="quiz-option-title">🔸 Turf · TF</span>
+              <span class="quiz-option-sub">Césped artificial corto / arena</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── STEP 5: Lesiones (multi) ─── -->
+        <div data-step="5" class="quiz-step hidden">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 05 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            ¿Alguna molestia<br />o lesión?
+          </h2>
+          <p class="text-zinc-400 mb-8">Puedes marcar varias. Si tienes alguna duda, elige "Ninguna".</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button class="quiz-option" data-field="lesiones" data-value="rodillas" data-multi="true">
+              <span class="quiz-option-title">🦵 Rodillas</span>
+            </button>
+            <button class="quiz-option" data-field="lesiones" data-value="tobillos" data-multi="true">
+              <span class="quiz-option-title">🦶 Tobillos</span>
+            </button>
+            <button class="quiz-option" data-field="lesiones" data-value="fascia" data-multi="true">
+              <span class="quiz-option-title">👣 Planta / fascia</span>
+            </button>
+            <button class="quiz-option" data-field="lesiones" data-value="ninguna" data-multi="true" data-exclusive="true">
+              <span class="quiz-option-title">🚫 Ninguna</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── STEP 6: Prioridad ─── -->
+        <div data-step="6" class="quiz-step hidden">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 06 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            Si tuvieras que elegir<br />UNA cosa...
+          </h2>
+          <p class="text-zinc-400 mb-8">La que más te importa por encima del resto.</p>
+          <div class="grid grid-cols-1 gap-3">
+            <button class="quiz-option" data-field="prioridad" data-value="agarre">
+              <span class="quiz-option-title">🔒 Agarre máximo</span>
+              <span class="quiz-option-sub">Tracción en arranques y frenadas</span>
+            </button>
+            <button class="quiz-option" data-field="prioridad" data-value="velocidad">
+              <span class="quiz-option-title">⚡ Velocidad</span>
+              <span class="quiz-option-sub">La más ligera posible</span>
+            </button>
+            <button class="quiz-option" data-field="prioridad" data-value="control">
+              <span class="quiz-option-title">🎯 Control de balón</span>
+              <span class="quiz-option-sub">Tacto, efecto, precisión en el pase</span>
+            </button>
+            <button class="quiz-option" data-field="prioridad" data-value="durabilidad">
+              <span class="quiz-option-title">🪨 Durabilidad</span>
+              <span class="quiz-option-sub">Que aguante mucho tiempo</span>
+            </button>
+            <button class="quiz-option" data-field="prioridad" data-value="precio">
+              <span class="quiz-option-title">💰 Mejor precio</span>
+              <span class="quiz-option-sub">Relación calidad-precio</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── STEP 7: Presupuesto ─── -->
+        <div data-step="7" class="quiz-step hidden">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 07 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            ¿Cuál es tu<br />presupuesto?
+          </h2>
+          <p class="text-zinc-400 mb-8">Filtramos lo que no encaje contigo.</p>
+          <div class="grid grid-cols-1 gap-3">
+            <button class="quiz-option" data-field="presupuesto_max_eur" data-value="80">
+              <span class="quiz-option-title">&lt; 80 €</span>
+              <span class="quiz-option-sub">Opciones de entrenamiento y amateur</span>
+            </button>
+            <button class="quiz-option" data-field="presupuesto_max_eur" data-value="150">
+              <span class="quiz-option-title">80 – 150 €</span>
+              <span class="quiz-option-sub">Gama media-alta, muy buenas opciones</span>
+            </button>
+            <button class="quiz-option" data-field="presupuesto_max_eur" data-value="220">
+              <span class="quiz-option-title">150 – 220 €</span>
+              <span class="quiz-option-sub">Gama premium, prestaciones top</span>
+            </button>
+            <button class="quiz-option" data-field="presupuesto_max_eur" data-value="null">
+              <span class="quiz-option-title">🤷 Sin tope</span>
+              <span class="quiz-option-sub">Quiero la mejor para mí, cueste lo que cueste</span>
+            </button>
+          </div>
+          <p class="text-xs text-zinc-500 mt-3">💡 La mayoría de botas de calidad están entre 150€ y 250€</p>
+        </div>
+
+        <!-- ─── STEP 8: Ancho de pie ─── -->
+        <div data-step="8" class="quiz-step hidden">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ 08 / 08</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight uppercase">
+            ¿Cómo es el<br />ancho de tu pie?
+          </h2>
+          <p class="text-zinc-400 mb-8">Muy importante en botas de fútbol — las hormas varían mucho entre marcas.</p>
+          <div class="grid grid-cols-1 gap-3">
+            <button class="quiz-option" data-field="ancho_pie" data-value="normal">
+              <span class="quiz-option-title">👟 Normal</span>
+              <span class="quiz-option-sub">La mayoría de botas te quedan bien</span>
+            </button>
+            <button class="quiz-option" data-field="ancho_pie" data-value="ancho">
+              <span class="quiz-option-title">🦶 Ancho</span>
+              <span class="quiz-option-sub">Las botas estrechas me aprietan — evito Nike Mercurial/Adidas X</span>
+            </button>
+            <button class="quiz-option" data-field="ancho_pie" data-value="no-se">
+              <span class="quiz-option-title">🤷 No sé</span>
+              <span class="quiz-option-sub">Ignora este filtro</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-between gap-4 mt-12">
+          <button
+            id="quiz-back"
+            type="button"
+            class="px-6 py-3 text-zinc-500 hover:text-white font-bold uppercase tracking-widest text-sm transition-colors disabled:opacity-0 disabled:pointer-events-none"
+            disabled
+          >
+            ← Atrás
+          </button>
+          <button
+            id="quiz-next"
+            type="button"
+            class="px-8 py-4 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider transition-all disabled:bg-zinc-800 disabled:text-zinc-600 disabled:cursor-not-allowed shadow-[4px_4px_0_0_rgb(250,204,21)] hover:shadow-[6px_6px_0_0_rgb(250,204,21)] disabled:shadow-none"
+            disabled
+          >
+            Continuar →
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style is:global>
+    @reference "../styles/global.css";
+
+    .quiz-option {
+      @apply text-left p-5 border-2 border-zinc-800 bg-zinc-900/50 hover:border-orange-500 hover:bg-zinc-900 transition-all cursor-pointer flex flex-col gap-1;
+    }
+    .quiz-option.is-selected {
+      @apply border-orange-500 bg-orange-500/10 shadow-[3px_3px_0_0_rgb(250,204,21)];
+    }
+    .quiz-option-title {
+      @apply font-black uppercase text-xl tracking-tight;
+    }
+    .quiz-option-sub {
+      @apply text-zinc-400 text-xs uppercase tracking-wider;
+    }
+
+    @keyframes quizSlideIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .quiz-step:not(.hidden) {
+      animation: quizSlideIn 0.25s ease both;
+    }
+  </style>
+
+  <script>
+    type Estado = {
+      posicion: string | null;
+      peso: string | null;
+      estilo: string | null;
+      superficie: string | null;
+      lesiones: string[];
+      prioridad: string | null;
+      presupuesto_max_eur: number | null | undefined;
+      ancho_pie: string | null;
+    };
+
+    const STORAGE_KEY = "campo-quiz-respuestas";
+    const TOTAL_STEPS = 8;
+    let currentStep = 1;
+    const state: Estado = {
+      posicion: null,
+      peso: null,
+      estilo: null,
+      superficie: null,
+      lesiones: [],
+      prioridad: null,
+      presupuesto_max_eur: undefined,
+      ancho_pie: null,
+    };
+
+    const $progress = document.getElementById("quiz-progress")!;
+    const $stepLabel = document.getElementById("quiz-step-label")!;
+    const $stepPercent = document.getElementById("quiz-step-percent")!;
+    const $back = document.getElementById("quiz-back") as HTMLButtonElement;
+    const $next = document.getElementById("quiz-next") as HTMLButtonElement;
+    const $steps = document.querySelectorAll<HTMLDivElement>(".quiz-step");
+    const $options = document.querySelectorAll<HTMLButtonElement>(".quiz-option");
+
+    function showStep(step: number) {
+      $steps.forEach((el) => {
+        const num = parseInt(el.dataset.step!, 10);
+        el.classList.toggle("hidden", num !== step);
+      });
+
+      const pct = Math.round((step / TOTAL_STEPS) * 100);
+      $progress.style.width = `${pct}%`;
+      $stepLabel.textContent = `Pregunta ${step} de ${TOTAL_STEPS}`;
+      $stepPercent.textContent = `${pct}%`;
+
+      $back.disabled = step === 1;
+
+      if (step === TOTAL_STEPS) {
+        $next.textContent = "Ver mis 5 botas →";
+      } else {
+        $next.textContent = "Continuar →";
+      }
+
+      updateNextButton();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function isStepComplete(step: number): boolean {
+      switch (step) {
+        case 1: return state.posicion !== null;
+        case 2: return state.peso !== null;
+        case 3: return state.estilo !== null;
+        case 4: return state.superficie !== null;
+        case 5: return state.lesiones.length > 0;
+        case 6: return state.prioridad !== null;
+        case 7: return state.presupuesto_max_eur !== undefined;
+        case 8: return state.ancho_pie !== null;
+        default: return false;
+      }
+    }
+
+    function updateNextButton() {
+      $next.disabled = !isStepComplete(currentStep);
+    }
+
+    function refreshSelections() {
+      $options.forEach((btn) => {
+        const field = btn.dataset.field!;
+        const value = btn.dataset.value!;
+        let selected = false;
+
+        if (field === "lesiones") {
+          selected = state.lesiones.includes(value);
+        } else if (field === "presupuesto_max_eur") {
+          if (value === "null") {
+            selected = state.presupuesto_max_eur === null;
+          } else {
+            selected = state.presupuesto_max_eur === parseInt(value, 10);
+          }
+        } else {
+          selected = state[field as keyof typeof state] === value;
+        }
+
+        btn.classList.toggle("is-selected", selected);
+      });
+    }
+
+    $options.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const field = btn.dataset.field!;
+        const value = btn.dataset.value!;
+        const isMulti = btn.dataset.multi === "true";
+        const isExclusive = btn.dataset.exclusive === "true";
+
+        if (field === "lesiones") {
+          if (isExclusive) {
+            if (state.lesiones.includes("ninguna")) {
+              state.lesiones = [];
+            } else {
+              state.lesiones = ["ninguna"];
+            }
+          } else {
+            state.lesiones = state.lesiones.filter((l) => l !== "ninguna");
+            if (state.lesiones.includes(value)) {
+              state.lesiones = state.lesiones.filter((l) => l !== value);
+            } else {
+              state.lesiones.push(value);
+            }
+          }
+        } else if (field === "presupuesto_max_eur") {
+          state.presupuesto_max_eur = value === "null" ? null : parseInt(value, 10);
+        } else {
+          (state as any)[field] = value;
+        }
+
+        refreshSelections();
+        updateNextButton();
+      });
+    });
+
+    $back.addEventListener("click", () => {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    $next.addEventListener("click", () => {
+      if (!isStepComplete(currentStep)) return;
+
+      if (currentStep < TOTAL_STEPS) {
+        currentStep++;
+        showStep(currentStep);
+      } else {
+        submit();
+      }
+    });
+
+    function submit() {
+      const respuestas = {
+        posicion: state.posicion,
+        peso: state.peso,
+        estilo: state.estilo,
+        superficie: state.superficie,
+        lesiones: state.lesiones.filter((l) => l !== "ninguna"),
+        prioridad: state.prioridad,
+        presupuesto_max_eur: state.presupuesto_max_eur ?? null,
+        ancho_pie: state.ancho_pie === "no-se" ? null : state.ancho_pie,
+      };
+
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(respuestas));
+      window.location.href = "/resultados";
+    }
+
+    showStep(1);
+  </script>
+</Base>

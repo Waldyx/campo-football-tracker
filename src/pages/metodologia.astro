@@ -1,0 +1,202 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Metodología · Campo"
+  description="Cómo evaluamos y puntuamos las botas de fútbol en CAMPO: fuentes de datos, atributos medidos, sistema de scoring y criterios de selección del catálogo."
+>
+  <main class="min-h-screen text-white">
+    <header class="px-6 py-5 border-b border-zinc-800/60 bg-[#0c0c0c]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">
+          CAMPO<span class="text-orange-500">.</span>
+        </a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="px-6 pt-16 pb-10 border-b border-zinc-800/40">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">Transparencia total</p>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.95] mb-4">
+          Metodología
+        </h1>
+        <p class="text-zinc-400 text-lg max-w-2xl leading-relaxed">
+          Así medimos, puntuamos y recomendamos botas. Sin cajas negras. Si algo no te convence, mándanos feedback.
+        </p>
+      </div>
+    </section>
+
+    <div class="px-6 py-16">
+      <div class="max-w-4xl mx-auto space-y-16">
+
+        <!-- 1. Selección del catálogo -->
+        <section>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
+            1. <span class="text-orange-500">Selección</span> del catálogo
+          </h2>
+          <p class="text-zinc-500 text-sm mb-6">Qué botas entran y por qué.</p>
+          <div class="space-y-4 text-sm text-zinc-400 leading-relaxed">
+            <p>Solo incluimos botas de gama media-alta con suficiente presencia en el mercado europeo para que los datos de precios sean fiables. Los criterios de entrada son:</p>
+            <ul class="list-none space-y-2 pl-0">
+              {[
+                "Disponibles en al menos tres distribuidores europeos con stock regular.",
+                "Lanzadas en los últimos 24 meses o todavía en producción activa.",
+                "Con especificaciones técnicas publicadas por el fabricante (peso oficial, materiales del upper, tipo de suela).",
+                "Con al menos 15 reseñas verificadas de campo en fuentes especializadas.",
+              ].map((item) => (
+                <li class="flex gap-3">
+                  <span class="text-orange-500 font-black shrink-0">→</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p>Las botas de edición limitada o colorways especiales sin cambios técnicos no se añaden como entradas separadas.</p>
+          </div>
+        </section>
+
+        <!-- 2. Atributos medidos -->
+        <section>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
+            2. <span class="text-orange-500">Atributos</span> medidos
+          </h2>
+          <p class="text-zinc-500 text-sm mb-6">8 dimensiones técnicas, cada una en escala 1-10.</p>
+          <div class="grid md:grid-cols-2 gap-3">
+            {[
+              {
+                nombre: "Tracción",
+                desc: "Capacidad de anclaje al suelo según el patrón y profundidad de tacos. Se mide en las superficies declaradas por el fabricante.",
+              },
+              {
+                nombre: "Amortiguación",
+                desc: "Absorción de impacto en plantilla y mediasuela. Relevante para jugadores con historial de lesiones articulares.",
+              },
+              {
+                nombre: "Control de balón",
+                desc: "Tacto y textura del upper. Considera la superficie de contacto, los elementos de agarre adicionales (Gripknit, zona de control) y el grosor del material.",
+              },
+              {
+                nombre: "Soporte lateral",
+                desc: "Rigidez de la zona mediopié y el talón para contener movimientos laterales bruscos. Crítico para defensas y mediocampistas.",
+              },
+              {
+                nombre: "Estabilidad",
+                desc: "Plataforma de la suela, distribución de tacos y contrafuerte del talón. Mide la resistencia al balanceo involuntario.",
+              },
+              {
+                nombre: "Peso (score)",
+                desc: "Score inverso del peso real. 175g o menos = 10. Cada 10g adicionales resta ~0.4 puntos. Correlaciona con velocidad explosiva.",
+              },
+              {
+                nombre: "Durabilidad",
+                desc: "Estimación de vida útil del upper y la suela basada en el material y construcción. Las botas de cuero natural tienden a puntuar más alto.",
+              },
+              {
+                nombre: "Confort",
+                desc: "Sensación subjetiva de calce, amplitud de la horma y ausencia de puntos de presión. Se extrae de reseñas verificadas de campo.",
+              },
+            ].map((attr) => (
+              <div class="bg-zinc-900 border border-zinc-800 p-5">
+                <p class="font-black text-sm uppercase tracking-widest text-orange-500 mb-2">{attr.nombre}</p>
+                <p class="text-zinc-400 text-sm leading-relaxed">{attr.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- 3. Sistema de scoring -->
+        <section>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
+            3. <span class="text-orange-500">Sistema</span> de scoring
+          </h2>
+          <p class="text-zinc-500 text-sm mb-6">Cómo transformamos tus respuestas en una recomendación.</p>
+          <div class="space-y-6 text-sm text-zinc-400 leading-relaxed">
+            <div class="bg-zinc-900 border border-zinc-800 p-6">
+              <p class="font-black text-white mb-3 uppercase tracking-widest text-xs">Paso 1 — Generación de pesos</p>
+              <p>Cada respuesta del quiz modifica un vector de pesos sobre los 8 atributos. Por ejemplo, un extremo que selecciona "velocidad" como prioridad y "FG" como superficie obtendrá un multiplicador alto en <em>peso_score</em> y uno moderado en <em>tracción</em>. Un portero obtendrá más peso en <em>estabilidad</em> y <em>amortiguación</em>.</p>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 p-6">
+              <p class="font-black text-white mb-3 uppercase tracking-widest text-xs">Paso 2 — Filtros duros</p>
+              <p>Antes de puntuar, eliminamos botas incompatibles: si marcaste superficie AG o TF, se excluyen las botas con durabilidad &lt;5 en esas superficies. Si tienes problemas de rodillas, se filtran las botas con amortiguación &lt;6. Si tienes pie ancho, se filtran las de horma estrecha.</p>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 p-6">
+              <p class="font-black text-white mb-3 uppercase tracking-widest text-xs">Paso 3 — Score ponderado</p>
+              <p>Para cada bota se calcula la suma de (atributo × peso) normalizada. El resultado es un score base entre 0 y 10.</p>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 p-6">
+              <p class="font-black text-white mb-3 uppercase tracking-widest text-xs">Paso 4 — Fit factor</p>
+              <p>Se añaden bonificaciones si la bota declara compatibilidad con tu posición (+0.15), si su categoría coincide con tu estilo de juego (+0.10) y si su lista de superficies incluye la tuya (+0.10). El score resultante se convierte en porcentaje de compatibilidad.</p>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 p-6">
+              <p class="font-black text-white mb-3 uppercase tracking-widest text-xs">Paso 5 — Diversidad</p>
+              <p>Para evitar que los resultados muestren 5 botas del mismo fabricante, se aplica una penalización leve a la tercera bota o superior de la misma marca. Esto garantiza que veas opciones de al menos 2-3 marcas diferentes.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Fuentes -->
+        <section>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
+            4. <span class="text-orange-500">Fuentes</span>
+          </h2>
+          <p class="text-zinc-500 text-sm mb-6">De dónde vienen los datos.</p>
+          <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
+            {[
+              { fuente: "Fichas técnicas oficiales", detalle: "Peso, materiales del upper y la suela, tecnologías declaradas por el fabricante." },
+              { fuente: "Mediciones independientes", detalle: "Weigh-in de youtubers especializados (Unisport, BootsReview.co.uk, Footy Headlines). Cuando hay discrepancia usamos la media." },
+              { fuente: "Reseñas de campo verificadas", detalle: "Mínimo 15 reseñas de usuarios con historial verificado en plataformas como Running Warehouse Europe, Football Boots EU y Amazon Verified Purchase." },
+              { fuente: "Precios MSRP", detalle: "Precio de venta recomendado oficial en EUR. Los precios reales varían. La sección 'Mejor precio' enlaza a comparadores externos." },
+            ].map((f) => (
+              <div class="flex gap-4 bg-zinc-900 border border-zinc-800 p-4">
+                <span class="text-orange-500 font-black text-xs shrink-0 uppercase tracking-widest w-40">{f.fuente}</span>
+                <p class="text-zinc-400">{f.detalle}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- 5. Limitaciones -->
+        <section>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
+            5. <span class="text-orange-500">Limitaciones</span>
+          </h2>
+          <p class="text-zinc-500 text-sm mb-6">Qué no puede hacer este sistema.</p>
+          <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
+            {[
+              "El confort es en parte subjetivo. Aunque usamos datos agregados de muchas reseñas, la morfología exacta de tu pie puede diferir.",
+              "No hacemos pruebas de campo propias. Dependemos de datos públicos y mediciones de terceros.",
+              "Las botas de alta gama están mejor representadas porque generan más datos. Las gamas bajas pueden tener puntuaciones menos precisas.",
+              "El precio MSRP no refleja el precio real en tienda, que puede variar significativamente en función del colorway y la temporada.",
+              "La durabilidad se estima en el momento del lanzamiento. Algunos modelos mejoran o empeoran su reputación con el tiempo y el catálogo puede no reflejar eso inmediatamente.",
+            ].map((lim) => (
+              <div class="flex gap-3">
+                <span class="text-zinc-600 font-black shrink-0">!</span>
+                <p>{lim}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <footer class="px-6 py-10 bg-black border-t-4 border-orange-500 mt-16">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></p>
+        <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
+          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+        </nav>
+        <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
+      </div>
+    </footer>
+  </main>
+</Base>

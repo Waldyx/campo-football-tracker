@@ -1,0 +1,131 @@
+---
+import Base from "../layouts/Base.astro";
+
+const faqs = [
+  {
+    q: "¿Qué diferencia hay entre botas FG y AG?",
+    a: "Las botas FG (Firm Ground) están diseñadas para césped natural en buen estado. Llevan tacos cónicos o moldeados que se clavan en el terreno sin hundirse. Las AG (Artificial Ground) tienen tacos más cortos y numerosos, distribuidos para reducir la presión sobre superficies de hierba artificial. Usar botas FG en AG puede aumentar el riesgo de lesiones en rodillas y tobillos.",
+  },
+  {
+    q: "¿Puedo usar botas TF (turf) en hierba artificial de última generación?",
+    a: "No es lo ideal. Las botas TF tienen una suela con muchos tacos de goma muy pequeños, pensados para tartán o hierba artificial de primera generación (muy corta). En césped artificial moderno de 3ª o 4ª generación (más largo), las botas AG ofrecen mejor tracción y mayor protección articular.",
+  },
+  {
+    q: "¿Cómo se calcula el score de cada bota?",
+    a: "Partimos de 8 atributos medidos objetivamente: tracción, amortiguación, control de balón, soporte lateral, estabilidad, peso, durabilidad y confort. En el quiz, tus respuestas generan un perfil de pesos que amplifica los atributos más relevantes para ti. El fit factor añade bonificaciones si la bota es compatible con tu posición, estilo y superficie. El resultado es un porcentaje de compatibilidad.",
+  },
+  {
+    q: "¿Por qué el precio no afecta al score de compatibilidad?",
+    a: "Separamos compatibilidad técnica de accesibilidad económica. Una bota puede ser perfecta para ti aunque esté fuera de tu presupuesto. El sistema aplica tu presupuesto como filtro duro solo cuando es imprescindible para mostrarte resultados, no para penalizar botas técnicamente superiores.",
+  },
+  {
+    q: "¿Qué significa 'horma estrecha' vs 'horma ancha'?",
+    a: "La horma es la forma interna del calzado. Una horma estrecha (Nike Mercurial, Mizuno Morelia) comprime el pie para mayor sensación de balón y menor peso. Una horma ancha (Puma King) ofrece más volumen interior. Si tienes pie ancho y usas botas de horma estrecha, puedes sufrir presión en los metatarsos y rozaduras. El quiz incluye esta pregunta para filtrar botas incompatibles.",
+  },
+  {
+    q: "¿Cada cuánto tiempo se actualizan las botas del catálogo?",
+    a: "Revisamos el catálogo con cada lanzamiento relevante de temporada (aproximadamente cada 3-4 meses). Las puntuaciones no cambian a menos que aparezcan datos de campo nuevos o el fabricante modifique la construcción. Cada bota indica su fecha de última revisión.",
+  },
+  {
+    q: "¿Por qué no aparecen botas de sala (futsal) en el catálogo principal?",
+    a: "Las botas de sala (IN) tienen una suela plana de goma no intercambiable, sin tacos. Son un categoría muy diferente técnicamente. Actualmente el catálogo incluye botas con suela de tacos (FG/AG/SG/TF) y algunas versiones IN de modelos híbridos. Las botas de futsal puro se incorporarán en una sección separada.",
+  },
+  {
+    q: "¿Qué posición se beneficia más de priorizar el control de balón?",
+    a: "Mediapuntas y mediocampistas técnicos. La puntuación de control de balón refleja la textura y el tacto del upper, la cantidad de superficie de contacto y la distribución de elementos de agarre. Para porteros, el control de balón influye en el juego de pies pero la estabilidad y la tracción tienen más peso.",
+  },
+  {
+    q: "¿Puedo usar botas SG (soft ground) en césped natural normal?",
+    a: "Las botas SG llevan 6 tacos de metal intercambiables, diseñados para terrenos blandos o encharcados donde los tacos moldeados no penetran suficientemente. En césped firme, los tacos SG pueden resbalar o no ejercer suficiente presión. Además, muchos campos prohíben tacos de metal. Úsalas solo cuando el terreno lo requiera.",
+  },
+  {
+    q: "¿Tienen afiliados o patrocinios que influyan en las recomendaciones?",
+    a: "No. CAMPO. es un proyecto independiente sin acuerdos de afiliado con ninguna marca ni tienda. Las puntuaciones se calculan únicamente a partir de datos técnicos medibles. La única fuente de sesgo posible es la disponibilidad de datos: marcas más grandes tienen más información pública, lo que puede hacer que sus botas estén representadas con mayor precisión.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+
+<Base
+  title="FAQ · Campo"
+  description="Preguntas frecuentes sobre botas de fútbol: diferencias entre superficies FG/AG/SG/TF, cómo funciona el scoring y cómo elegir la bota correcta."
+  jsonLd={jsonLd}
+>
+  <main class="min-h-screen text-white">
+    <header class="px-6 py-5 border-b border-zinc-800/60 bg-[#0c0c0c]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">
+          CAMPO<span class="text-orange-500">.</span>
+        </a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
+          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="px-6 pt-16 pb-10 border-b border-zinc-800/40">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">Preguntas frecuentes</p>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.95] mb-4">
+          FAQ
+        </h1>
+        <p class="text-zinc-400 text-lg max-w-xl leading-relaxed">
+          Todo lo que necesitas saber sobre superficies, materiales, puntuaciones y cómo sacar el máximo partido al comparador.
+        </p>
+      </div>
+    </section>
+
+    <div class="px-6 py-16">
+      <div class="max-w-4xl mx-auto space-y-4">
+        {faqs.map((faq, i) => (
+          <details class="group bg-zinc-900 border border-zinc-800 open:border-orange-500/40 transition-colors">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none select-none">
+              <span class="font-black tracking-tight text-sm md:text-base leading-snug pr-4">{faq.q}</span>
+              <span class="text-orange-500 font-black text-xl shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <div class="max-w-4xl mx-auto mt-16 bg-zinc-900 border border-zinc-800 p-8">
+        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">¿No encuentras tu respuesta?</p>
+        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+          Lee la metodología completa para entender cómo calculamos cada puntuación, qué fuentes usamos y cuáles son los límites del sistema.
+        </p>
+        <a
+          href="/metodologia"
+          class="inline-block bg-orange-500 text-black text-xs font-black px-6 py-3 uppercase tracking-widest hover:bg-orange-400 transition-colors"
+        >
+          Ver metodología →
+        </a>
+      </div>
+    </div>
+
+    <footer class="px-6 py-10 bg-black border-t-4 border-orange-500 mt-16">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></p>
+        <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
+          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+        </nav>
+        <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
+      </div>
+    </footer>
+  </main>
+</Base>

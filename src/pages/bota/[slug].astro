@@ -1,0 +1,445 @@
+---
+import Base from "../../layouts/Base.astro";
+import { botas } from "../../data/botas";
+import { findMejorPrecio } from "../../lib/scoring";
+import type { Puntuaciones } from "../../lib/types";
+
+export async function getStaticPaths() {
+  return botas.map((b) => ({
+    params: { slug: b.slug },
+    props: { bota: b },
+  }));
+}
+
+const { bota: b } = Astro.props;
+
+const LABELS_TIENDA: Record<string, string> = {
+  amazon_es: "Amazon", decathlon: "Decathlon", nike_es: "Nike",
+  adidas_es: "Adidas", puma_es: "Puma", ua_es: "Under Armour",
+  nb_es: "New Balance", mizuno_es: "Mizuno", footlocker_es: "Foot Locker",
+  jd_sports_es: "JD Sports", zalando_es: "Zalando", sprinter_es: "Sprinter",
+};
+
+const LABELS_SUP: Record<string, string> = {
+  fg: "Hierba natural (FG)",
+  ag: "Hierba artificial (AG)",
+  sg: "Barro / lluvia (SG)",
+  in: "Interior / Futsal (IN)",
+  tf: "Turf (TF)",
+};
+
+const ATRIBUTOS: { key: keyof Puntuaciones; label: string }[] = [
+  { key: "traccion", label: "Tracción" },
+  { key: "amortiguacion", label: "Amortiguación" },
+  { key: "control_balon", label: "Control de balón" },
+  { key: "soporte_lateral", label: "Soporte lateral" },
+  { key: "estabilidad", label: "Estabilidad" },
+  { key: "peso_score", label: "Ligereza" },
+  { key: "durabilidad", label: "Durabilidad" },
+  { key: "confort", label: "Confort" },
+];
+
+const mejorPrecio = findMejorPrecio(b.links_compra);
+const linksOrdenados = [...b.links_compra]
+  .filter((l) => l.disponible)
+  .sort((a, c) => a.precio_actual - c.precio_actual);
+
+const titulo = `${b.marca} ${b.modelo} · Review y mejor precio`;
+
+function scoreB(bota: typeof b): number {
+  const vals = Object.values(bota.puntuaciones);
+  return vals.reduce((a, c) => a + c, 0) / vals.length;
+}
+
+const relacionadas = botas
+  .filter((bt) => bt.slug !== b.slug && bt.categoria_principal === b.categoria_principal)
+  .sort((a, c) => scoreB(c) - scoreB(a))
+  .slice(0, 3);
+
+const descripcion = b.resumen.slice(0, 155);
+const valoresPuntuaciones = Object.values(b.puntuaciones);
+const ratingMedio = valoresPuntuaciones.reduce((s, v) => s + v, 0) / valoresPuntuaciones.length;
+
+const jsonLd = {
+  "@context": "https://schema.org/",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: new URL("/", Astro.site).toString() },
+        { "@type": "ListItem", position: 2, name: "Catálogo", item: new URL("/botas", Astro.site).toString() },
+        { "@type": "ListItem", position: 3, name: `${b.marca} ${b.modelo}`, item: new URL(`/bota/${b.slug}`, Astro.site).toString() },
+      ],
+    },
+    {
+      "@type": "Product",
+      name: `${b.marca} ${b.modelo}`,
+      image: b.imagen_principal,
+      description: b.resumen,
+      brand: { "@type": "Brand", name: b.marca },
+      category: "Sports & Outdoors / Football Boots",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: ratingMedio.toFixed(1),
+        bestRating: "10",
+        ratingCount: b.fuentes.length || 1,
+      },
+      offers: linksOrdenados.map((link) => ({
+        "@type": "Offer",
+        url: link.url,
+        priceCurrency: "EUR",
+        price: link.precio_actual,
+        availability: link.disponible ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        seller: { "@type": "Organization", name: LABELS_TIENDA[link.tienda] || link.tienda },
+      })),
+    },
+  ],
+};
+---
+
+<Base title={titulo} description={descripcion} ogType="article" ogImage={b.imagen_principal} jsonLd={jsonLd}>
+  <main class="min-h-screen bg-zinc-950 text-white">
+    <!-- Header -->
+    <header class="px-6 py-5 border-b border-zinc-800/60 bg-[#0c0c0c]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="px-6 py-4 border-b border-zinc-900 text-xs uppercase tracking-widest text-zinc-600">
+      <div class="max-w-6xl mx-auto flex items-center gap-2 flex-wrap">
+        <a href="/" class="hover:text-orange-500 transition-colors">Inicio</a>
+        <span>/</span>
+        <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+        <span>/</span>
+        <span class="text-zinc-400">{b.marca} {b.modelo}</span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="px-6 py-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        <!-- Imagen principal -->
+        <div class="flex flex-col gap-3">
+          <div class="relative overflow-hidden bg-gradient-to-b from-zinc-800 to-zinc-900 border border-zinc-700">
+            <img
+              id="gallery-main"
+              src={b.imagen_principal}
+              alt={`${b.marca} ${b.modelo}`}
+              class="w-full aspect-[4/3] object-contain p-6 transition-opacity duration-200"
+              loading="eager"
+              fetchpriority="high"
+              onerror="this.onerror=null;this.src='/placeholder-boot.svg'"
+            />
+            <div class="absolute top-4 left-4 flex flex-wrap gap-2 max-w-[80%]">
+              {b.tags.slice(0, 3).map((t) => (
+                <span class="px-2 py-1 bg-zinc-950/80 border border-zinc-700 text-[10px] font-bold uppercase tracking-widest text-zinc-300">{t}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="flex flex-col gap-5">
+          <div>
+            <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-2">★ {b.año_lanzamiento}</p>
+            <p class="text-sm font-bold uppercase tracking-widest text-zinc-500">{b.marca}</p>
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mt-1">{b.modelo}</h1>
+          </div>
+
+          <!-- Score global -->
+          <div class="flex items-center gap-4">
+            <div class="flex items-baseline gap-2">
+              <span class="text-5xl font-black text-orange-500">{Math.round(ratingMedio * 10) / 10}</span>
+              <span class="text-zinc-600 font-bold">/10</span>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Score global</p>
+              <p class="text-[10px] text-zinc-600 uppercase tracking-widest">Media de 8 atributos</p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">{b.resumen}</p>
+
+          <!-- Datos físicos -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
+            {[
+              { label: "Peso", value: `${b.peso_real_g} g`, sub: "EU 42" },
+              { label: "Horma", value: b.horma, sub: "" },
+              { label: "Superficies", value: b.superficies_compatibles.join(", ").toUpperCase(), sub: "" },
+            ].map(s => (
+              <div class="bg-zinc-900/60 border border-zinc-800 border-t-2 border-t-orange-500/40 p-3 flex flex-col gap-1">
+                <p class="text-[9px] font-bold uppercase tracking-widest text-zinc-500">{s.label}{s.sub && <span class="text-zinc-700 ml-1">({s.sub})</span>}</p>
+                <p class="text-base font-black capitalize leading-tight">{s.value}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Tecnología -->
+          {b.tecnologia_clave.length > 0 && (
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">Tecnología clave</p>
+              <div class="flex flex-wrap gap-2">
+                {b.tecnologia_clave.map((t) => (
+                  <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 text-xs font-bold uppercase tracking-wider text-zinc-300">{t}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- CTA mejor precio -->
+          {mejorPrecio && (
+            <div class="bg-zinc-900 border-2 border-orange-500 p-5 mt-4">
+              <p class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-2">Mejor precio actual</p>
+              <div class="flex items-end justify-between gap-4 flex-wrap">
+                <div>
+                  <div class="flex items-baseline gap-3">
+                    <p class="text-4xl font-black text-white">{mejorPrecio.precio_actual}€</p>
+                    {mejorPrecio.precio_actual < b.precio_msrp_eur && (
+                      <>
+                        <span class="text-sm line-through text-zinc-600">{b.precio_msrp_eur}€</span>
+                        <span class="text-sm font-black text-green-400">-{Math.round((1 - mejorPrecio.precio_actual / b.precio_msrp_eur) * 100)}%</span>
+                      </>
+                    )}
+                  </div>
+                  <p class="text-xs text-zinc-500 uppercase tracking-wider mt-1">
+                    en {LABELS_TIENDA[mejorPrecio.tienda] || mejorPrecio.tienda}
+                  </p>
+                </div>
+                <a
+                  href={mejorPrecio.url}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  class="px-6 py-4 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(250,204,21)] hover:shadow-[6px_6px_0_0_rgb(250,204,21)]"
+                >
+                  Ver en {LABELS_TIENDA[mejorPrecio.tienda] || mejorPrecio.tienda} →
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <!-- PUNTUACIONES -->
+    <section class="px-6 py-16 bg-zinc-900 border-y border-zinc-800">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-4 mb-10">
+          <div class="h-1 flex-1 bg-orange-500"></div>
+          <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Análisis técnico</h2>
+          <div class="h-1 flex-1 bg-orange-500"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-x-10 gap-y-6">
+          {ATRIBUTOS.map(({ key, label }) => {
+            const valor = b.puntuaciones[key];
+            const pct = (valor / 10) * 100;
+            const color = valor >= 8 ? "bg-orange-500" : valor >= 6 ? "bg-yellow-400" : "bg-zinc-500";
+            const textColor = valor >= 8 ? "text-orange-500" : valor >= 6 ? "text-yellow-400" : "text-zinc-400";
+            return (
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-[11px] font-semibold uppercase tracking-widest text-zinc-500 group-hover:text-zinc-300 transition-colors">{label}</p>
+                  <p class={`text-xl font-black tabular-nums ${textColor}`}>{valor}<span class="text-zinc-700 text-xs font-bold">/10</span></p>
+                </div>
+                <div class="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                  <div class={`h-full rounded-full ${color} transition-all duration-700`} style={`width: ${pct}%;`} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- PROS + CONTRAS -->
+    <section class="px-6 py-16">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 mb-12">
+          <div>
+            <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">✓ Lo que sí</p>
+            <ul class="flex flex-col gap-3">
+              {b.pros.map((p) => (
+                <li class="flex gap-3 text-zinc-300">
+                  <span class="text-orange-500 font-black mt-1">+</span>
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-black uppercase tracking-widest text-zinc-500 mb-4">✗ Lo que no</p>
+            <ul class="flex flex-col gap-3">
+              {b.contras.map((c) => (
+                <li class="flex gap-3 text-zinc-300">
+                  <span class="text-zinc-500 font-black mt-1">−</span>
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 border-l-4 border-orange-500 p-6 md:p-8">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">★ Veredicto</p>
+          <p class="text-lg md:text-xl text-white leading-relaxed">{b.veredicto}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUIÉN -->
+    <section class="px-6 py-16 bg-zinc-900 border-y border-zinc-800">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-10">¿Para quién?</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div>
+            <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">✓ Recomendada si...</p>
+            <ul class="space-y-2 text-zinc-300">
+              <li><span class="text-zinc-500">·</span> Juegas de: <span class="font-bold capitalize">{b.ideal_para.posiciones.join(", ")}</span></li>
+              <li><span class="text-zinc-500">·</span> Pesas entre <span class="font-bold">{b.ideal_para.peso_jugador_kg[0]}-{b.ideal_para.peso_jugador_kg[1]} kg</span></li>
+              <li><span class="text-zinc-500">·</span> Estilo: <span class="font-bold capitalize">{b.ideal_para.estilos.join(", ")}</span></li>
+              <li><span class="text-zinc-500">·</span> Superficie: <span class="font-bold">{b.ideal_para.superficies.map(s => LABELS_SUP[s] ?? s).join(", ")}</span></li>
+            </ul>
+          </div>
+          {((b.no_recomendada_para.posiciones?.length ?? 0) + (b.no_recomendada_para.estilos?.length ?? 0)) > 0 && (
+            <div>
+              <p class="text-xs font-black uppercase tracking-widest text-zinc-500 mb-3">✗ No recomendada si...</p>
+              <ul class="space-y-2 text-zinc-300">
+                {b.no_recomendada_para.posiciones && b.no_recomendada_para.posiciones.length > 0 && (
+                  <li><span class="text-zinc-500">·</span> Juegas de: <span class="font-bold capitalize">{b.no_recomendada_para.posiciones.join(", ")}</span></li>
+                )}
+                {b.no_recomendada_para.estilos && b.no_recomendada_para.estilos.length > 0 && (
+                  <li><span class="text-zinc-500">·</span> Estilo: <span class="font-bold capitalize">{b.no_recomendada_para.estilos.join(", ")}</span></li>
+                )}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="px-6 py-16">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
+          <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Precios</h2>
+          <p class="text-xs uppercase tracking-widest text-zinc-500">Actualizado: <span class="text-zinc-300">{b.ultima_actualizacion}</span></p>
+        </div>
+
+        <div class="border-2 border-zinc-800">
+          {linksOrdenados.length === 0 && (
+            <p class="p-6 text-zinc-500 text-center">Sin precios disponibles en este momento.</p>
+          )}
+          {linksOrdenados.map((link, idx) => {
+            const diffPct = idx === 0 && link.precio_actual < b.precio_msrp_eur
+              ? Math.round((1 - link.precio_actual / b.precio_msrp_eur) * 100)
+              : 0;
+            return (
+              <div class={`flex items-center justify-between gap-4 p-5 flex-wrap ${idx > 0 ? "border-t border-zinc-800" : ""} ${idx === 0 ? "bg-zinc-900" : ""}`}>
+                <div class="flex items-center gap-3 min-w-0">
+                  {idx === 0 && <span class="shrink-0 px-2 py-1 bg-yellow-400 text-zinc-950 text-[10px] font-black uppercase tracking-widest">Mejor</span>}
+                  <div class="min-w-0">
+                    <p class="font-black uppercase tracking-tight text-base leading-tight">{LABELS_TIENDA[link.tienda] || link.tienda}</p>
+                    <p class="text-[10px] uppercase tracking-widest text-zinc-600 mt-0.5">{link.tiene_afiliado ? "★ Enlace afiliado" : "Sin afiliación"} · {link.ultima_verificacion}</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 ml-auto">
+                  <div class="text-right">
+                    <p class={`text-xl font-black ${idx === 0 ? "text-orange-500" : "text-white"}`}>{link.precio_actual}€</p>
+                    {diffPct > 0 && <p class="text-[10px] text-green-400 font-bold">-{diffPct}% vs MSRP</p>}
+                  </div>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel={link.tiene_afiliado ? "noopener noreferrer sponsored" : "noopener noreferrer"}
+                    class="shrink-0 px-4 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors"
+                  >
+                    Ver →
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTAS RELACIONADAS -->
+    {relacionadas.length > 0 && (
+      <section class="px-6 py-16 bg-zinc-900 border-y border-zinc-800">
+        <div class="max-w-6xl mx-auto">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">★ Misma categoría</p>
+          <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8">También te puede interesar</h2>
+          <div class="grid sm:grid-cols-3 gap-5">
+            {relacionadas.map((rel) => {
+              const relMejor = findMejorPrecio(rel.links_compra);
+              const relPrecio = relMejor?.precio_actual ?? rel.precio_msrp_eur;
+              const relScore = Math.round((Object.values(rel.puntuaciones).reduce((a, c) => a + c, 0) / 8) * 10) / 10;
+              return (
+                <a href={`/bota/${rel.slug}`} class="group bg-zinc-950 border-2 border-zinc-800 hover:border-orange-500 transition-all flex flex-col">
+                  <div class="relative">
+                    <img src={rel.imagen_principal} alt={`${rel.marca} ${rel.modelo}`}
+                      class="w-full aspect-[4/3] object-contain p-3 bg-gradient-to-b from-zinc-800 to-zinc-900"
+                      loading="lazy" onerror="this.onerror=null;this.src='/placeholder-boot.svg'" />
+                    <span class="absolute top-2 right-2 px-2 py-0.5 bg-zinc-950/90 border border-zinc-700 text-xs font-black text-orange-500">{relScore}</span>
+                  </div>
+                  <div class="p-4 flex flex-col flex-1 gap-2">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{rel.marca}</p>
+                    <h3 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">{rel.modelo}</h3>
+                    <p class="text-xl font-black text-orange-500 mt-auto">{relPrecio}€</p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Footer actions -->
+    <section class="px-6 py-16">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6">¿No estás seguro?</h3>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/quiz" class="px-6 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(250,204,21)]">Hacer el quiz →</a>
+          <a href="/comparar" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">Comparar con otra</a>
+          <button id="btn-copiar-url" type="button" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">🔗 Compartir</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="px-6 py-10 bg-black border-t-4 border-orange-500">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></a>
+        <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
+          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+        </nav>
+        <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const $copiarUrl = document.getElementById("btn-copiar-url");
+    if ($copiarUrl) {
+      $copiarUrl.addEventListener("click", () => {
+        const url = window.location.href;
+        if (navigator.share) {
+          navigator.share({ title: document.title, url });
+        } else {
+          navigator.clipboard.writeText(url).then(() => {
+            $copiarUrl.textContent = "✓ Enlace copiado";
+            setTimeout(() => { ($copiarUrl as HTMLButtonElement).textContent = "🔗 Compartir"; }, 2000);
+          });
+        }
+      });
+    }
+  </script>
+</Base>

@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Página no encontrada · Campo"
+  description="Esta página no existe. Vuelve al catálogo de botas de fútbol."
+>
+  <main class="min-h-screen text-white flex flex-col">
+    <header class="px-6 py-5 border-b border-zinc-800/60 bg-[#0c0c0c]/80 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">
+          CAMPO<span class="text-orange-500">.</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="flex-1 flex items-center justify-center px-6 py-20">
+      <div class="text-center max-w-lg">
+        <p class="text-[8rem] font-black tracking-tighter leading-none text-zinc-800 select-none">404</p>
+        <h1 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4 -mt-4">
+          Fuera de <span class="text-orange-500">juego</span>
+        </h1>
+        <p class="text-zinc-400 text-sm leading-relaxed mb-10">
+          Esta página no existe o fue movida. Vuelve al catálogo para encontrar tu bota perfecta.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="/"
+            class="bg-orange-500 text-black text-xs font-black px-8 py-4 uppercase tracking-widest hover:bg-orange-400 transition-colors"
+          >
+            Ir al inicio
+          </a>
+          <a
+            href="/botas"
+            class="bg-zinc-900 border border-zinc-700 text-white text-xs font-black px-8 py-4 uppercase tracking-widest hover:border-orange-500/50 transition-colors"
+          >
+            Ver catálogo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="px-6 py-10 bg-black border-t-4 border-orange-500">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></p>
+        <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
+          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
+          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+        </nav>
+        <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
+      </div>
+    </footer>
+  </main>
+</Base>
