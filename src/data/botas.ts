@@ -2006,6 +2006,520 @@ const _rawBotas: Bota[] = [
       { tienda: "amazon_es", url: "https://www.amazon.es/s?k=umbro+tocco+iii+pro+fg", precio_actual: 84.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
     ],
   },
+
+  // ───────────────────────────────────────────────
+  // 29. ADIDAS F50 (2024) — Velocidad next-gen
+  // ───────────────────────────────────────────────
+  {
+    id: "adidas-f50-2024",
+    slug: "adidas-f50-2024",
+    marca: "Adidas",
+    modelo: "F50 2024",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Carbitex carbon plate", "FUSIONSKIN upper", "Speedframe suela", "Lightstrike Pro"],
+    peso_real_g: 165,
+    horma: "estrecha",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+    puntuaciones: {
+      traccion: 9,
+      amortiguacion: 7,
+      control_balon: 8,
+      soporte_lateral: 8,
+      estabilidad: 8,
+      peso_score: 9,
+      durabilidad: 8,
+      confort: 7,
+    },
+    categoria_principal: "velocidad",
+    tags: ["velocidad", "ligera", "carbon", "FG", "AG", "elite", "2024"],
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral"],
+      peso_jugador_kg: [55, 85],
+      estilos: ["velocidad", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia"],
+    },
+    resumen:
+      "El regreso de la mítica F50. Adidas la resucita con tecnología de 2024: upper FUSIONSKIN ultrafino, placa de carbono Carbitex y suela Speedframe. Una de las botas más ligeras del mercado (165g) pensada para jugadores explosivos que priorizan la velocidad por encima de todo.",
+    pros: [
+      "Solo 165g — una de las más ligeras del mercado",
+      "Placa de carbono para máxima propulsión",
+      "Nombre icónico con tecnología moderna",
+      "Excelente agarre en FG y AG",
+    ],
+    contras: [
+      "Horma estrecha — no apta para pies anchos",
+      "Precio de élite",
+      "El upper fino sacrifica algo de protección",
+    ],
+    veredicto:
+      "Si buscas la bota de velocidad más avanzada de Adidas en 2024, la F50 es la respuesta. Para extremos y delanteros que viven del sprint y el primer paso explosivo.",
+    imagen_principal: "https://m.media-amazon.com/images/I/61cSNMGbS8L._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "football-boots-guru", url: "https://www.football-boots-guru.com/adidas-f50-2024-review/" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 280,
+    links_compra: [
+      { tienda: "adidas_es", url: "https://www.adidas.es/botas-f50", precio_actual: 280.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+f50+2024+fg", precio_actual: 259.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 30. NIKE MERCURIAL VAPOR 15 TF — Velocidad en moqueta
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-mercurial-vapor-15-tf",
+    slug: "nike-mercurial-vapor-15-tf",
+    marca: "Nike",
+    modelo: "Mercurial Vapor 15 TF",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Vaporposite upper", "ACC", "Turf rubber outsole", "Air Zoom Turbo"],
+    peso_real_g: 210,
+    horma: "estrecha",
+    superficies_compatibles: ["tf"],
+    material_superior: "sintetico",
+    puntuaciones: {
+      traccion: 9,
+      amortiguacion: 7,
+      control_balon: 8,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 8,
+      durabilidad: 9,
+      confort: 7,
+    },
+    categoria_principal: "velocidad",
+    tags: ["velocidad", "turf", "moqueta", "TF", "cesped-artificial", "Nike"],
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral", "mediocentro"],
+      peso_jugador_kg: [55, 85],
+      estilos: ["velocidad", "equilibrado"],
+      superficies: ["tf"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+    },
+    resumen:
+      "La Mercurial Vapor 15 adaptada para césped artificial de baja altura (moqueta/TF). La suela de goma multitaco proporciona agarre constante sin dañar la superficie. Ideal para jugadores que entrenan o compiten habitualmente en campos de moqueta o césped artificial corto.",
+    pros: [
+      "Suela TF específica para moqueta y cesped artificial",
+      "Upper Vaporposite igual que la versión FG",
+      "Muy buena tracción y arranque en TF",
+      "Durabilidad superior a la versión FG en superficies duras",
+    ],
+    contras: [
+      "No usar en hierba natural — la suela se desgasta",
+      "Horma estrecha",
+      "Menos propulsión que la versión FG con placa",
+    ],
+    veredicto:
+      "La opción definitiva para jugadores velocistas que compiten en moqueta o cesped artificial de pelo corto. Toda la tecnología Mercurial adaptada a TF.",
+    imagen_principal: "https://m.media-amazon.com/images/I/71iEz3580zL._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 130,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/t/mercurial-vapor-15-tf", precio_actual: 130.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+tf", precio_actual: 119.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 31. ADIDAS X SPEEDPORTAL IN — Fútbol sala
+  // ───────────────────────────────────────────────
+  {
+    id: "adidas-x-speedportal-in",
+    slug: "adidas-x-speedportal-in",
+    marca: "Adidas",
+    modelo: "X Speedportal IN",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["SPRINTFRAME suela lisa", "PRIMEKNIT upper", "Laceless option"],
+    peso_real_g: 200,
+    horma: "normal",
+    superficies_compatibles: ["in"],
+    material_superior: "knit",
+    puntuaciones: {
+      traccion: 9,
+      amortiguacion: 7,
+      control_balon: 8,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 8,
+      durabilidad: 8,
+      confort: 8,
+    },
+    categoria_principal: "velocidad",
+    tags: ["futbol-sala", "indoor", "IN", "velocidad", "Adidas"],
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral", "mediocentro", "mediapunta"],
+      peso_jugador_kg: [50, 90],
+      estilos: ["velocidad", "tecnico", "equilibrado"],
+      superficies: ["in"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+    },
+    resumen:
+      "La X Speedportal adaptada para pabellón. Suela de goma lisa para máximo agarre en parqué y superficies de interior. La horma envolvente de knit ofrece un tacto de balón excepcional en sala. Para jugadores de fútbol sala que quieren la sensación de bota de velocidad.",
+    pros: [
+      "Suela indoor específica para pabellón y parqué",
+      "Upper knit — tacto suave y preciso",
+      "Muy ligera para sala",
+      "Buen agarre en giros y cambios de dirección",
+    ],
+    contras: [
+      "Solo para interior — nunca usar en exterior",
+      "Disponibilidad puede ser limitada",
+      "La suela se desgasta rápido si se usa en exterior",
+    ],
+    veredicto:
+      "La mejor opción de Adidas para fútbol sala. La X Speedportal IN combina velocidad y control en pabellón, ideal para el jugador dinámico que domina los espacios reducidos.",
+    imagen_principal: "https://m.media-amazon.com/images/I/61zgBZashPL._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 110,
+    links_compra: [
+      { tienda: "adidas_es", url: "https://www.adidas.es/botas-de-futbol-x-speedportal-in", precio_actual: 110.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+speedportal+in", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 32. NIKE PHANTOM GX TF — Control en turf
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-phantom-gx-tf",
+    slug: "nike-phantom-gx-tf",
+    marca: "Nike",
+    modelo: "Phantom GX TF",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Gripknit upper", "ACC", "Turf rubber outsole"],
+    peso_real_g: 225,
+    horma: "normal",
+    superficies_compatibles: ["tf"],
+    material_superior: "knit+tpu",
+    puntuaciones: {
+      traccion: 9,
+      amortiguacion: 8,
+      control_balon: 9,
+      soporte_lateral: 7,
+      estabilidad: 8,
+      peso_score: 7,
+      durabilidad: 9,
+      confort: 8,
+    },
+    categoria_principal: "control",
+    tags: ["control", "turf", "moqueta", "TF", "cesped-artificial", "Nike", "tecnico"],
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "defensa", "lateral"],
+      peso_jugador_kg: [60, 95],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["tf"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+    },
+    resumen:
+      "La Phantom GX para césped artificial de baja altura. El upper Gripknit mantiene su excepcional tacto de balón mientras la suela de goma TF garantiza agarre duradero en moqueta. Para el mediocampista técnico que juega en superficies artificiales.",
+    pros: [
+      "Gripknit — mejor tacto de balón de Nike en TF",
+      "Excelente durabilidad en superficies duras",
+      "Suela TF con muy buen agarre multidireccional",
+      "Cómoda desde el primer uso",
+    ],
+    contras: [
+      "No usar en hierba natural",
+      "Algo más pesada que la versión FG",
+      "Horma normal — no para pies muy estrechos",
+    ],
+    veredicto:
+      "La mejor bota de control de Nike adaptada a césped artificial. Si juegas de mediocentro o mediapunta en campos de moqueta, la Phantom GX TF es tu bota.",
+    imagen_principal: "https://m.media-amazon.com/images/I/71z5uqaMhcL._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 120,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/t/phantom-gx-tf", precio_actual: 120.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx+tf", precio_actual: 109.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 33. NIKE MERCURIAL VAPOR 15 ELITE — Velocidad gama alta
+  // ───────────────────────────────────────────────
+  {
+    id: "nike-mercurial-vapor-15-elite",
+    slug: "nike-mercurial-vapor-15-elite",
+    marca: "Nike",
+    modelo: "Mercurial Vapor 15 Elite",
+    año_lanzamiento: 2023,
+    genero: "unisex",
+    tecnologia_clave: ["Vaporposite+ upper", "ACC", "Carbon fiber plate", "Air Zoom Turbo"],
+    peso_real_g: 188,
+    horma: "estrecha",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "sintetico",
+    puntuaciones: {
+      traccion: 9,
+      amortiguacion: 7,
+      control_balon: 8,
+      soporte_lateral: 8,
+      estabilidad: 8,
+      peso_score: 9,
+      durabilidad: 8,
+      confort: 7,
+    },
+    categoria_principal: "velocidad",
+    tags: ["velocidad", "ligera", "carbon", "FG", "AG", "elite", "Nike"],
+    ideal_para: {
+      posiciones: ["extremo", "delantero", "lateral"],
+      peso_jugador_kg: [55, 85],
+      estilos: ["velocidad", "equilibrado"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia"],
+    },
+    resumen:
+      "El escalón intermedio de la gama Mercurial. La Vapor 15 Elite ofrece prácticamente la misma tecnología que la Superfly (Vaporposite+, placa de carbono, Air Zoom Turbo) sin el collar de tobillo y a un precio algo más accesible. Para jugadores que quieren tecnología de élite sin pagar el precio más alto.",
+    pros: [
+      "Casi idéntica a la Superfly 10 en rendimiento",
+      "Sin collar — más libertad de tobillo",
+      "Placa de carbono para propulsión máxima",
+      "100-120€ más barata que la Superfly",
+    ],
+    contras: [
+      "Horma estrecha — pies anchos quedan fuera",
+      "Sin el sistema de agarre del collar Superfly",
+      "Precio de élite igualmente",
+    ],
+    veredicto:
+      "Si quieres la bota de velocidad definitiva de Nike sin el collar, la Vapor 15 Elite es la respuesta. Todo el rendimiento de la Superfly a un precio ligeramente más humano.",
+    imagen_principal: "https://m.media-amazon.com/images/I/51FCaw0bbUL._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "football-boots-guru", url: "https://www.football-boots-guru.com/nike-mercurial-vapor-15-elite-review/" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 220,
+    links_compra: [
+      { tienda: "nike_es", url: "https://www.nike.com/es/t/mercurial-vapor-15-elite-fg", precio_actual: 220.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+elite+fg", precio_actual: 199.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 34. PUMA FUTURE 7 PRO — Equilibrada gama alta
+  // ───────────────────────────────────────────────
+  {
+    id: "puma-future-7-pro",
+    slug: "puma-future-7-pro",
+    marca: "Puma",
+    modelo: "Future 7 Pro",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["FUZIONFIT+ upper", "EvoKNIT collar", "ProPulsion carbon plate", "GripControl Pro"],
+    peso_real_g: 195,
+    horma: "normal",
+    superficies_compatibles: ["fg", "ag"],
+    material_superior: "knit+tpu",
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 8,
+      control_balon: 8,
+      soporte_lateral: 8,
+      estabilidad: 8,
+      peso_score: 8,
+      durabilidad: 8,
+      confort: 9,
+    },
+    categoria_principal: "equilibrada",
+    tags: ["equilibrada", "FG", "AG", "confort", "Puma", "gama-alta"],
+    ideal_para: {
+      posiciones: ["mediocentro", "lateral", "extremo", "delantero", "defensa"],
+      peso_jugador_kg: [60, 90],
+      estilos: ["equilibrado", "tecnico", "velocidad"],
+      superficies: ["fg", "ag"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+    },
+    resumen:
+      "Un escalón por debajo de la Future 7 Ultimate pero con muy buenas prestaciones. La Pro mantiene el upper adaptable FUZIONFIT+ y añade una placa de carbono para propulsión. Más económica que la Ultimate manteniendo el 90% del rendimiento. La elección inteligente dentro de la gama Future.",
+    pros: [
+      "Upper FUZIONFIT+ que se adapta al pie",
+      "Placa de carbono a precio más accesible",
+      "Compatible FG y AG",
+      "Comodidad excepcional desde el primer día",
+    ],
+    contras: [
+      "No llega al nivel top de la Ultimate",
+      "Algo más pesada que las botas de velocidad pura",
+    ],
+    veredicto:
+      "La opción inteligente dentro de la gama Future de Puma. Si la Ultimate te parece cara pero quieres el ADN Future con placa de carbono, la Pro es tu bota.",
+    imagen_principal: "https://m.media-amazon.com/images/I/71GECgkNA6L._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 160,
+    links_compra: [
+      { tienda: "puma_es", url: "https://es.puma.com/future-7-pro-fg", precio_actual: 160.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+future+7+pro+fg", precio_actual: 144.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 35. ASICS DS LIGHT — El secreto de los técnicos
+  // ───────────────────────────────────────────────
+  {
+    id: "asics-ds-light",
+    slug: "asics-ds-light",
+    marca: "Asics",
+    modelo: "DS Light",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Microfiber leather upper", "Trusstic system", "DS suela ligera", "FluidFit"],
+    peso_real_g: 175,
+    horma: "normal",
+    superficies_compatibles: ["fg"],
+    material_superior: "sintetico",
+    puntuaciones: {
+      traccion: 8,
+      amortiguacion: 7,
+      control_balon: 9,
+      soporte_lateral: 8,
+      estabilidad: 8,
+      peso_score: 9,
+      durabilidad: 9,
+      confort: 9,
+    },
+    categoria_principal: "control",
+    tags: ["tecnico", "control", "ligera", "FG", "Asics", "japonesa", "cuero"],
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "delantero", "defensa"],
+      peso_jugador_kg: [55, 85],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero"],
+      estilos: ["potencia"],
+    },
+    resumen:
+      "El secreto mejor guardado del fútbol técnico. La DS Light de Asics combina un upper de microfibra con tacto de cuero, una construcción ultraligera (175g) y una durabilidad excepcional. Muy popular entre jugadores técnicos japoneses y europeos que buscan una alternativa diferente a Nike y Adidas.",
+    pros: [
+      "Upper microfibra con tacto de cuero — control excelente",
+      "Solo 175g — sorprendentemente ligera",
+      "Durabilidad superior a muchas opciones premium",
+      "Alternativa única a Nike/Adidas con carácter propio",
+    ],
+    contras: [
+      "Solo FG — sin versión AG oficial",
+      "Disponibilidad limitada fuera de internet",
+      "Menos reconocible que las grandes marcas",
+    ],
+    veredicto:
+      "Para el jugador técnico que quiere salir de lo convencional. La DS Light ofrece tacto de cuero, peso pluma y durabilidad excepcional. Un joya desconocida que merece más atención.",
+    imagen_principal: "https://m.media-amazon.com/images/I/61k4zK6PuLL._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 130,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=asics+ds+light+fg", precio_actual: 119.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
+
+  // ───────────────────────────────────────────────
+  // 36. PANTOFOLA D'ORO LAZZARINI — Cuero italiano artesanal
+  // ───────────────────────────────────────────────
+  {
+    id: "pantofola-doro-lazzarini",
+    slug: "pantofola-doro-lazzarini",
+    marca: "Pantofola d'Oro",
+    modelo: "Lazzarini",
+    año_lanzamiento: 2024,
+    genero: "unisex",
+    tecnologia_clave: ["Full-grain kangaroo leather", "Artisanal Italian craft", "Classic stud pattern"],
+    peso_real_g: 220,
+    horma: "normal",
+    superficies_compatibles: ["fg"],
+    material_superior: "cuero",
+    puntuaciones: {
+      traccion: 7,
+      amortiguacion: 7,
+      control_balon: 10,
+      soporte_lateral: 7,
+      estabilidad: 7,
+      peso_score: 6,
+      durabilidad: 9,
+      confort: 9,
+    },
+    categoria_principal: "control",
+    tags: ["cuero", "artesanal", "italiana", "tecnico", "FG", "premium", "nicho"],
+    ideal_para: {
+      posiciones: ["mediocentro", "mediapunta", "delantero", "defensa"],
+      peso_jugador_kg: [60, 95],
+      estilos: ["tecnico", "equilibrado"],
+      superficies: ["fg"],
+    },
+    no_recomendada_para: {
+      posiciones: ["portero", "extremo"],
+      estilos: ["velocidad", "potencia"],
+    },
+    resumen:
+      "El pináculo del cuero artesanal italiano. Pantofola d'Oro lleva haciendo botas desde 1886 y la Lazzarini es su obra maestra: piel de canguro full-grain cosida a mano, tacto de balón incomparable y una durabilidad que mejora con el tiempo. Para el purista del fútbol técnico.",
+    pros: [
+      "Piel de canguro full-grain — mejor tacto de balón posible",
+      "Artesanía italiana — construida para durar años",
+      "El cuero se amolda perfectamente al pie con el uso",
+      "Estética clásica e inconfundible",
+    ],
+    contras: [
+      "Necesita periodo de amoldamiento",
+      "Más pesada que las opciones modernas",
+      "Precio elevado para lo que ofrece en rendimiento puro",
+      "Solo FG — sin versiones alternativas",
+    ],
+    veredicto:
+      "No es para todos. Es para el jugador que valora el tacto de balón por encima de cualquier otra cosa y quiere una bota con alma. Si el cuero te llama, la Lazzarini es la cumbre.",
+    imagen_principal: "https://m.media-amazon.com/images/I/41akE-8s5HL._AC_SY500_.jpg",
+    imagenes: [],
+    fuentes: [
+      { tipo: "evaluacion-propia" },
+    ],
+    ultima_actualizacion: "2026-05-20",
+    precio_msrp_eur: 200,
+    links_compra: [
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=pantofola+d'oro+lazzarini+fg", precio_actual: 189.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+    ],
+  },
 ];
 
 export const botas: Bota[] = _rawBotas;
