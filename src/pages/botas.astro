@@ -34,7 +34,7 @@ const marcas = [...new Set(botas.map((b) => b.marca))].sort();
 const SUP_LABELS: Record<string, string> = { fg: "FG", ag: "AG", sg: "SG", in: "IN", tf: "TF" };
 
 const CAT_STYLE: Record<string, { badge: string; accent: string }> = {
-  velocidad:   { badge: "text-yellow-400/80 border-zinc-700 bg-zinc-800/80", accent: "bg-yellow-400/50" },
+  velocidad:   { badge: "text-lime-300/80 border-zinc-700 bg-zinc-800/80", accent: "bg-lime-300/50" },
   control:     { badge: "text-sky-400/70 border-zinc-700 bg-zinc-800/80",    accent: "bg-sky-500/50" },
   potencia:    { badge: "text-purple-400/70 border-zinc-700 bg-zinc-800/80", accent: "bg-purple-500/50" },
   equilibrada: { badge: "text-zinc-300 border-zinc-700 bg-zinc-800/80",      accent: "bg-zinc-500/40" },
@@ -51,12 +51,12 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
-          CAMPO<span class="text-orange-500">.</span>
+          CAMPO<span class="text-lime-500">.</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-500 uppercase tracking-widest">
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">↻ Hacer quiz</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">↻ Hacer quiz</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
       </div>
     </header>
@@ -64,13 +64,13 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
     <!-- HERO catálogo -->
     <section class="px-6 py-14 border-b border-green-900/60">
       <div class="max-w-6xl mx-auto">
-        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-500 mb-3">★ Catálogo</p>
+        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-lime-500 mb-3">★ Catálogo</p>
         <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-3 leading-[0.9]">
-          {botas.length} <span class="text-orange-500">botas</span> analizadas
+          {botas.length} <span class="text-lime-500">botas</span> analizadas
         </h1>
         <p class="text-zinc-400 max-w-2xl text-sm leading-relaxed mb-8">
           Puntuaciones, precio verificado y veredicto honesto. ¿No sabes cuál te encaja?{" "}
-          <a href="/quiz" class="text-orange-500 hover:text-orange-400 font-semibold underline underline-offset-4">Haz el quiz →</a>
+          <a href="/quiz" class="text-lime-500 hover:text-lime-400 font-semibold underline underline-offset-4">Haz el quiz →</a>
         </p>
 
         <!-- Búsqueda -->
@@ -81,19 +81,19 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
             type="text"
             placeholder="Buscar bota…"
             autocomplete="off"
-            class="w-full sm:max-w-sm pl-10 pr-4 py-2.5 bg-zinc-900/80 border border-zinc-700 focus:border-orange-500 rounded-full text-white text-sm font-medium outline-none transition-colors placeholder-zinc-600 backdrop-blur-sm"
+            class="w-full sm:max-w-sm pl-10 pr-4 py-2.5 bg-zinc-900/80 border border-zinc-700 focus:border-lime-500 rounded-full text-white text-sm font-medium outline-none transition-colors placeholder-zinc-600 backdrop-blur-sm"
           />
         </div>
 
         <!-- Filtros marca -->
         <div class="flex flex-wrap gap-2 mb-4" role="group" aria-label="Filtrar por marca">
           <button data-filter-marca="all" aria-pressed="true"
-            class="filter-btn px-4 py-1.5 rounded-full border border-orange-500 bg-orange-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">
+            class="filter-btn px-4 py-1.5 rounded-full border border-lime-500 bg-lime-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">
             Todas
           </button>
           {marcas.map((m) => (
             <button data-filter-marca={m} aria-pressed="false"
-              class="filter-btn px-4 py-1.5 rounded-full border border-zinc-700 hover:border-orange-500/60 text-zinc-400 hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all hover:bg-zinc-800">
+              class="filter-btn px-4 py-1.5 rounded-full border border-zinc-700 hover:border-lime-500/60 text-zinc-400 hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all hover:bg-zinc-800">
               {m}
             </button>
           ))}
@@ -103,7 +103,7 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
         <div class="flex flex-wrap gap-2 mb-4" role="group" aria-label="Filtrar por superficie">
           <span class="text-[10px] font-semibold uppercase tracking-widest text-zinc-600 self-center">Superficie:</span>
           <button data-filter-sup="all" aria-pressed="true"
-            class="sup-btn px-4 py-1.5 rounded-full border border-orange-500 bg-orange-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">
+            class="sup-btn px-4 py-1.5 rounded-full border border-lime-500 bg-lime-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">
             Todas
           </button>
           {[
@@ -123,11 +123,11 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
         <!-- Filtros categoría -->
         <div class="flex flex-wrap gap-2 mb-4" role="group" aria-label="Filtrar por categoría">
           <button data-filter-cat="all" aria-pressed="true"
-            class="cat-btn px-4 py-1.5 rounded-full border border-orange-500 bg-orange-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">
+            class="cat-btn px-4 py-1.5 rounded-full border border-lime-500 bg-lime-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">
             Todas
           </button>
           <button data-filter-cat="velocidad" aria-pressed="false"
-            class="cat-btn px-4 py-1.5 rounded-full border border-zinc-700 text-zinc-400 hover:border-yellow-500/60 hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all hover:bg-zinc-800">
+            class="cat-btn px-4 py-1.5 rounded-full border border-zinc-700 text-zinc-400 hover:border-lime-300/60 hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all hover:bg-zinc-800">
             ⚡ Velocidad
           </button>
           <button data-filter-cat="control" aria-pressed="false"
@@ -155,7 +155,7 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
               { key: "premium", label: "> 200€" },
             ].map((p) => (
               <button data-filter-precio={p.key} aria-pressed={p.key === "all" ? "true" : "false"}
-                class={`precio-btn px-3.5 py-1 rounded-full border text-[11px] font-bold uppercase tracking-wider transition-all ${p.key === "all" ? "border-orange-500 bg-orange-500 text-zinc-950" : "border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white"}`}>
+                class={`precio-btn px-3.5 py-1 rounded-full border text-[11px] font-bold uppercase tracking-wider transition-all ${p.key === "all" ? "border-lime-500 bg-lime-500 text-zinc-950" : "border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white"}`}>
                 {p.label}
               </button>
             ))}
@@ -164,7 +164,7 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
           <div class="flex items-center gap-2 flex-wrap" role="group" aria-label="Ordenar catálogo">
             <span class="text-[10px] font-semibold uppercase tracking-widest text-zinc-600">Ordenar:</span>
             <button data-sort="precio-asc" aria-pressed="true"
-              class="sort-btn px-3.5 py-1 rounded-full border border-orange-500 bg-orange-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">↑ Precio</button>
+              class="sort-btn px-3.5 py-1 rounded-full border border-lime-500 bg-lime-500 text-zinc-950 text-[11px] font-bold uppercase tracking-wider transition-all">↑ Precio</button>
             <button data-sort="precio-desc" aria-pressed="false"
               class="sort-btn px-3.5 py-1 rounded-full border border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all">↓ Precio</button>
             <button data-sort="score-desc" aria-pressed="false"
@@ -176,7 +176,7 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
           </p>
         </div>
 
-        <button id="btn-reset-filtros" class="hidden text-xs text-orange-400 hover:text-orange-300 underline font-bold transition-colors py-1 mt-2">
+        <button id="btn-reset-filtros" class="hidden text-xs text-lime-400 hover:text-lime-300 underline font-bold transition-colors py-1 mt-2">
           Limpiar filtros
         </button>
       </div>
@@ -195,9 +195,9 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
 
               const scoreBg =
                 score >= 8
-                  ? "bg-orange-500 text-zinc-950"
+                  ? "bg-lime-500 text-zinc-950"
                   : score >= 6.5
-                    ? "bg-yellow-400 text-zinc-950"
+                    ? "bg-lime-300 text-zinc-950"
                     : "bg-zinc-700 text-zinc-200";
 
               const cat = CAT_STYLE[b.categoria_principal] ?? CAT_DEFAULT;
@@ -212,7 +212,7 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
                   data-nombre={`${b.marca} ${b.modelo}`.toLowerCase()}
                   data-categoria={b.categoria_principal}
                   data-superficies={b.superficies_compatibles.join(",")}
-                  class="catalogo-card group bg-[#161616] border border-zinc-800/60 hover:border-orange-500/50 transition-all duration-200 flex flex-col hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.6),0_0_0_1px_rgba(249,115,22,0.15)]"
+                  class="catalogo-card group bg-[#161616] border border-zinc-800/60 hover:border-lime-500/50 transition-all duration-200 flex flex-col hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.6),0_0_0_1px_rgba(249,115,22,0.15)]"
                 >
                   <div class="relative overflow-hidden bg-gradient-to-b from-zinc-800 to-zinc-900">
                     <img
@@ -237,7 +237,7 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
                   <div class="p-4 flex flex-col flex-1 gap-2">
                     <div>
                       <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-0.5">{b.marca}</p>
-                      <h2 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
+                      <h2 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-lime-500 transition-colors">
                         {b.modelo}
                       </h2>
                     </div>
@@ -265,12 +265,12 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
                         ) : (
                           <span class="inline-block text-[9px] font-bold uppercase tracking-widest text-zinc-600 mb-1">editorial</span>
                         )}
-                        <p class="text-2xl font-black text-orange-500 leading-none">{precio}€</p>
+                        <p class="text-2xl font-black text-lime-500 leading-none">{precio}€</p>
                         {tienda && (
                           <p class="text-[10px] text-zinc-600 uppercase tracking-wider mt-0.5">en {tienda}</p>
                         )}
                       </div>
-                      <span class="text-[10px] font-black uppercase tracking-widest text-zinc-600 group-hover:text-orange-500 transition-colors border border-zinc-700 group-hover:border-orange-500 px-2.5 py-1.5 mb-0.5">
+                      <span class="text-[10px] font-black uppercase tracking-widest text-zinc-600 group-hover:text-lime-500 transition-colors border border-zinc-700 group-hover:border-lime-500 px-2.5 py-1.5 mb-0.5">
                         Ver →
                       </span>
                     </div>
@@ -288,14 +288,14 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
     </section>
 
     <!-- Footer -->
-    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-orange-500">
+    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-lime-500">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></a>
+        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-lime-500">.</span></a>
         <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">Quiz</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Metodología</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
         <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
       </div>
@@ -323,10 +323,10 @@ const CAT_DEFAULT = { badge: "text-zinc-400 border-zinc-700 bg-zinc-800/80", acc
 
     function setPillActive(btn, active) {
       if (active) {
-        btn.classList.add("border-orange-500", "bg-orange-500", "text-zinc-950");
+        btn.classList.add("border-lime-500", "bg-lime-500", "text-zinc-950");
         btn.classList.remove("border-zinc-700", "text-zinc-400");
       } else {
-        btn.classList.remove("border-orange-500", "bg-orange-500", "text-zinc-950");
+        btn.classList.remove("border-lime-500", "bg-lime-500", "text-zinc-950");
         btn.classList.add("border-zinc-700", "text-zinc-400");
       }
       btn.setAttribute("aria-pressed", String(active));

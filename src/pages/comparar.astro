@@ -10,42 +10,42 @@ import Base from "../layouts/Base.astro";
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
-          CAMPO<span class="text-orange-500">.</span>
+          CAMPO<span class="text-lime-500">.</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
       </div>
     </header>
 
     <noscript>
       <div class="px-6 py-20 text-center max-w-2xl mx-auto">
-        <p class="text-orange-500 font-black uppercase tracking-widest text-xs mb-4">⚠ JavaScript requerido</p>
+        <p class="text-lime-500 font-black uppercase tracking-widest text-xs mb-4">⚠ JavaScript requerido</p>
         <p class="text-zinc-400 mb-6">El comparador necesita JavaScript para funcionar. Actívalo y recarga.</p>
-        <a href="/botas" class="inline-block px-6 py-3 bg-orange-500 text-zinc-950 font-black uppercase tracking-wider">← Ver catálogo</a>
+        <a href="/botas" class="inline-block px-6 py-3 bg-lime-500 text-zinc-950 font-black uppercase tracking-wider">← Ver catálogo</a>
       </div>
     </noscript>
 
     <!-- Selector -->
     <section id="estado-selector" class="hidden px-6 py-12">
       <div class="max-w-4xl mx-auto">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ Comparador</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Comparador</p>
         <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase mb-3">Elige 2 o 3 botas</h1>
         <p class="text-zinc-400 mb-8">Las verás lado a lado con todas sus métricas, precios y veredictos.</p>
 
         <div class="relative mb-5">
           <span class="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 text-sm select-none">🔍</span>
           <input id="selector-search" type="text" placeholder="Buscar bota…" autocomplete="off"
-            class="w-full sm:max-w-sm pl-10 pr-4 py-2.5 bg-zinc-900/80 border border-zinc-700 focus:border-orange-500 rounded-full text-white text-sm font-medium outline-none transition-colors placeholder-zinc-600" />
+            class="w-full sm:max-w-sm pl-10 pr-4 py-2.5 bg-zinc-900/80 border border-zinc-700 focus:border-lime-500 rounded-full text-white text-sm font-medium outline-none transition-colors placeholder-zinc-600" />
         </div>
 
         <div id="selector-grid" class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4"></div>
 
         <div class="flex justify-center mb-6">
-          <button id="btn-limpiar" class="hidden text-xs text-zinc-500 hover:text-orange-400 underline transition-colors">Limpiar selección</button>
+          <button id="btn-limpiar" class="hidden text-xs text-zinc-500 hover:text-lime-400 underline transition-colors">Limpiar selección</button>
         </div>
 
         <div id="empty-state" class="text-center py-16 text-zinc-600">
@@ -57,7 +57,7 @@ import Base from "../layouts/Base.astro";
         <div class="flex items-center justify-between gap-4">
           <p id="selector-count" class="text-sm text-zinc-500">0 seleccionadas</p>
           <button id="selector-comparar" type="button" disabled
-            class="px-8 py-4 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider transition-all disabled:bg-zinc-800 disabled:text-zinc-600 disabled:cursor-not-allowed shadow-[4px_4px_0_0_rgb(250,204,21)] disabled:shadow-none">
+            class="px-8 py-4 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider transition-all disabled:bg-zinc-800 disabled:text-zinc-600 disabled:cursor-not-allowed shadow-[4px_4px_0_0_rgb(255,255,255)] disabled:shadow-none">
             Comparar →
           </button>
         </div>
@@ -68,11 +68,11 @@ import Base from "../layouts/Base.astro";
     <section id="estado-comparativa" class="hidden px-6 py-12">
       <div class="max-w-7xl mx-auto">
         <div class="mb-10">
-          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">★ Comparativa lado a lado</p>
+          <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-3">★ Comparativa lado a lado</p>
           <h1 class="text-3xl md:text-5xl font-black tracking-tight uppercase mb-3 leading-tight">
             <span id="comp-titulo"></span>
           </h1>
-          <p class="text-zinc-400">Mejor valor en cada métrica resaltado en <span class="text-orange-500 font-black">naranja</span>.</p>
+          <p class="text-zinc-400">Mejor valor en cada métrica resaltado en <span class="text-lime-500 font-black">naranja</span>.</p>
         </div>
 
         <div class="overflow-x-auto -mx-6 px-6 pb-4">
@@ -80,7 +80,7 @@ import Base from "../layouts/Base.astro";
         </div>
 
         <div class="mt-12 flex flex-wrap gap-4 justify-center">
-          <a href="/comparar" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">↻ Nueva comparativa</a>
+          <a href="/comparar" class="px-6 py-3 border-2 border-zinc-700 hover:border-lime-500 font-black uppercase tracking-wider text-sm transition-colors">↻ Nueva comparativa</a>
           <a href="/quiz" class="px-6 py-3 text-zinc-500 hover:text-white font-bold uppercase tracking-widest text-xs transition-colors self-center">¿No sabes cuál elegir? Haz el quiz</a>
         </div>
       </div>
@@ -89,10 +89,10 @@ import Base from "../layouts/Base.astro";
     <!-- Error -->
     <section id="estado-error" class="hidden px-6 py-20">
       <div class="max-w-2xl mx-auto text-center">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">⚠ Botas no encontradas</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">⚠ Botas no encontradas</p>
         <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase mb-6">Esos IDs no existen.</h1>
         <p class="text-zinc-400 mb-8">Vuelve al selector y elige botas válidas de la lista.</p>
-        <a href="/comparar" class="inline-block px-8 py-4 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider transition-all shadow-[4px_4px_0_0_rgb(250,204,21)]">← Volver al selector</a>
+        <a href="/comparar" class="inline-block px-8 py-4 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider transition-all shadow-[4px_4px_0_0_rgb(255,255,255)]">← Volver al selector</a>
       </div>
     </section>
   </main>
@@ -125,10 +125,10 @@ import Base from "../layouts/Base.astro";
 
       $grid.innerHTML = botas.map((b) => `
         <button type="button" data-id="${escapeHtml(b.id)}"
-          class="selector-card text-left p-4 border-2 border-zinc-800 bg-zinc-900/50 hover:border-orange-500 transition-all cursor-pointer flex flex-col gap-1">
+          class="selector-card text-left p-4 border-2 border-zinc-800 bg-zinc-900/50 hover:border-lime-500 transition-all cursor-pointer flex flex-col gap-1">
           <div class="flex items-start justify-between gap-1">
             <span class="selector-marca text-xs font-bold uppercase tracking-widest text-zinc-500">${escapeHtml(b.marca)}</span>
-            <span class="text-xs font-black text-orange-500/70 shrink-0">${String(Math.round((Object.values(b.puntuaciones).reduce((a, c) => a + c, 0) / 8) * 10) / 10)}</span>
+            <span class="text-xs font-black text-lime-500/70 shrink-0">${String(Math.round((Object.values(b.puntuaciones).reduce((a, c) => a + c, 0) / 8) * 10) / 10)}</span>
           </div>
           <span class="selector-nombre font-black uppercase text-base leading-tight">${escapeHtml(b.modelo)}</span>
           <span class="text-xs text-zinc-500 mt-1">${escapeHtml(b.precio_msrp_eur)}€</span>
@@ -143,8 +143,8 @@ import Base from "../layouts/Base.astro";
 
         $grid.querySelectorAll(".selector-card").forEach((el) => {
           const id = el.getAttribute("data-id")!;
-          el.classList.toggle("border-orange-500", seleccion.has(id));
-          el.classList.toggle("bg-orange-500/10", seleccion.has(id));
+          el.classList.toggle("border-lime-500", seleccion.has(id));
+          el.classList.toggle("bg-lime-500/10", seleccion.has(id));
           el.classList.toggle("border-zinc-800", !seleccion.has(id));
         });
       }
@@ -195,7 +195,7 @@ import Base from "../layouts/Base.astro";
       const max = Math.max(...scores);
       const min = Math.min(...scores);
       if (max === min) return "#71717a";
-      if (score === max) return "#f97316";
+      if (score === max) return "#84cc16";
       return "#52525b";
     }
 
@@ -226,7 +226,7 @@ import Base from "../layouts/Base.astro";
       const { ganadores, html } = opts;
       const cells = valores.map((v, i) => {
         const isWinner = ganadores?.has(i);
-        return `<div class="px-4 py-3 border-l border-zinc-800 ${isWinner ? "text-orange-500 font-black" : "text-zinc-200"} text-sm">${html ? v : escapeHtml(v)}</div>`;
+        return `<div class="px-4 py-3 border-l border-zinc-800 ${isWinner ? "text-lime-500 font-black" : "text-zinc-200"} text-sm">${html ? v : escapeHtml(v)}</div>`;
       }).join("");
 
       return `
@@ -250,15 +250,15 @@ import Base from "../layouts/Base.astro";
                 loading="lazy" onerror="this.onerror=null;this.src='/placeholder-boot.svg'" />
             </a>
             <p class="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-1">${escapeHtml(b.marca)}</p>
-            <a href="/bota/${escapeHtml(b.slug)}" class="hover:text-orange-500 transition-colors">
+            <a href="/bota/${escapeHtml(b.slug)}" class="hover:text-lime-500 transition-colors">
               <h2 class="text-xl font-black uppercase leading-tight tracking-tight mb-3">${escapeHtml(b.modelo)}</h2>
             </a>
-            <p class="text-2xl font-black text-orange-500 mb-3">${escapeHtml(precio)}€${tienda ? ` <span class="text-xs text-zinc-500 font-normal">en ${escapeHtml(tienda)}</span>` : ""}</p>
+            <p class="text-2xl font-black text-lime-500 mb-3">${escapeHtml(precio)}€${tienda ? ` <span class="text-xs text-zinc-500 font-normal">en ${escapeHtml(tienda)}</span>` : ""}</p>
             <div class="flex flex-wrap gap-2">
               <a href="${escapeHtml(ctaHref)}" target="_blank" rel="noopener noreferrer sponsored"
-                class="inline-block px-4 py-2 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors">Ver oferta →</a>
+                class="inline-block px-4 py-2 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors">Ver oferta →</a>
               <a href="/bota/${escapeHtml(b.slug)}"
-                class="inline-block px-4 py-2 border-2 border-zinc-700 hover:border-orange-500 font-bold uppercase tracking-wider text-xs transition-colors">Ver ficha →</a>
+                class="inline-block px-4 py-2 border-2 border-zinc-700 hover:border-lime-500 font-bold uppercase tracking-wider text-xs transition-colors">Ver ficha →</a>
             </div>
           </div>`;
       }).join("");
@@ -273,7 +273,7 @@ import Base from "../layouts/Base.astro";
     function renderComparativa(bts: Bota[]) {
       document.getElementById("estado-comparativa")!.classList.remove("hidden");
       document.getElementById("comp-titulo")!.innerHTML = bts
-        .map((b) => `<span class="text-orange-500">${escapeHtml(b.modelo)}</span>`)
+        .map((b) => `<span class="text-lime-500">${escapeHtml(b.modelo)}</span>`)
         .join(" <span class='text-zinc-500'>vs</span> ");
 
       const $tabla = document.getElementById("comp-tabla")!;
@@ -282,7 +282,7 @@ import Base from "../layouts/Base.astro";
       let html = "";
       html += renderHeader(bts);
 
-      html += `<div class="text-xs font-black uppercase tracking-widest text-orange-500 mt-6 mb-2">Datos físicos</div>`;
+      html += `<div class="text-xs font-black uppercase tracking-widest text-lime-500 mt-6 mb-2">Datos físicos</div>`;
       html += `<div class="border border-zinc-800">`;
       html += renderFila("Año", bts.map((b) => b.año_lanzamiento));
       html += renderFila("Peso (EU 42)", bts.map((b) => `${b.peso_real_g} g`), { ganadores: indicesGanadores(bts.map((b) => b.peso_real_g), false) });
@@ -291,7 +291,7 @@ import Base from "../layouts/Base.astro";
       html += renderFila("Categoría", bts.map((b) => b.categoria_principal));
       html += `</div>`;
 
-      html += `<div class="text-xs font-black uppercase tracking-widest text-orange-500 mt-6 mb-2">Puntuaciones (1-10)</div>`;
+      html += `<div class="text-xs font-black uppercase tracking-widest text-lime-500 mt-6 mb-2">Puntuaciones (1-10)</div>`;
       html += `<div class="border border-zinc-800">`;
       for (const attr of ATRIBUTOS) {
         const valores = bts.map((b) => b.puntuaciones[attr.key]);
@@ -301,10 +301,10 @@ import Base from "../layouts/Base.astro";
       }
       html += `</div>`;
 
-      html += `<div class="text-xs font-black uppercase tracking-widest text-orange-500 mt-6 mb-2">Veredicto</div>`;
+      html += `<div class="text-xs font-black uppercase tracking-widest text-lime-500 mt-6 mb-2">Veredicto</div>`;
       html += `<div class="border border-zinc-800">`;
       html += renderFila("Resumen", bts.map((b) => `<span class="text-xs leading-relaxed">${escapeHtml(b.resumen)}</span>`), { html: true });
-      html += renderFila("Pros", bts.map((b) => `<ul class="text-xs space-y-1">${b.pros.map((p) => `<li class="flex gap-1.5"><span class="text-orange-500">+</span><span>${escapeHtml(p)}</span></li>`).join("")}</ul>`), { html: true });
+      html += renderFila("Pros", bts.map((b) => `<ul class="text-xs space-y-1">${b.pros.map((p) => `<li class="flex gap-1.5"><span class="text-lime-500">+</span><span>${escapeHtml(p)}</span></li>`).join("")}</ul>`), { html: true });
       html += renderFila("Contras", bts.map((b) => `<ul class="text-xs space-y-1">${b.contras.map((c) => `<li class="flex gap-1.5"><span class="text-zinc-500">−</span><span>${escapeHtml(c)}</span></li>`).join("")}</ul>`), { html: true });
       html += `</div>`;
 

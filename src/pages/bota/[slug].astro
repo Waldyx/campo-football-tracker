@@ -102,10 +102,10 @@ const jsonLd = {
     <!-- Header -->
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></a>
+        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-lime-500">.</span></a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
         </nav>
       </div>
     </header>
@@ -113,9 +113,9 @@ const jsonLd = {
     <!-- Breadcrumbs -->
     <nav class="px-6 py-4 border-b border-green-900/60 text-xs uppercase tracking-widest text-zinc-600">
       <div class="max-w-6xl mx-auto flex items-center gap-2 flex-wrap">
-        <a href="/" class="hover:text-orange-500 transition-colors">Inicio</a>
+        <a href="/" class="hover:text-lime-500 transition-colors">Inicio</a>
         <span>/</span>
-        <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
+        <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
         <span>/</span>
         <span class="text-zinc-400">{b.marca} {b.modelo}</span>
       </div>
@@ -147,7 +147,7 @@ const jsonLd = {
         <!-- Info -->
         <div class="flex flex-col gap-5">
           <div>
-            <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-2">★ {b.año_lanzamiento}</p>
+            <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-2">★ {b.año_lanzamiento}</p>
             <p class="text-sm font-bold uppercase tracking-widest text-zinc-500">{b.marca}</p>
             <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mt-1">{b.modelo}</h1>
           </div>
@@ -155,7 +155,7 @@ const jsonLd = {
           <!-- Score global -->
           <div class="flex items-center gap-4">
             <div class="flex items-baseline gap-2">
-              <span class="text-5xl font-black text-orange-500">{Math.round(ratingMedio * 10) / 10}</span>
+              <span class="text-5xl font-black text-lime-500">{Math.round(ratingMedio * 10) / 10}</span>
               <span class="text-zinc-600 font-bold">/10</span>
             </div>
             <div>
@@ -173,7 +173,7 @@ const jsonLd = {
               { label: "Horma", value: b.horma, sub: "" },
               { label: "Superficies", value: b.superficies_compatibles.join(", ").toUpperCase(), sub: "" },
             ].map(s => (
-              <div class="bg-zinc-900/60 border border-zinc-800 border-t-2 border-t-orange-500/40 p-3 flex flex-col gap-1">
+              <div class="bg-zinc-900/60 border border-zinc-800 border-t-2 border-t-lime-500/40 p-3 flex flex-col gap-1">
                 <p class="text-[9px] font-bold uppercase tracking-widest text-zinc-500">{s.label}{s.sub && <span class="text-zinc-700 ml-1">({s.sub})</span>}</p>
                 <p class="text-base font-black capitalize leading-tight">{s.value}</p>
               </div>
@@ -194,8 +194,8 @@ const jsonLd = {
 
           <!-- CTA mejor precio -->
           {mejorPrecio && (
-            <div class="bg-zinc-900 border-2 border-orange-500 p-5 mt-4">
-              <p class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-2">Mejor precio actual</p>
+            <div class="bg-zinc-900 border-2 border-lime-500 p-5 mt-4">
+              <p class="text-xs font-bold uppercase tracking-widest text-lime-500 mb-2">Mejor precio actual</p>
               <div class="flex items-end justify-between gap-4 flex-wrap">
                 <div>
                   <div class="flex items-baseline gap-3">
@@ -215,7 +215,7 @@ const jsonLd = {
                   href={mejorPrecio.url}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  class="px-6 py-4 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(250,204,21)] hover:shadow-[6px_6px_0_0_rgb(250,204,21)]"
+                  class="px-6 py-4 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(255,255,255)] hover:shadow-[6px_6px_0_0_rgb(255,255,255)]"
                 >
                   Ver en {LABELS_TIENDA[mejorPrecio.tienda] || mejorPrecio.tienda} →
                 </a>
@@ -230,16 +230,16 @@ const jsonLd = {
     <section class="px-6 py-16 bg-zinc-900 border-y border-zinc-800">
       <div class="max-w-6xl mx-auto">
         <div class="flex items-center gap-4 mb-10">
-          <div class="h-1 flex-1 bg-orange-500"></div>
+          <div class="h-1 flex-1 bg-lime-500"></div>
           <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Análisis técnico</h2>
-          <div class="h-1 flex-1 bg-orange-500"></div>
+          <div class="h-1 flex-1 bg-lime-500"></div>
         </div>
         <div class="grid sm:grid-cols-2 gap-x-10 gap-y-6">
           {ATRIBUTOS.map(({ key, label }) => {
             const valor = b.puntuaciones[key];
             const pct = (valor / 10) * 100;
-            const color = valor >= 8 ? "bg-orange-500" : valor >= 6 ? "bg-yellow-400" : "bg-zinc-500";
-            const textColor = valor >= 8 ? "text-orange-500" : valor >= 6 ? "text-yellow-400" : "text-zinc-400";
+            const color = valor >= 8 ? "bg-lime-500" : valor >= 6 ? "bg-lime-300" : "bg-zinc-500";
+            const textColor = valor >= 8 ? "text-lime-500" : valor >= 6 ? "text-lime-300" : "text-zinc-400";
             return (
               <div class="group">
                 <div class="flex items-center justify-between mb-2">
@@ -261,11 +261,11 @@ const jsonLd = {
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-10 mb-12">
           <div>
-            <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">✓ Lo que sí</p>
+            <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">✓ Lo que sí</p>
             <ul class="flex flex-col gap-3">
               {b.pros.map((p) => (
                 <li class="flex gap-3 text-zinc-300">
-                  <span class="text-orange-500 font-black mt-1">+</span>
+                  <span class="text-lime-500 font-black mt-1">+</span>
                   <span>{p}</span>
                 </li>
               ))}
@@ -284,8 +284,8 @@ const jsonLd = {
           </div>
         </div>
 
-        <div class="bg-zinc-900 border-l-4 border-orange-500 p-6 md:p-8">
-          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">★ Veredicto</p>
+        <div class="bg-zinc-900 border-l-4 border-lime-500 p-6 md:p-8">
+          <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-3">★ Veredicto</p>
           <p class="text-lg md:text-xl text-white leading-relaxed">{b.veredicto}</p>
         </div>
       </div>
@@ -297,7 +297,7 @@ const jsonLd = {
         <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-10">¿Para quién?</h2>
         <div class="grid md:grid-cols-2 gap-10">
           <div>
-            <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">✓ Recomendada si...</p>
+            <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-3">✓ Recomendada si...</p>
             <ul class="space-y-2 text-zinc-300">
               <li><span class="text-zinc-500">·</span> Juegas de: <span class="font-bold capitalize">{b.ideal_para.posiciones.join(", ")}</span></li>
               <li><span class="text-zinc-500">·</span> Pesas entre <span class="font-bold">{b.ideal_para.peso_jugador_kg[0]}-{b.ideal_para.peso_jugador_kg[1]} kg</span></li>
@@ -341,7 +341,7 @@ const jsonLd = {
             return (
               <div class={`flex items-center justify-between gap-4 p-5 flex-wrap ${idx > 0 ? "border-t border-zinc-800" : ""} ${idx === 0 ? "bg-zinc-900" : ""}`}>
                 <div class="flex items-center gap-3 min-w-0">
-                  {idx === 0 && <span class="shrink-0 px-2 py-1 bg-yellow-400 text-zinc-950 text-[10px] font-black uppercase tracking-widest">Mejor</span>}
+                  {idx === 0 && <span class="shrink-0 px-2 py-1 bg-lime-300 text-zinc-950 text-[10px] font-black uppercase tracking-widest">Mejor</span>}
                   <div class="min-w-0">
                     <p class="font-black uppercase tracking-tight text-base leading-tight">{LABELS_TIENDA[link.tienda] || link.tienda}</p>
                     <p class="text-[10px] uppercase tracking-widest text-zinc-600 mt-0.5">{link.tiene_afiliado ? "★ Enlace afiliado" : "Sin afiliación"} · {link.ultima_verificacion}</p>
@@ -349,14 +349,14 @@ const jsonLd = {
                 </div>
                 <div class="flex items-center gap-3 ml-auto">
                   <div class="text-right">
-                    <p class={`text-xl font-black ${idx === 0 ? "text-orange-500" : "text-white"}`}>{link.precio_actual}€</p>
+                    <p class={`text-xl font-black ${idx === 0 ? "text-lime-500" : "text-white"}`}>{link.precio_actual}€</p>
                     {diffPct > 0 && <p class="text-[10px] text-green-400 font-bold">-{diffPct}% vs MSRP</p>}
                   </div>
                   <a
                     href={link.url}
                     target="_blank"
                     rel={link.tiene_afiliado ? "noopener noreferrer sponsored" : "noopener noreferrer"}
-                    class="shrink-0 px-4 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors"
+                    class="shrink-0 px-4 py-3 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors"
                   >
                     Ver →
                   </a>
@@ -372,7 +372,7 @@ const jsonLd = {
     {relacionadas.length > 0 && (
       <section class="px-6 py-16 bg-zinc-900 border-y border-zinc-800">
         <div class="max-w-6xl mx-auto">
-          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">★ Misma categoría</p>
+          <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-3">★ Misma categoría</p>
           <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-8">También te puede interesar</h2>
           <div class="grid sm:grid-cols-3 gap-5">
             {relacionadas.map((rel) => {
@@ -380,17 +380,17 @@ const jsonLd = {
               const relPrecio = relMejor?.precio_actual ?? rel.precio_msrp_eur;
               const relScore = Math.round((Object.values(rel.puntuaciones).reduce((a, c) => a + c, 0) / 8) * 10) / 10;
               return (
-                <a href={`/bota/${rel.slug}`} class="group bg-[#0a1f0f] border-2 border-zinc-800 hover:border-orange-500 transition-all flex flex-col">
+                <a href={`/bota/${rel.slug}`} class="group bg-[#0a1f0f] border-2 border-zinc-800 hover:border-lime-500 transition-all flex flex-col">
                   <div class="relative">
                     <img src={rel.imagen_principal} alt={`${rel.marca} ${rel.modelo}`}
                       class="w-full aspect-[4/3] object-contain p-3 bg-gradient-to-b from-zinc-800 to-zinc-900"
                       loading="lazy" onerror="this.onerror=null;this.src='/placeholder-boot.svg'" />
-                    <span class="absolute top-2 right-2 px-2 py-0.5 bg-[#0a1f0f]/90 border border-zinc-700 text-xs font-black text-orange-500">{relScore}</span>
+                    <span class="absolute top-2 right-2 px-2 py-0.5 bg-[#0a1f0f]/90 border border-zinc-700 text-xs font-black text-lime-500">{relScore}</span>
                   </div>
                   <div class="p-4 flex flex-col flex-1 gap-2">
                     <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{rel.marca}</p>
-                    <h3 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">{rel.modelo}</h3>
-                    <p class="text-xl font-black text-orange-500 mt-auto">{relPrecio}€</p>
+                    <h3 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-lime-500 transition-colors">{rel.modelo}</h3>
+                    <p class="text-xl font-black text-lime-500 mt-auto">{relPrecio}€</p>
                   </div>
                 </a>
               );
@@ -405,21 +405,21 @@ const jsonLd = {
       <div class="max-w-3xl mx-auto text-center">
         <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6">¿No estás seguro?</h3>
         <div class="flex flex-wrap gap-4 justify-center">
-          <a href="/quiz" class="px-6 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(250,204,21)]">Hacer el quiz →</a>
-          <a href="/comparar" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">Comparar con otra</a>
-          <button id="btn-copiar-url" type="button" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">🔗 Compartir</button>
+          <a href="/quiz" class="px-6 py-3 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(255,255,255)]">Hacer el quiz →</a>
+          <a href="/comparar" class="px-6 py-3 border-2 border-zinc-700 hover:border-lime-500 font-black uppercase tracking-wider text-sm transition-colors">Comparar con otra</a>
+          <button id="btn-copiar-url" type="button" class="px-6 py-3 border-2 border-zinc-700 hover:border-lime-500 font-black uppercase tracking-wider text-sm transition-colors">🔗 Compartir</button>
         </div>
       </div>
     </section>
 
-    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-orange-500">
+    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-lime-500">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></a>
+        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-lime-500">.</span></a>
         <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Metodología</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
         <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
       </div>

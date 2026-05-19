@@ -64,19 +64,19 @@ const jsonLd = {
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
-          CAMPO<span class="text-orange-500">.</span>
+          CAMPO<span class="text-lime-500">.</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
         </nav>
       </div>
     </header>
 
     <section class="px-6 pt-16 pb-10 border-b border-green-900/60">
       <div class="max-w-4xl mx-auto">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">Preguntas frecuentes</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">Preguntas frecuentes</p>
         <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.95] mb-4">
           FAQ
         </h1>
@@ -89,10 +89,10 @@ const jsonLd = {
     <div class="px-6 py-16">
       <div class="max-w-4xl mx-auto space-y-4">
         {faqs.map((faq, i) => (
-          <details class="group bg-zinc-900 border border-zinc-800 open:border-orange-500/40 transition-colors">
+          <details class="group bg-zinc-900 border border-zinc-800 open:border-lime-500/40 transition-colors">
             <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none select-none">
               <span class="font-black tracking-tight text-sm md:text-base leading-snug pr-4">{faq.q}</span>
-              <span class="text-orange-500 font-black text-xl shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
+              <span class="text-lime-500 font-black text-xl shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
             </summary>
             <div class="px-6 pb-6">
               <p class="text-zinc-400 text-sm leading-relaxed border-t border-zinc-800 pt-4">{faq.a}</p>
@@ -102,27 +102,27 @@ const jsonLd = {
       </div>
 
       <div class="max-w-4xl mx-auto mt-16 bg-zinc-900 border border-zinc-800 p-8">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-3">¿No encuentras tu respuesta?</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-3">¿No encuentras tu respuesta?</p>
         <p class="text-zinc-400 text-sm leading-relaxed mb-6">
           Lee la metodología completa para entender cómo calculamos cada puntuación, qué fuentes usamos y cuáles son los límites del sistema.
         </p>
         <a
           href="/metodologia"
-          class="inline-block bg-orange-500 text-black text-xs font-black px-6 py-3 uppercase tracking-widest hover:bg-orange-400 transition-colors"
+          class="inline-block bg-lime-500 text-black text-xs font-black px-6 py-3 uppercase tracking-widest hover:bg-lime-400 transition-colors"
         >
           Ver metodología →
         </a>
       </div>
     </div>
 
-    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-orange-500 mt-16">
+    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-lime-500 mt-16">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></p>
+        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-lime-500">.</span></p>
         <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Metodología</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
         </nav>
         <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
       </div>

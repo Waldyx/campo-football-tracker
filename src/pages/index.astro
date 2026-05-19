@@ -26,18 +26,18 @@ const top3 = ranked.slice(0, 3);
 <Base title="Campo. — Tu bota de fútbol, sin BS">
   <main class="min-h-screen text-white">
     <!-- Franja superior gradient -->
-    <div class="h-1.5 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500"></div>
+    <div class="h-1.5 bg-gradient-to-r from-lime-500 via-lime-300 to-lime-500"></div>
 
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
-          CAMPO<span class="text-orange-500">.</span>
+          CAMPO<span class="text-lime-500">.</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
       </div>
     </header>
@@ -62,36 +62,36 @@ const top3 = ranked.slice(0, 3);
       </div>
 
       <div class="relative max-w-4xl mx-auto text-center">
-        <p class="inline-block px-4 py-1.5 mb-10 text-xs font-black uppercase tracking-widest text-zinc-950 bg-yellow-400 -rotate-2 shadow-[3px_3px_0_0_rgb(249,115,22)]">
+        <p class="inline-block px-4 py-1.5 mb-10 text-xs font-black uppercase tracking-widest text-zinc-950 bg-lime-300 -rotate-2 shadow-[3px_3px_0_0_rgb(249,115,22)]">
           ★ BETA · v0.1 EN CONSTRUCCIÓN
         </p>
 
         <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.85] uppercase">
           Tus botas<br />
-          <span class="text-orange-500 italic">perfectas</span><br />
+          <span class="text-lime-500 italic">perfectas</span><br />
           están aquí
         </h1>
 
         <p class="text-lg md:text-xl text-zinc-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Cuéntanos cómo juegas. Te decimos las <span class="text-orange-400 font-black">5 botas</span> que mejor encajan contigo y dónde están al mejor precio. <span class="text-zinc-500 italic">Sin sesgo. Sin BS.</span>
+          Cuéntanos cómo juegas. Te decimos las <span class="text-lime-400 font-black">5 botas</span> que mejor encajan contigo y dónde están al mejor precio. <span class="text-zinc-500 italic">Sin sesgo. Sin BS.</span>
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a
             href="/quiz"
-            class="inline-block px-10 py-5 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-lg transition-all hover:-translate-y-1 hover:-translate-x-1 shadow-[6px_6px_0_0_rgb(250,204,21)] hover:shadow-[8px_8px_0_0_rgb(250,204,21)]"
+            class="inline-block px-10 py-5 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-lg transition-all hover:-translate-y-1 hover:-translate-x-1 shadow-[6px_6px_0_0_rgb(255,255,255)] hover:shadow-[8px_8px_0_0_rgb(255,255,255)]"
           >
             → Empezar el quiz
           </a>
           <a
             href="/botas"
-            class="inline-block px-8 py-5 border-2 border-zinc-600 text-zinc-300 hover:border-orange-500 hover:text-orange-400 font-black uppercase tracking-wider text-lg transition-all"
+            class="inline-block px-8 py-5 border-2 border-zinc-600 text-zinc-300 hover:border-lime-500 hover:text-lime-400 font-black uppercase tracking-wider text-lg transition-all"
           >
             Catálogo
           </a>
           <a
             href="/comparar"
-            class="inline-block px-8 py-5 border border-zinc-600 text-zinc-300 hover:border-orange-500 hover:text-orange-400 font-black uppercase tracking-wider text-lg transition-all"
+            class="inline-block px-8 py-5 border border-zinc-600 text-zinc-300 hover:border-lime-500 hover:text-lime-400 font-black uppercase tracking-wider text-lg transition-all"
           >
             Comparar botas
           </a>
@@ -104,15 +104,15 @@ const top3 = ranked.slice(0, 3);
         <!-- Stats row -->
         <div class="mt-14 flex flex-wrap justify-center gap-8 border-t border-zinc-800 pt-10">
           <div class="text-center">
-            <p class="text-3xl font-black text-orange-500" data-count={botas.length} data-suffix="+">{botas.length}</p>
+            <p class="text-3xl font-black text-lime-500" data-count={botas.length} data-suffix="+">{botas.length}</p>
             <p class="text-[11px] uppercase tracking-widest text-zinc-500 mt-0.5">botas analizadas</p>
           </div>
           <div class="text-center">
-            <p class="text-3xl font-black text-orange-500" data-count={[...new Set(botas.map(b => b.marca))].length}>{[...new Set(botas.map(b => b.marca))].length}</p>
+            <p class="text-3xl font-black text-lime-500" data-count={[...new Set(botas.map(b => b.marca))].length}>{[...new Set(botas.map(b => b.marca))].length}</p>
             <p class="text-[11px] uppercase tracking-widest text-zinc-500 mt-0.5">marcas cubiertas</p>
           </div>
           <div class="text-center">
-            <p class="text-3xl font-black text-orange-500" data-count="5">5</p>
+            <p class="text-3xl font-black text-lime-500" data-count="5">5</p>
             <p class="text-[11px] uppercase tracking-widest text-zinc-500 mt-0.5">superficies evaluadas</p>
           </div>
         </div>
@@ -123,10 +123,10 @@ const top3 = ranked.slice(0, 3);
     <section class="px-6 py-20 border-t border-green-900/60 bg-[#0f0f0f]">
       <div class="max-w-6xl mx-auto">
         <div class="flex items-center gap-4 mb-4">
-          <p class="text-xs font-black uppercase tracking-widest text-orange-500">★ Selección editorial</p>
+          <p class="text-xs font-black uppercase tracking-widest text-lime-500">★ Selección editorial</p>
         </div>
         <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-2 leading-tight">
-          Botas <span class="text-orange-500">destacadas</span>
+          Botas <span class="text-lime-500">destacadas</span>
         </h2>
         <p class="text-zinc-400 mb-10 max-w-2xl">
           La más rápida, la más técnica y la más versátil. Tres categorías distintas, todas de primer nivel.
@@ -138,7 +138,7 @@ const top3 = ranked.slice(0, 3);
             return (
               <a
                 href={`/bota/${b.slug}`}
-                class="group bg-zinc-900 border border-zinc-800 hover:border-orange-500/70 transition-all duration-200 flex flex-col hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(249,115,22,0.15)] rounded-lg overflow-hidden"
+                class="group bg-zinc-900 border border-zinc-800 hover:border-lime-500/70 transition-all duration-200 flex flex-col hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(249,115,22,0.15)] rounded-lg overflow-hidden"
               >
                 <div class="relative overflow-hidden bg-gradient-to-b from-zinc-800 to-zinc-900">
                   <img
@@ -148,20 +148,20 @@ const top3 = ranked.slice(0, 3);
                     loading="lazy"
                     onerror="this.onerror=null;this.src='/placeholder-boot.svg'"
                   />
-                  <span class="absolute top-3 left-3 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest bg-yellow-400 text-zinc-950">
+                  <span class="absolute top-3 left-3 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest bg-lime-300 text-zinc-950">
                     {badges[i]}
                   </span>
                 </div>
                 <div class="p-5 flex flex-col flex-1 gap-3">
                   <div>
                     <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-1">{b.marca}</p>
-                    <h3 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
+                    <h3 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-lime-500 transition-colors">
                       {b.modelo}
                     </h3>
                   </div>
                   <div class="mt-auto pt-3 border-t border-zinc-800 flex items-center justify-between">
-                    <p class="text-xl font-black text-orange-500 leading-none">{b.precio_msrp_eur}€</p>
-                    <span class="text-[10px] font-black uppercase tracking-widest text-zinc-600 group-hover:text-orange-500 border border-zinc-700 group-hover:border-orange-500 px-2.5 py-1.5 transition-colors">
+                    <p class="text-xl font-black text-lime-500 leading-none">{b.precio_msrp_eur}€</p>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-zinc-600 group-hover:text-lime-500 border border-zinc-700 group-hover:border-lime-500 px-2.5 py-1.5 transition-colors">
                       Ver →
                     </span>
                   </div>
@@ -182,7 +182,7 @@ const top3 = ranked.slice(0, 3);
           { posicion: "extremo", emoji: "⚡", label: "Extremo", desc: "Ligeras y rápidas", color: "from-yellow-900/40 to-yellow-800/20" },
           { posicion: "mediapunta", emoji: "🎯", label: "Mediapunta", desc: "Control y técnica", color: "from-blue-900/40 to-blue-800/20" },
           { posicion: "defensa", emoji: "🛡️", label: "Defensa", desc: "Estabilidad y soporte", color: "from-purple-900/40 to-purple-800/20" },
-          { posicion: "ag", emoji: "⚽", label: "Artificial", desc: "AG/TF durables", color: "from-orange-900/40 to-orange-800/20" },
+          { posicion: "ag", emoji: "⚽", label: "Artificial", desc: "AG/TF durables", color: "from-lime-900/40 to-lime-800/20" },
         ].map(({ posicion, emoji, label, desc, color }) => (
           <a
             href={posicion === "ag" ? "/botas?superficie=ag" : `/botas?posicion=${posicion}`}
@@ -197,53 +197,53 @@ const top3 = ranked.slice(0, 3);
     </section>
 
     <!-- CÓMO FUNCIONA -->
-    <section class="px-6 py-24 bg-[#141414] border-t-4 border-orange-500">
+    <section class="px-6 py-24 bg-[#141414] border-t-4 border-lime-500">
       <div class="max-w-5xl mx-auto">
         <div class="flex items-center gap-4 mb-16">
-          <div class="h-1 flex-1 bg-orange-500"></div>
+          <div class="h-1 flex-1 bg-lime-500"></div>
           <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">
-            Cómo<span class="text-orange-500">.</span>funciona
+            Cómo<span class="text-lime-500">.</span>funciona
           </h2>
-          <div class="h-1 flex-1 bg-orange-500"></div>
+          <div class="h-1 flex-1 bg-lime-500"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="group bg-[#0a1f0f] border border-zinc-800 hover:border-orange-500/60 transition-all duration-200 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(249,115,22,0.10)]">
+          <div class="group bg-[#0a1f0f] border border-zinc-800 hover:border-lime-500/60 transition-all duration-200 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(132,204,22,0.10)]">
             <div class="flex items-center gap-4">
-              <div class="w-8 h-8 rounded-full border-2 border-orange-500 flex items-center justify-center text-orange-500 font-black text-sm shrink-0">1</div>
-              <span class="w-12 h-12 flex items-center justify-center bg-orange-500/10 border border-orange-500/30 text-2xl shrink-0">⚽</span>
-              <span class="text-5xl font-black text-orange-500/30 leading-none select-none">01</span>
+              <div class="w-8 h-8 rounded-full border-2 border-lime-500 flex items-center justify-center text-lime-500 font-black text-sm shrink-0">1</div>
+              <span class="w-12 h-12 flex items-center justify-center bg-lime-500/10 border border-lime-500/30 text-2xl shrink-0">⚽</span>
+              <span class="text-5xl font-black text-lime-500/30 leading-none select-none">01</span>
             </div>
             <div>
-              <h3 class="text-xl font-black uppercase mb-2 tracking-tight group-hover:text-orange-500 transition-colors">Tu juego</h3>
+              <h3 class="text-xl font-black uppercase mb-2 tracking-tight group-hover:text-lime-500 transition-colors">Tu juego</h3>
               <p class="text-zinc-400 text-sm leading-relaxed">
                 Posición, peso, superficie, estilo, lesiones. <span class="text-white font-bold">8 preguntas</span> en menos de un minuto.
               </p>
             </div>
           </div>
 
-          <div class="group bg-[#0a1f0f] border border-zinc-800 hover:border-yellow-500/60 transition-all duration-200 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(234,179,8,0.10)]">
+          <div class="group bg-[#0a1f0f] border border-zinc-800 hover:border-lime-300/60 transition-all duration-200 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(234,179,8,0.10)]">
             <div class="flex items-center gap-4">
-              <div class="w-8 h-8 rounded-full border-2 border-orange-500 flex items-center justify-center text-orange-500 font-black text-sm shrink-0">2</div>
-              <span class="w-12 h-12 flex items-center justify-center bg-yellow-500/10 border border-yellow-500/30 text-2xl shrink-0">⚡</span>
-              <span class="text-5xl font-black text-yellow-400/30 leading-none select-none">02</span>
+              <div class="w-8 h-8 rounded-full border-2 border-lime-500 flex items-center justify-center text-lime-500 font-black text-sm shrink-0">2</div>
+              <span class="w-12 h-12 flex items-center justify-center bg-lime-300/10 border border-lime-300/30 text-2xl shrink-0">⚡</span>
+              <span class="text-5xl font-black text-lime-300/30 leading-none select-none">02</span>
             </div>
             <div>
-              <h3 class="text-xl font-black uppercase mb-2 tracking-tight group-hover:text-yellow-400 transition-colors">Tu match</h3>
+              <h3 class="text-xl font-black uppercase mb-2 tracking-tight group-hover:text-lime-300 transition-colors">Tu match</h3>
               <p class="text-zinc-400 text-sm leading-relaxed">
                 Las <span class="text-white font-bold">5 botas</span> con mayor compatibilidad técnica, con explicación de por qué encajan contigo.
               </p>
             </div>
           </div>
 
-          <div class="group bg-[#0a1f0f] border border-zinc-800 hover:border-orange-500/60 transition-all duration-200 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(249,115,22,0.10)]">
+          <div class="group bg-[#0a1f0f] border border-zinc-800 hover:border-lime-500/60 transition-all duration-200 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(132,204,22,0.10)]">
             <div class="flex items-center gap-4">
-              <div class="w-8 h-8 rounded-full border-2 border-orange-500 flex items-center justify-center text-orange-500 font-black text-sm shrink-0">3</div>
-              <span class="w-12 h-12 flex items-center justify-center bg-orange-500/10 border border-orange-500/30 text-2xl shrink-0">💸</span>
-              <span class="text-5xl font-black text-orange-500/30 leading-none select-none">03</span>
+              <div class="w-8 h-8 rounded-full border-2 border-lime-500 flex items-center justify-center text-lime-500 font-black text-sm shrink-0">3</div>
+              <span class="w-12 h-12 flex items-center justify-center bg-lime-500/10 border border-lime-500/30 text-2xl shrink-0">💸</span>
+              <span class="text-5xl font-black text-lime-500/30 leading-none select-none">03</span>
             </div>
             <div>
-              <h3 class="text-xl font-black uppercase mb-2 tracking-tight group-hover:text-orange-500 transition-colors">Tu precio</h3>
+              <h3 class="text-xl font-black uppercase mb-2 tracking-tight group-hover:text-lime-500 transition-colors">Tu precio</h3>
               <p class="text-zinc-400 text-sm leading-relaxed">
                 Comparador lado a lado y <span class="text-white font-bold">mejor precio actual</span> entre tiendas. Tú decides dónde comprar.
               </p>
@@ -257,10 +257,10 @@ const top3 = ranked.slice(0, 3);
     <section class="px-6 py-20 border-t border-green-900/60">
       <div class="max-w-6xl mx-auto">
         <div class="flex items-center gap-4 mb-4">
-          <p class="text-xs font-black uppercase tracking-widest text-orange-500">★ Precio verificado · Mejor valoradas</p>
+          <p class="text-xs font-black uppercase tracking-widest text-lime-500">★ Precio verificado · Mejor valoradas</p>
         </div>
         <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-2 leading-tight">
-          El <span class="text-orange-500">top 3</span> de la base de datos
+          El <span class="text-lime-500">top 3</span> de la base de datos
         </h2>
         <p class="text-zinc-400 mb-10 max-w-2xl">
           Las botas con mayor puntuación técnica agregada. Para una recomendación personalizada, usa el quiz.
@@ -274,7 +274,7 @@ const top3 = ranked.slice(0, 3);
             return (
               <a
                 href={`/bota/${b.slug}`}
-                class="group bg-zinc-900 border border-zinc-800 hover:border-orange-500/70 transition-all duration-200 flex flex-col hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(249,115,22,0.15)]"
+                class="group bg-zinc-900 border border-zinc-800 hover:border-lime-500/70 transition-all duration-200 flex flex-col hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(249,115,22,0.15)]"
               >
                 <div class="relative overflow-hidden bg-gradient-to-b from-zinc-800 to-zinc-900">
                   <img
@@ -284,23 +284,23 @@ const top3 = ranked.slice(0, 3);
                     loading="lazy"
                     onerror="this.onerror=null;this.src='/placeholder-boot.svg'"
                   />
-                  <span class="absolute top-3 left-3 w-8 h-8 flex items-center justify-center bg-orange-500 text-zinc-950 text-xs font-black">
+                  <span class="absolute top-3 left-3 w-8 h-8 flex items-center justify-center bg-lime-500 text-zinc-950 text-xs font-black">
                     #{i + 1}
                   </span>
-                  <span class="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-orange-500 text-zinc-950 text-sm font-black shadow-lg">
+                  <span class="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-lime-500 text-zinc-950 text-sm font-black shadow-lg">
                     {score}
                   </span>
                 </div>
                 <div class="p-5 flex flex-col flex-1 gap-3">
                   <div>
                     <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-1">{b.marca}</p>
-                    <h3 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
+                    <h3 class="text-lg font-black uppercase tracking-tight leading-tight group-hover:text-lime-500 transition-colors">
                       {b.modelo}
                     </h3>
                   </div>
                   <div class="mt-auto pt-3 border-t border-zinc-800 flex items-center justify-between">
-                    <p class="text-2xl font-black text-orange-500 leading-none">{precio}€</p>
-                    <span class="text-[10px] font-black uppercase tracking-widest text-zinc-600 group-hover:text-orange-500 border border-zinc-700 group-hover:border-orange-500 px-2.5 py-1.5 transition-colors">
+                    <p class="text-2xl font-black text-lime-500 leading-none">{precio}€</p>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-zinc-600 group-hover:text-lime-500 border border-zinc-700 group-hover:border-lime-500 px-2.5 py-1.5 transition-colors">
                       Ver →
                     </span>
                   </div>
@@ -313,7 +313,7 @@ const top3 = ranked.slice(0, 3);
         <div class="text-center">
           <a
             href="/botas"
-            class="inline-block px-8 py-4 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors"
+            class="inline-block px-8 py-4 border-2 border-zinc-700 hover:border-lime-500 font-black uppercase tracking-wider text-sm transition-colors"
           >
             Ver las {botas.length} botas →
           </a>
@@ -324,7 +324,7 @@ const top3 = ranked.slice(0, 3);
     <!-- MANIFIESTO -->
     <section class="px-6 py-20 bg-[#141414] border-t border-green-900/60">
       <div class="max-w-4xl mx-auto">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ Manifiesto</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Manifiesto</p>
         <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 leading-tight">
           No te vendemos. <span class="text-zinc-500">Te ayudamos a elegir.</span>
         </h3>
@@ -335,24 +335,24 @@ const top3 = ranked.slice(0, 3);
     </section>
 
     <!-- Footer -->
-    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-orange-500">
+    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-lime-500">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex flex-col items-center md:items-start gap-1">
           <p class="text-2xl font-black tracking-tighter">
-            CAMPO<span class="text-orange-500">.</span>
+            CAMPO<span class="text-lime-500">.</span>
           </p>
           <p class="text-[11px] text-zinc-500 tracking-wide">El radar de botas de fútbol para España</p>
         </div>
         <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Metodología</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
         <p class="text-xs text-zinc-500 uppercase tracking-widest text-center md:text-right">
           Proyecto independiente · Sin sesgo de afiliado<br />
-          Hecho con <span class="text-orange-500">★</span> en español
+          Hecho con <span class="text-lime-500">★</span> en español
         </p>
       </div>
     </footer>

@@ -10,12 +10,12 @@ import Base from "../layouts/Base.astro";
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
-          CAMPO<span class="text-orange-500">.</span>
+          CAMPO<span class="text-lime-500">.</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
         </nav>
       </div>
     </header>
@@ -23,7 +23,7 @@ import Base from "../layouts/Base.astro";
     <!-- Hero -->
     <section class="px-6 pt-16 pb-10 border-b border-green-900/60">
       <div class="max-w-4xl mx-auto">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">Transparencia total</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">Transparencia total</p>
         <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.95] mb-4">
           Metodología
         </h1>
@@ -39,7 +39,7 @@ import Base from "../layouts/Base.astro";
         <!-- 1. Selección del catálogo -->
         <section>
           <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
-            1. <span class="text-orange-500">Selección</span> del catálogo
+            1. <span class="text-lime-500">Selección</span> del catálogo
           </h2>
           <p class="text-zinc-500 text-sm mb-6">Qué botas entran y por qué.</p>
           <div class="space-y-4 text-sm text-zinc-400 leading-relaxed">
@@ -52,7 +52,7 @@ import Base from "../layouts/Base.astro";
                 "Con al menos 15 reseñas verificadas de campo en fuentes especializadas.",
               ].map((item) => (
                 <li class="flex gap-3">
-                  <span class="text-orange-500 font-black shrink-0">→</span>
+                  <span class="text-lime-500 font-black shrink-0">→</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -64,7 +64,7 @@ import Base from "../layouts/Base.astro";
         <!-- 2. Atributos medidos -->
         <section>
           <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
-            2. <span class="text-orange-500">Atributos</span> medidos
+            2. <span class="text-lime-500">Atributos</span> medidos
           </h2>
           <p class="text-zinc-500 text-sm mb-6">8 dimensiones técnicas, cada una en escala 1-10.</p>
           <div class="grid md:grid-cols-2 gap-3">
@@ -103,7 +103,7 @@ import Base from "../layouts/Base.astro";
               },
             ].map((attr) => (
               <div class="bg-zinc-900 border border-zinc-800 p-5">
-                <p class="font-black text-sm uppercase tracking-widest text-orange-500 mb-2">{attr.nombre}</p>
+                <p class="font-black text-sm uppercase tracking-widest text-lime-500 mb-2">{attr.nombre}</p>
                 <p class="text-zinc-400 text-sm leading-relaxed">{attr.desc}</p>
               </div>
             ))}
@@ -113,7 +113,7 @@ import Base from "../layouts/Base.astro";
         <!-- 3. Sistema de scoring -->
         <section>
           <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
-            3. <span class="text-orange-500">Sistema</span> de scoring
+            3. <span class="text-lime-500">Sistema</span> de scoring
           </h2>
           <p class="text-zinc-500 text-sm mb-6">Cómo transformamos tus respuestas en una recomendación.</p>
           <div class="space-y-6 text-sm text-zinc-400 leading-relaxed">
@@ -143,7 +143,7 @@ import Base from "../layouts/Base.astro";
         <!-- 4. Fuentes -->
         <section>
           <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
-            4. <span class="text-orange-500">Fuentes</span>
+            4. <span class="text-lime-500">Fuentes</span>
           </h2>
           <p class="text-zinc-500 text-sm mb-6">De dónde vienen los datos.</p>
           <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
@@ -154,7 +154,7 @@ import Base from "../layouts/Base.astro";
               { fuente: "Precios MSRP", detalle: "Precio de venta recomendado oficial en EUR. Los precios reales varían. La sección 'Mejor precio' enlaza a comparadores externos." },
             ].map((f) => (
               <div class="flex gap-4 bg-zinc-900 border border-zinc-800 p-4">
-                <span class="text-orange-500 font-black text-xs shrink-0 uppercase tracking-widest w-40">{f.fuente}</span>
+                <span class="text-lime-500 font-black text-xs shrink-0 uppercase tracking-widest w-40">{f.fuente}</span>
                 <p class="text-zinc-400">{f.detalle}</p>
               </div>
             ))}
@@ -164,7 +164,7 @@ import Base from "../layouts/Base.astro";
         <!-- 5. Limitaciones -->
         <section>
           <h2 class="text-2xl font-black uppercase tracking-tighter mb-2">
-            5. <span class="text-orange-500">Limitaciones</span>
+            5. <span class="text-lime-500">Limitaciones</span>
           </h2>
           <p class="text-zinc-500 text-sm mb-6">Qué no puede hacer este sistema.</p>
           <div class="space-y-3 text-sm text-zinc-400 leading-relaxed">
@@ -186,14 +186,14 @@ import Base from "../layouts/Base.astro";
       </div>
     </div>
 
-    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-orange-500 mt-16">
+    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-lime-500 mt-16">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></p>
+        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-lime-500">.</span></p>
         <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
-          <a href="/rankings" class="hover:text-orange-500 transition-colors">Rankings</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">Quiz</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
         </nav>
         <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
       </div>

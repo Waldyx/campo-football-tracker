@@ -11,27 +11,27 @@ import Base from "../layouts/Base.astro";
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
-          CAMPO<span class="text-orange-500">.</span>
+          CAMPO<span class="text-lime-500">.</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
         </nav>
       </div>
     </header>
 
     <noscript>
       <div class="px-6 py-20 text-center max-w-2xl mx-auto">
-        <p class="text-orange-500 font-black uppercase tracking-widest text-xs mb-4">⚠ JavaScript requerido</p>
+        <p class="text-lime-500 font-black uppercase tracking-widest text-xs mb-4">⚠ JavaScript requerido</p>
         <p class="text-zinc-400 mb-6">Esta página necesita JavaScript para mostrar tus resultados. Actívalo y recarga.</p>
-        <a href="/quiz" class="inline-block px-6 py-3 bg-orange-500 text-zinc-950 font-black uppercase tracking-wider">← Ir al quiz</a>
+        <a href="/quiz" class="inline-block px-6 py-3 bg-lime-500 text-zinc-950 font-black uppercase tracking-wider">← Ir al quiz</a>
       </div>
     </noscript>
 
     <!-- Estado: sin respuestas -->
     <section id="estado-sin-respuestas" class="hidden px-6 py-20">
       <div class="max-w-2xl mx-auto text-center">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ Falta el quiz</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Falta el quiz</p>
         <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase mb-6">
           Primero el quiz, luego los resultados.
         </h1>
@@ -40,7 +40,7 @@ import Base from "../layouts/Base.astro";
         </p>
         <a
           href="/quiz"
-          class="inline-block px-8 py-4 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider transition-all shadow-[4px_4px_0_0_rgb(250,204,21)]"
+          class="inline-block px-8 py-4 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider transition-all shadow-[4px_4px_0_0_rgb(255,255,255)]"
         >
           → Empezar el quiz
         </a>
@@ -51,9 +51,9 @@ import Base from "../layouts/Base.astro";
     <section id="estado-resultados" class="hidden px-6 py-16">
       <div class="max-w-6xl mx-auto">
         <div class="mb-12">
-          <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ Tus resultados</p>
+          <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Tus resultados</p>
           <h1 class="text-4xl md:text-6xl font-black tracking-tight uppercase mb-6 leading-[0.95]">
-            Tus <span class="text-orange-500">5 botas</span><br />ideales
+            Tus <span class="text-lime-500">5 botas</span><br />ideales
           </h1>
           <p class="text-zinc-400 max-w-2xl">
             Ordenadas por compatibilidad técnica con tu perfil. Las 5 son buenas opciones — elige la que más te entre por la vista.
@@ -67,7 +67,7 @@ import Base from "../layouts/Base.astro";
           <p class="text-5xl mb-4">🤔</p>
           <p class="text-xl font-bold text-white mb-2">Sin resultados exactos</p>
           <p class="text-zinc-400 text-sm mb-6">Tus criterios son muy específicos. Prueba a relajar algún filtro.</p>
-          <a href="/quiz" class="bg-orange-500 hover:bg-orange-400 text-white font-bold px-6 py-3 inline-block transition-colors">Repetir quiz</a>
+          <a href="/quiz" class="bg-lime-500 hover:bg-lime-400 text-white font-bold px-6 py-3 inline-block transition-colors">Repetir quiz</a>
         </div>
 
         <div class="text-center mt-12 py-8 border-t border-zinc-800">
@@ -76,7 +76,7 @@ import Base from "../layouts/Base.astro";
             <a href="/botas" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-5 py-2.5 text-sm transition-colors">
               Ver catálogo completo
             </a>
-            <a href="/comparar" class="border border-zinc-700 hover:border-orange-500 text-zinc-300 hover:text-orange-400 font-bold px-5 py-2.5 text-sm transition-colors">
+            <a href="/comparar" class="border border-zinc-700 hover:border-lime-500 text-zinc-300 hover:text-lime-400 font-bold px-5 py-2.5 text-sm transition-colors">
               Comparar botas
             </a>
             <a href="/quiz" class="text-zinc-500 hover:text-zinc-300 font-bold px-5 py-2.5 text-sm underline">
@@ -86,16 +86,16 @@ import Base from "../layouts/Base.astro";
         </div>
 
         <div class="mt-16 flex flex-wrap gap-4 justify-center items-center">
-          <a id="cta-comparar-top3" href="#" class="hidden px-6 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(250,204,21)]">
+          <a id="cta-comparar-top3" href="#" class="hidden px-6 py-3 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-sm transition-all shadow-[4px_4px_0_0_rgb(255,255,255)]">
             Comparar las 3 primeras →
           </a>
-          <a href="/quiz" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">
+          <a href="/quiz" class="px-6 py-3 border-2 border-zinc-700 hover:border-lime-500 font-black uppercase tracking-wider text-sm transition-colors">
             ↻ Rehacer quiz
           </a>
           <a href="/metodologia" class="px-6 py-3 text-zinc-500 hover:text-white font-bold uppercase tracking-widest text-xs transition-colors">
             ¿Cómo calculamos esto?
           </a>
-          <button id="btn-compartir" type="button" class="px-6 py-3 border-2 border-zinc-700 hover:border-orange-500 font-black uppercase tracking-wider text-sm transition-colors">
+          <button id="btn-compartir" type="button" class="px-6 py-3 border-2 border-zinc-700 hover:border-lime-500 font-black uppercase tracking-wider text-sm transition-colors">
             🔗 Compartir
           </button>
         </div>
@@ -103,14 +103,14 @@ import Base from "../layouts/Base.astro";
     </section>
 
     <!-- Footer -->
-    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-orange-500">
+    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-lime-500">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></a>
+        <a href="/" class="text-2xl font-black tracking-tighter">CAMPO<span class="text-lime-500">.</span></a>
         <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Metodología</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
         <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
       </div>
@@ -213,8 +213,8 @@ import Base from "../layouts/Base.astro";
     }
 
     function colorMatchPct(pct: number): string {
-      if (pct >= 80) return "text-orange-500";
-      if (pct >= 65) return "text-yellow-400";
+      if (pct >= 80) return "text-lime-500";
+      if (pct >= 65) return "text-lime-300";
       return "text-zinc-400";
     }
 
@@ -229,7 +229,7 @@ import Base from "../layouts/Base.astro";
 
       const razonesHtml = rec.razones
         .map(
-          (r) => `<li class="flex gap-2 text-sm text-zinc-300"><span class="text-orange-500 font-black">✓</span><span>${escapeHtml(r)}</span></li>`
+          (r) => `<li class="flex gap-2 text-sm text-zinc-300"><span class="text-lime-500 font-black">✓</span><span>${escapeHtml(r)}</span></li>`
         )
         .join("");
 
@@ -238,7 +238,7 @@ import Base from "../layouts/Base.astro";
       const ctaLabel = mejorPrecio ? `Ver en ${tiendaNombre} →` : `Ver ficha →`;
 
       return `
-        <article class="bg-zinc-900 border-2 border-zinc-800 hover:border-orange-500 transition-all flex flex-col">
+        <article class="bg-zinc-900 border-2 border-zinc-800 hover:border-lime-500 transition-all flex flex-col">
           <a href="${fichaHref}" class="relative block group">
             <img
               src="${escapeHtml(b.imagen_principal)}"
@@ -247,10 +247,10 @@ import Base from "../layouts/Base.astro";
               loading="lazy"
               onerror="this.onerror=null;this.src='/placeholder-boot.svg'"
             />
-            <span class="absolute top-3 left-3 px-3 py-1 bg-[#0a1f0f] border border-orange-500 text-orange-500 text-xs font-black uppercase tracking-widest">
+            <span class="absolute top-3 left-3 px-3 py-1 bg-[#0a1f0f] border border-lime-500 text-lime-500 text-xs font-black uppercase tracking-widest">
               #${rank}
             </span>
-            <span class="absolute top-3 right-3 px-3 py-1 bg-yellow-400 text-zinc-950 text-xs font-black uppercase tracking-widest">
+            <span class="absolute top-3 right-3 px-3 py-1 bg-lime-300 text-zinc-950 text-xs font-black uppercase tracking-widest">
               ${rec.match_pct}% match
             </span>
           </a>
@@ -258,7 +258,7 @@ import Base from "../layouts/Base.astro";
           <div class="p-5 flex flex-col flex-1 gap-4">
             <a href="${fichaHref}" class="group">
               <p class="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-1">${escapeHtml(b.marca)}</p>
-              <h2 class="text-2xl font-black uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
+              <h2 class="text-2xl font-black uppercase tracking-tight leading-tight group-hover:text-lime-500 transition-colors">
                 ${escapeHtml(b.modelo)}
               </h2>
             </a>
@@ -274,12 +274,12 @@ import Base from "../layouts/Base.astro";
               <div class="flex flex-col gap-2 items-end">
                 ${mejorPrecio ? `
                 <a href="${escapeHtml(ctaHref)}" target="_blank" rel="noopener noreferrer sponsored"
-                  class="px-4 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors shadow-[3px_3px_0_0_rgb(250,204,21)]">
+                  class="px-4 py-3 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors shadow-[3px_3px_0_0_rgb(255,255,255)]">
                   ${escapeHtml(ctaLabel)}
                 </a>
-                <a href="${fichaHref}" class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 hover:text-orange-500 transition-colors">Ver ficha →</a>
+                <a href="${fichaHref}" class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 hover:text-lime-500 transition-colors">Ver ficha →</a>
                 ` : `
-                <a href="${fichaHref}" class="px-4 py-3 bg-orange-500 hover:bg-orange-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors shadow-[3px_3px_0_0_rgb(250,204,21)]">
+                <a href="${fichaHref}" class="px-4 py-3 bg-lime-500 hover:bg-lime-400 text-zinc-950 font-black uppercase tracking-wider text-xs transition-colors shadow-[3px_3px_0_0_rgb(255,255,255)]">
                   Ver ficha →
                 </a>`}
               </div>

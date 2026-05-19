@@ -28,12 +28,12 @@ const topBudget = [...botas]
     <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
-          CAMPO<span class="text-orange-500">.</span>
+          CAMPO<span class="text-lime-500">.</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Método</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
       </div>
     </header>
@@ -41,10 +41,10 @@ const topBudget = [...botas]
     <!-- Hero -->
     <section class="px-6 pt-16 pb-10 border-b border-green-900/60">
       <div class="max-w-6xl mx-auto">
-        <p class="text-xs font-black uppercase tracking-widest text-orange-500 mb-4">★ Rankings</p>
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Rankings</p>
         <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.95] mb-4">
           Las mejores<br />
-          <span class="text-orange-500">botas</span><br />
+          <span class="text-lime-500">botas</span><br />
           por categoría
         </h1>
         <p class="text-zinc-400 text-lg max-w-xl leading-relaxed">
@@ -62,7 +62,7 @@ const topBudget = [...botas]
             <span class="text-3xl">⚡</span>
             <div>
               <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tighter">
-                Top <span class="text-orange-500">velocidad</span>
+                Top <span class="text-lime-500">velocidad</span>
               </h2>
               <p class="text-zinc-500 text-sm mt-1">Las más ligeras del mercado. Para extremos y delanteros que viven de la velocidad.</p>
             </div>
@@ -70,8 +70,8 @@ const topBudget = [...botas]
           <ol class="space-y-3">
             {topVelocidad.map((b, i) => (
               <li class="group">
-                <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-orange-500/50 transition-colors p-4">
-                  <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-orange-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
+                <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-lime-500/50 transition-colors p-4">
+                  <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-lime-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
                   <img src={b.imagen_principal} alt={`${b.marca} ${b.modelo}`} width="48" height="48" class="w-12 h-12 object-contain shrink-0" loading="lazy" onerror="this.onerror=null;this.src='/placeholder-boot.svg'" />
                   <div class="flex-1 min-w-0">
                     <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">{b.marca}</p>
@@ -79,9 +79,9 @@ const topBudget = [...botas]
                     <p class="text-[10px] text-zinc-600">{b.peso_real_g}g</p>
                   </div>
                   <div class="shrink-0 text-right">
-                    <span class="inline-block bg-orange-500 text-black text-xs font-black px-2 py-1 tracking-widest">{b.puntuaciones.peso_score}/10</span>
+                    <span class="inline-block bg-lime-500 text-black text-xs font-black px-2 py-1 tracking-widest">{b.puntuaciones.peso_score}/10</span>
                   </div>
-                  <span class="text-zinc-600 group-hover:text-orange-500 transition-colors font-black text-sm shrink-0">Ver →</span>
+                  <span class="text-zinc-600 group-hover:text-lime-500 transition-colors font-black text-sm shrink-0">Ver →</span>
                 </a>
               </li>
             ))}
@@ -94,7 +94,7 @@ const topBudget = [...botas]
             <span class="text-3xl">🎯</span>
             <div>
               <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tighter">
-                Top <span class="text-orange-500">control de balón</span>
+                Top <span class="text-lime-500">control de balón</span>
               </h2>
               <p class="text-zinc-500 text-sm mt-1">Máximo tacto y precisión. Para mediapuntas y jugadores técnicos.</p>
             </div>
@@ -102,17 +102,17 @@ const topBudget = [...botas]
           <ol class="space-y-3">
             {topControl.map((b, i) => (
               <li class="group">
-                <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-orange-500/50 transition-colors p-4">
-                  <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-orange-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
+                <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-lime-500/50 transition-colors p-4">
+                  <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-lime-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
                   <img src={b.imagen_principal} alt={`${b.marca} ${b.modelo}`} width="48" height="48" class="w-12 h-12 object-contain shrink-0" loading="lazy" onerror="this.onerror=null;this.src='/placeholder-boot.svg'" />
                   <div class="flex-1 min-w-0">
                     <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">{b.marca}</p>
                     <p class="font-black tracking-tight truncate">{b.modelo}</p>
                   </div>
                   <div class="shrink-0 text-right">
-                    <span class="inline-block bg-orange-500 text-black text-xs font-black px-2 py-1 tracking-widest">{b.puntuaciones.control_balon}/10</span>
+                    <span class="inline-block bg-lime-500 text-black text-xs font-black px-2 py-1 tracking-widest">{b.puntuaciones.control_balon}/10</span>
                   </div>
-                  <span class="text-zinc-600 group-hover:text-orange-500 transition-colors font-black text-sm shrink-0">Ver →</span>
+                  <span class="text-zinc-600 group-hover:text-lime-500 transition-colors font-black text-sm shrink-0">Ver →</span>
                 </a>
               </li>
             ))}
@@ -125,7 +125,7 @@ const topBudget = [...botas]
             <span class="text-3xl">🪨</span>
             <div>
               <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tighter">
-                Top <span class="text-orange-500">durabilidad</span>
+                Top <span class="text-lime-500">durabilidad</span>
               </h2>
               <p class="text-zinc-500 text-sm mt-1">Las que más aguantan en superficies duras. Para hierba artificial y turf.</p>
             </div>
@@ -133,17 +133,17 @@ const topBudget = [...botas]
           <ol class="space-y-3">
             {topDurabilidad.map((b, i) => (
               <li class="group">
-                <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-orange-500/50 transition-colors p-4">
-                  <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-orange-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
+                <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-lime-500/50 transition-colors p-4">
+                  <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-lime-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
                   <img src={b.imagen_principal} alt={`${b.marca} ${b.modelo}`} width="48" height="48" class="w-12 h-12 object-contain shrink-0" loading="lazy" onerror="this.onerror=null;this.src='/placeholder-boot.svg'" />
                   <div class="flex-1 min-w-0">
                     <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">{b.marca}</p>
                     <p class="font-black tracking-tight truncate">{b.modelo}</p>
                   </div>
                   <div class="shrink-0 text-right">
-                    <span class="inline-block bg-orange-500 text-black text-xs font-black px-2 py-1 tracking-widest">{b.puntuaciones.durabilidad}/10</span>
+                    <span class="inline-block bg-lime-500 text-black text-xs font-black px-2 py-1 tracking-widest">{b.puntuaciones.durabilidad}/10</span>
                   </div>
-                  <span class="text-zinc-600 group-hover:text-orange-500 transition-colors font-black text-sm shrink-0">Ver →</span>
+                  <span class="text-zinc-600 group-hover:text-lime-500 transition-colors font-black text-sm shrink-0">Ver →</span>
                 </a>
               </li>
             ))}
@@ -156,7 +156,7 @@ const topBudget = [...botas]
             <span class="text-3xl">💰</span>
             <div>
               <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tighter">
-                Mejores <span class="text-orange-500">sub-100€</span>
+                Mejores <span class="text-lime-500">sub-100€</span>
               </h2>
               <p class="text-zinc-500 text-sm mt-1">
                 {topBudget.length > 0
@@ -170,8 +170,8 @@ const topBudget = [...botas]
             <ol class="space-y-3">
               {topBudget.map((b, i) => (
                 <li class="group">
-                  <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-orange-500/50 transition-colors p-4">
-                    <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-orange-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
+                  <a href={`/bota/${b.slug}`} class="flex items-center gap-4 bg-zinc-900 border border-zinc-800 hover:border-lime-500/50 transition-colors p-4">
+                    <span class={`text-2xl font-black tracking-tighter w-8 shrink-0 ${i === 0 ? "text-lime-500" : i === 1 ? "text-zinc-300" : i === 2 ? "text-yellow-600" : "text-zinc-600"}`}>{i + 1}</span>
                     <img src={b.imagen_principal} alt={`${b.marca} ${b.modelo}`} width="48" height="48" class="w-12 h-12 object-contain shrink-0" loading="lazy" onerror="this.onerror=null;this.src='/placeholder-boot.svg'" />
                     <div class="flex-1 min-w-0">
                       <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">{b.marca}</p>
@@ -180,7 +180,7 @@ const topBudget = [...botas]
                     <div class="shrink-0 text-right">
                       <span class="inline-block bg-green-600 text-white text-xs font-black px-2 py-1 tracking-widest">{b.precio_msrp_eur}€</span>
                     </div>
-                    <span class="text-zinc-600 group-hover:text-orange-500 transition-colors font-black text-sm shrink-0">Ver →</span>
+                    <span class="text-zinc-600 group-hover:text-lime-500 transition-colors font-black text-sm shrink-0">Ver →</span>
                   </a>
                 </li>
               ))}
@@ -195,14 +195,14 @@ const topBudget = [...botas]
       </div>
     </div>
 
-    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-orange-500 mt-16">
+    <footer class="px-6 py-10 bg-[#071408] border-t-4 border-lime-500 mt-16">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-orange-500">.</span></p>
+        <p class="text-2xl font-black tracking-tighter">CAMPO<span class="text-lime-500">.</span></p>
         <nav class="flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest flex-wrap justify-center">
-          <a href="/botas" class="hover:text-orange-500 transition-colors">Catálogo</a>
-          <a href="/quiz" class="hover:text-orange-500 transition-colors">Quiz</a>
-          <a href="/metodologia" class="hover:text-orange-500 transition-colors">Metodología</a>
-          <a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/quiz" class="hover:text-lime-500 transition-colors">Quiz</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Metodología</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
         </nav>
         <p class="text-xs text-zinc-600 uppercase tracking-widest text-center">Proyecto independiente · Sin sesgo de afiliado</p>
       </div>
