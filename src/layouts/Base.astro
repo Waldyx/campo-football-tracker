@@ -27,7 +27,7 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#0a1f0f" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -66,9 +66,9 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
       )
     }
   </head>
-  <body class="bg-zinc-950 text-white antialiased">
+  <body class="bg-[#0a1f0f] text-white antialiased">
     <div class="fixed inset-0 pointer-events-none select-none z-0" aria-hidden="true">
-      <div class="absolute inset-0 bg-zinc-950/90"></div>
+      <div class="absolute inset-0 bg-[#0a1f0f]/90"></div>
     </div>
     <div class="relative z-10">
       <slot />

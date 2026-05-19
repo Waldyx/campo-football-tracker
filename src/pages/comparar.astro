@@ -7,7 +7,7 @@ import Base from "../layouts/Base.astro";
   description="Compara hasta 3 botas de fútbol lado a lado. Puntuaciones, precios en tiendas españolas y veredicto honesto."
 >
   <main class="min-h-screen text-white">
-    <header class="px-6 py-5 border-b border-zinc-800/60 bg-[#0c0c0c]/80 backdrop-blur-sm sticky top-0 z-50">
+    <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a href="/" class="text-2xl font-black tracking-tighter">
           CAMPO<span class="text-orange-500">.</span>
@@ -264,7 +264,7 @@ import Base from "../layouts/Base.astro";
       }).join("");
 
       return `
-        <div class="grid border border-zinc-800 bg-zinc-950" style="grid-template-columns: 160px repeat(${bts.length}, minmax(180px, 1fr));">
+        <div class="grid border border-zinc-800 bg-[#0a1f0f]" style="grid-template-columns: 160px repeat(${bts.length}, minmax(180px, 1fr));">
           <div class="px-4 py-5 bg-zinc-900/50"></div>
           ${cells}
         </div>`;
