@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { botas } from "../data/botas";
-import { findMejorPrecio } from "../lib/scoring";
+import { findMejorPrecio, scoreDisplay } from "../lib/scoring";
 
 const slugsDestacadas = ["nike-mercurial-superfly-10-elite", "adidas-predator-24-elite", "puma-future-7-ultimate"];
 const botasDestacadas = slugsDestacadas
@@ -9,8 +9,7 @@ const botasDestacadas = slugsDestacadas
   .filter(Boolean) as (typeof botas)[0][];
 
 function scoreGlobal(b: (typeof botas)[0]): number {
-  const vals = Object.values(b.puntuaciones);
-  return vals.reduce((a, c) => a + c, 0) / vals.length;
+  return scoreDisplay(b);
 }
 
 const conPrecioLive = botas.filter((b) => findMejorPrecio(b.links_compra) !== undefined);

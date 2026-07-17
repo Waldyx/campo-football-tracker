@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { botas } from "../data/botas";
-import { findMejorPrecio } from "../lib/scoring";
+import { findMejorPrecio, scoreDisplay } from "../lib/scoring";
 
 const LABELS_TIENDA: Record<string, string> = {
   amazon_es: "Amazon",
@@ -19,8 +19,7 @@ const LABELS_TIENDA: Record<string, string> = {
 };
 
 function scoreGlobal(b: (typeof botas)[0]): number {
-  const vals = Object.values(b.puntuaciones);
-  return Math.round((vals.reduce((a, c) => a + c, 0) / vals.length) * 10) / 10;
+  return scoreDisplay(b);
 }
 
 const ordenadas = [...botas].sort(

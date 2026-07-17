@@ -1,7 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { botas } from "../../data/botas";
-import { findMejorPrecio } from "../../lib/scoring";
+import { findMejorPrecio, scoreDisplay, scoreMeta, compareByScore } from "../../lib/scoring";
 import type { Puntuaciones } from "../../lib/types";
 
 export async function getStaticPaths() {
@@ -46,19 +46,15 @@ const linksOrdenados = [...b.links_compra]
 
 const titulo = `${b.marca} ${b.modelo} · Review y mejor precio`;
 
-function scoreB(bota: typeof b): number {
-  const vals = Object.values(bota.puntuaciones);
-  return vals.reduce((a, c) => a + c, 0) / vals.length;
-}
-
 const relacionadas = botas
   .filter((bt) => bt.slug !== b.slug && bt.categoria_principal === b.categoria_principal)
-  .sort((a, c) => scoreB(c) - scoreB(a))
+  .sort(compareByScore)
   .slice(0, 3);
 
 const descripcion = b.resumen.slice(0, 155);
-const valoresPuntuaciones = Object.values(b.puntuaciones);
-const ratingMedio = valoresPuntuaciones.reduce((s, v) => s + v, 0) / valoresPuntuaciones.length;
+// Score mostrado anclado a fuentes (FootballBootsDB/SoccerBible) + desglose.
+const meta = scoreMeta(b);
+const ratingMedio = meta.score;
 
 const jsonLd = {
   "@context": "https://schema.org/",
@@ -155,14 +151,43 @@ const jsonLd = {
           <!-- Score global -->
           <div class="flex items-center gap-4">
             <div class="flex items-baseline gap-2">
-              <span class="text-5xl font-black text-lime-500">{Math.round(ratingMedio * 10) / 10}</span>
+              <span class="text-5xl font-black text-lime-500">{ratingMedio.toFixed(1)}</span>
               <span class="text-zinc-600 font-bold">/10</span>
             </div>
             <div>
               <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Score global</p>
-              <p class="text-[10px] text-zinc-600 uppercase tracking-widest">Media de 8 atributos</p>
+              {meta.fuentes.length > 0 ? (
+                <p class="text-[10px] text-zinc-600 uppercase tracking-widest">
+                  {meta.confianza === "alta" ? "Consenso verificado" : "Fuente externa"} · {meta.fuentes.map((f) => f.nombre).join(" + ")}
+                </p>
+              ) : (
+                <p class="text-[10px] text-zinc-600 uppercase tracking-widest">Estimación editorial · 8 atributos</p>
+              )}
             </div>
           </div>
+
+          {meta.fuentes.length > 0 && (
+            <div class="flex flex-wrap gap-2 text-[10px]">
+              {meta.fuentes.map((f) => (
+                f.url ? (
+                  <a href={f.url} target="_blank" rel="noopener nofollow" class="inline-flex items-center gap-1 bg-zinc-900 border border-zinc-800 px-2 py-1 rounded text-zinc-400 hover:text-lime-400 hover:border-lime-500/40 transition-colors">
+                    <span class="font-bold">{f.nombre}</span>
+                    {f.escala !== "reseña" && <span class="text-zinc-600">{f.escala}</span>}
+                  </a>
+                ) : (
+                  <span class="inline-flex items-center gap-1 bg-zinc-900 border border-zinc-800 px-2 py-1 rounded text-zinc-400">
+                    <span class="font-bold">{f.nombre}</span>
+                    {f.escala !== "reseña" && <span class="text-zinc-600">{f.escala}</span>}
+                  </span>
+                )
+              ))}
+              {meta.ajusteAntiguedad < 0 && (
+                <span class="inline-flex items-center bg-zinc-900 border border-zinc-800 px-2 py-1 rounded text-zinc-600" title="Ajuste por antigüedad del modelo">
+                  ajuste antigüedad {meta.ajusteAntiguedad.toFixed(1)}
+                </span>
+              )}
+            </div>
+          )}
 
           <p class="text-zinc-300 leading-relaxed">{b.resumen}</p>
 
@@ -378,7 +403,7 @@ const jsonLd = {
             {relacionadas.map((rel) => {
               const relMejor = findMejorPrecio(rel.links_compra);
               const relPrecio = relMejor?.precio_actual ?? rel.precio_msrp_eur;
-              const relScore = Math.round((Object.values(rel.puntuaciones).reduce((a, c) => a + c, 0) / 8) * 10) / 10;
+              const relScore = scoreDisplay(rel);
               return (
                 <a href={`/bota/${rel.slug}`} class="group bg-[#0a1f0f] border-2 border-zinc-800 hover:border-lime-500 transition-all flex flex-col">
                   <div class="relative">

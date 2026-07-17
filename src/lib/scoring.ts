@@ -355,6 +355,31 @@ export function findMejorPrecio(links: LinkCompra[]): LinkCompra | undefined {
 }
 
 // ─────────────────────────────────────────────────────────
+// 5b. Precio MOSTRADO (estrategia "ver precio")
+//
+// Solo mostramos un PRECIO numérico de tiendas donde monetizamos (o a punto de
+// aprobarse). Para tiendas sin programa/rechazadas mostramos "Ver precio en
+// [tienda]" sin número, así el precio que enseñamos es el que respaldamos.
+// OJO: esto SOLO afecta a lo MOSTRADO. El orden del catálogo y el editor's pick
+// siguen usando findMejorPrecio (precio real más barato), que NO se toca.
+// ─────────────────────────────────────────────────────────
+
+// Tiendas pendientes de aprobación: mostramos su precio porque convertirán pronto.
+const TIENDAS_PENDIENTES = new Set<string>([
+  "prodirect_es", "futbolemotion_es",
+]);
+
+/** ¿Mostramos el precio numérico de este enlace? (afiliado activo o pendiente) */
+export function mostramosPrecio(link: LinkCompra): boolean {
+  return link.tiene_afiliado === true || TIENDAS_PENDIENTES.has(link.tienda);
+}
+
+/** Mejor precio entre las tiendas cuyo precio SÍ mostramos (para el "desde X€"). */
+export function findMejorPrecioMostrado(links: LinkCompra[]): LinkCompra | undefined {
+  return findMejorPrecio(links.filter((l) => mostramosPrecio(l)));
+}
+
+// ─────────────────────────────────────────────────────────
 // 6. Razones humanas (max 3 por card)
 // ─────────────────────────────────────────────────────────
 
@@ -469,4 +494,60 @@ export function recomendar(
 
   recomendaciones.sort((a, b) => b.match_pct - a.match_pct);
   return aplicarDiversidad(recomendaciones, topN);
+}
+
+// ─────────────────────────────────────────────────────────
+// Score MOSTRADO — anclado a fuentes de referencia (FootballBootsDB/SoccerBible)
+// con fallback al promedio de nuestros 8 ejes. Ver lib/scoreFuentes.ts.
+// ─────────────────────────────────────────────────────────
+import { scoreInfo, axisAverage } from "./scoreFuentes";
+import type { ScoreInfo } from "./scoreFuentes";
+
+// Ajuste de antigüedad: el rendimiento no cambia, pero un score de hace años no es
+// del todo comparable con uno actual. A partir de 3 años: -0.1 cada 2 años, tope -0.3.
+const CURRENT_YEAR = 2026;
+function agePenalty(b: Bota): number {
+  const age = CURRENT_YEAR - (b.año_lanzamiento ?? CURRENT_YEAR);
+  if (age <= 2) return 0;
+  return -Math.min(Math.floor((age - 1) / 2) * 0.1, 0.3);
+}
+
+export interface ScoreMetaFull extends ScoreInfo {
+  /** Score de las fuentes antes del ajuste por antigüedad. */
+  scoreBase: number;
+  /** Ajuste por antigüedad aplicado (0 o negativo). */
+  ajusteAntiguedad: number;
+}
+
+/** Score 0-10 que se muestra al usuario (consenso de fuentes − ajuste antigüedad). */
+export function scoreDisplay(b: Bota): number {
+  const base = scoreInfo(b.id, axisAverage(b.puntuaciones as any)).score;
+  return Math.round((base + agePenalty(b)) * 10) / 10;
+}
+
+/** Texto del badge de score (nota a 1 decimal). */
+export function scoreBadge(b: Bota): string {
+  return scoreDisplay(b).toFixed(1);
+}
+
+/** Score + confianza + fuentes + desglose del ajuste, para la UI de la ficha. */
+export function scoreMeta(b: Bota): ScoreMetaFull {
+  const info = scoreInfo(b.id, axisAverage(b.puntuaciones as any));
+  const ajuste = agePenalty(b);
+  return {
+    ...info,
+    scoreBase: info.score,
+    ajusteAntiguedad: ajuste,
+    score: Math.round((info.score + ajuste) * 10) / 10,
+  };
+}
+
+/**
+ * Comparador para ordenar por score DESC. MÁS ES MEJOR. El año solo desempata
+ * cuando el score es EXACTAMENTE igual (la más nueva primero).
+ */
+export function compareByScore(a: Bota, b: Bota): number {
+  const sa = scoreDisplay(a), sb = scoreDisplay(b);
+  if (sb !== sa) return sb - sa;
+  return (b.año_lanzamiento ?? 0) - (a.año_lanzamiento ?? 0);
 }
