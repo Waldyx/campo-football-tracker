@@ -848,7 +848,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "Alternativa más asequible a la X Crazyfast.1 para extremos y delanteros que buscan velocidad pura con placa de carbono. Si la Crazyfast se sale del presupuesto, la Speedportal.1 ofrece experiencia similar a menor precio.",
 
-    imagen_principal: "https://m.media-amazon.com/images/I/61zgBZashPL._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/61XjXxG3LgL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1353,7 +1353,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La puerta de entrada al mundo Phantom para técnicos con presupuesto. No iguala a la Elite pero ofrece el perfil correcto a una fracción del precio. Para jugadores jóvenes y amateurs técnicos.",
 
-    imagen_principal: "https://m.media-amazon.com/images/I/71B8c5-NZ-L._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/51Rkc9iiOsL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1777,7 +1777,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La entrada al mundo Copa para jugadores técnicos con presupuesto. No iguala a la Copa Pure 2 Elite pero ofrece el perfil correcto a una fracción del precio. Ideal para amateurs técnicos.",
 
-    imagen_principal: "https://m.media-amazon.com/images/I/61dxCaVWqNL._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/71Ut81IQyWL._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -1921,7 +1921,7 @@ const _rawBotas: Bota[] = [
     veredicto:
       "La opción Nike técnica por excelencia por debajo de 70€. Para mediapuntas y centrocampistas jóvenes o amateurs que quieren el ADN Phantom sin el desembolso de la Elite.",
 
-    imagen_principal: "https://m.media-amazon.com/images/I/71B8c5-NZ-L._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/71d-GfsOV6L._AC_SY500_.jpg",
     imagenes: [],
 
     fuentes: [
@@ -2059,7 +2059,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "Si buscas la bota de velocidad más avanzada de Adidas en 2024, la F50 es la respuesta. Para extremos y delanteros que viven del sprint y el primer paso explosivo.",
-    imagen_principal: "https://m.media-amazon.com/images/I/61cSNMGbS8L._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/61Np7w7imbL._AC_SY500_.jpg",
     imagenes: [],
     fuentes: [
       { tipo: "football-boots-guru", url: "https://www.football-boots-guru.com/adidas-f50-2024-review/" },
@@ -2123,7 +2123,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "La opción definitiva para jugadores velocistas que compiten en moqueta o cesped artificial de pelo corto. Toda la tecnología Mercurial adaptada a TF.",
-    imagen_principal: "https://m.media-amazon.com/images/I/71iEz3580zL._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/515rjxBtp-L._AC_SY500_.jpg",
     imagenes: [],
     fuentes: [
       { tipo: "evaluacion-propia" },
@@ -2187,7 +2187,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "La mejor opción de Adidas para fútbol sala. La X Speedportal IN combina velocidad y control en pabellón, ideal para el jugador dinámico que domina los espacios reducidos.",
-    imagen_principal: "https://m.media-amazon.com/images/I/61zgBZashPL._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/61ZTbZAbkIL._AC_SY500_.jpg",
     imagenes: [],
     fuentes: [
       { tipo: "evaluacion-propia" },
@@ -2251,7 +2251,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "La mejor bota de control de Nike adaptada a césped artificial. Si juegas de mediocentro o mediapunta en campos de moqueta, la Phantom GX TF es tu bota.",
-    imagen_principal: "https://m.media-amazon.com/images/I/71z5uqaMhcL._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/712uySG2wiL._AC_SY500_.jpg",
     imagenes: [],
     fuentes: [
       { tipo: "evaluacion-propia" },
@@ -2316,7 +2316,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "Si quieres la bota de velocidad definitiva de Nike sin el collar, la Vapor 15 Elite es la respuesta. Todo el rendimiento de la Superfly a un precio ligeramente más humano.",
-    imagen_principal: "https://m.media-amazon.com/images/I/51FCaw0bbUL._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/61l0MC4phNL._AC_SY500_.jpg",
     imagenes: [],
     fuentes: [
       { tipo: "football-boots-guru", url: "https://www.football-boots-guru.com/nike-mercurial-vapor-15-elite-review/" },
@@ -2379,7 +2379,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "La opción inteligente dentro de la gama Future de Puma. Si la Ultimate te parece cara pero quieres el ADN Future con placa de carbono, la Pro es tu bota.",
-    imagen_principal: "https://m.media-amazon.com/images/I/71GECgkNA6L._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/7157yTr2DaL._AC_SY500_.jpg",
     imagenes: [],
     fuentes: [
       { tipo: "evaluacion-propia" },
@@ -2444,7 +2444,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "Para el jugador técnico que quiere salir de lo convencional. La DS Light ofrece tacto de cuero, peso pluma y durabilidad excepcional. Un joya desconocida que merece más atención.",
-    imagen_principal: "https://m.media-amazon.com/images/I/61k4zK6PuLL._AC_SY500_.jpg",
+    imagen_principal: "/placeholder-boot.svg",
     imagenes: [],
     fuentes: [
       { tipo: "evaluacion-propia" },
@@ -2509,7 +2509,7 @@ const _rawBotas: Bota[] = [
     ],
     veredicto:
       "No es para todos. Es para el jugador que valora el tacto de balón por encima de cualquier otra cosa y quiere una bota con alma. Si el cuero te llama, la Lazzarini es la cumbre.",
-    imagen_principal: "https://m.media-amazon.com/images/I/41akE-8s5HL._AC_SY500_.jpg",
+    imagen_principal: "https://m.media-amazon.com/images/I/61kKpgd1AtL._AC_SY500_.jpg",
     imagenes: [],
     fuentes: [
       { tipo: "evaluacion-propia" },
