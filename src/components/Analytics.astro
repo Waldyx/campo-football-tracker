@@ -1,0 +1,26 @@
+---
+// Componente: Analytics (Cloudflare Web Analytics — privacy-first, sin cookies)
+//
+// Cloudflare Web Analytics: gratis, sin cookies, sin localStorage, GDPR-compliant.
+// No rastrea visitantes individuales → no requiere banner de consentimiento por sí solo.
+//
+// CÓMO ACTIVARLO:
+//   1. Cloudflare dash → Analytics → Web Analytics → "Add a site".
+//   2. Elige el método "JS snippet" (NO el proxy DNS — el sitio vive en Vercel).
+//   3. Copia el token del beacon y pégalo en CF_TOKEN abajo.
+// Mientras CF_TOKEN esté vacío, el componente NO inyecta nada (no-op seguro).
+//
+// OJO: no reutilizar el token de otro sitio (mezclaría el tráfico en el panel).
+
+const isDev = import.meta.env.DEV;
+const CF_TOKEN = ""; // ← pega aquí el token de Cloudflare Web Analytics
+const enabled = !isDev && CF_TOKEN.length > 0;
+---
+
+{enabled && (
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon={`{"token": "${CF_TOKEN}"}`}
+  ></script>
+)}

@@ -1,0 +1,78 @@
+---
+// Componente: CookieBanner — banner mínimo, sin terceros ni trackers.
+// Se oculta tras "Aceptar" o "Rechazar" (guardado en localStorage).
+---
+
+<div id="cb-cookie" class="cb-cookie hidden" role="dialog" aria-label="Aviso de cookies">
+  <div class="cb-cookie-inner">
+    <div class="cb-cookie-text">
+      <p class="cb-cookie-eyebrow">★ Cookies</p>
+      <p>
+        Usamos cookies <strong>solo para enlaces de afiliado</strong> (sin rastrear personas).
+        Si compras a través de nuestros enlaces, la tienda nos puede atribuir la venta.
+        <a href="/financiacion">Cómo nos financiamos →</a>
+      </p>
+    </div>
+    <div class="cb-cookie-actions">
+      <button type="button" data-choice="reject" class="cb-cookie-btn ghost">Rechazar</button>
+      <button type="button" data-choice="accept" class="cb-cookie-btn primary">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .cb-cookie {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 55;
+    background: #071408; border-top: 2px solid #84cc16;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .cb-cookie.hidden { display: none; }
+  .cb-cookie-inner {
+    max-width: 1280px; margin: 0 auto; padding: 14px 18px;
+    display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  }
+  .cb-cookie-text { flex: 1; min-width: 260px; font-size: 12.5px; color: #a1a1aa; line-height: 1.55; }
+  .cb-cookie-text strong { color: #fff; }
+  .cb-cookie-text a { color: #84cc16; text-decoration: underline; }
+  .cb-cookie-eyebrow {
+    font-size: 10px; font-weight: 900; text-transform: uppercase;
+    letter-spacing: .12em; color: #84cc16; margin-bottom: 4px;
+  }
+  .cb-cookie-actions { display: flex; gap: 8px; }
+  .cb-cookie-btn {
+    padding: 9px 18px; font-size: 11.5px; font-weight: 900;
+    text-transform: uppercase; letter-spacing: .08em; cursor: pointer;
+    border: 1px solid #3f3f46; background: transparent; color: #a1a1aa;
+    transition: all .15s ease;
+  }
+  .cb-cookie-btn.ghost:hover { border-color: #71717a; color: #fff; }
+  .cb-cookie-btn.primary { background: #84cc16; color: #0a1f0f; border-color: #84cc16; }
+  .cb-cookie-btn.primary:hover { background: #a3e635; }
+  /* Deja hueco para no tapar la burbuja del chat en móvil */
+  @media (max-width: 640px) {
+    .cb-cookie-inner { padding-bottom: 18px; }
+    .cb-cookie-actions { width: 100%; }
+    .cb-cookie-btn { flex: 1; }
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = "cb.cookies.v1";
+  const $banner = document.getElementById("cb-cookie");
+
+  try {
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      setTimeout(() => $banner?.classList.remove("hidden"), 800);
+    }
+  } catch {}
+
+  $banner?.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const choice = btn.dataset.choice!;
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ v: 1, choice, ts: Date.now() }));
+      } catch {}
+      $banner?.classList.add("hidden");
+    });
+  });
+</script>

@@ -1,196 +1,184 @@
-# 🤖 HANDOVER — Football Shoe Tracker (CAMPO.)
+# 🤖 HANDOVER — CANCHA.BOTAS (Football Shoe Tracker)
 **Para la próxima IA o desarrollador que tome este proyecto.**
+
+> Última actualización: 2026-05-20 — sesión de portado de sistemas desde CANCHA.ZAPA.
 
 ---
 
 ## 🎯 ¿Qué es esto?
 
-**CAMPO.** es un motor de recomendación experto de botas de fútbol. El usuario hace un quiz de ~6 preguntas sobre cómo juega (posición, superficie, estilo, presupuesto, peso, anchura de pie) y el motor devuelve las 5 botas que mejor encajan con su perfil. Sin publicidad, sin sesgo, 100% técnico.
+**CANCHA.BOTAS** es un motor de recomendación experto de botas de fútbol para el
+mercado español. El usuario hace un quiz (posición, superficie, estilo, peso,
+presupuesto, anchura de pie) y el motor devuelve las 5 botas que mejor encajan.
+Sin publicidad, sin sesgo de marca, 100% técnico.
 
-**Referencia visual y de código:** está basado 1:1 en el Basketball Shoe Tracker que está en:
-`C:\Users\oswal\Desktop\AI\Proyectos\Basketball Shoe Tracker\web`
-Ese proyecto ya está desplegado y funciona. Si algo no está claro aquí, mírate ese proyecto — la arquitectura es idéntica.
+**Proyecto hermano:** `C:\Users\oswal\Desktop\AI\Proyectos\Basketball Shoe Tracker`
+(CANCHA.ZAPA, baloncesto, ya maduro y en producción en canchazapa.com).
+Este proyecto replica su arquitectura. **Si algo no está claro aquí, míralo allí.**
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Estructura
 
 ```
 Football Shoe Tracker/
-├── astro.config.mjs          # Config Astro + Tailwind v4 + sitemap
-├── package.json              # Dependencias (astro, tailwindcss, sitemap)
-├── tsconfig.json             # TypeScript config
+├── api/
+│   ├── chat.ts               # ⭐ Función serverless del asistente IA (Vercel)
+│   └── _catalog.json         # Catálogo precompilado (lo genera prebuild)
+├── scripts/
+│   └── gen-chat-catalog.ts   # Genera _catalog.json (corre en prebuild)
 ├── src/
 │   ├── data/
-│   │   └── botas.ts          # ⭐ BASE DE DATOS de 8 botas (aquí añades más)
+│   │   ├── botas.ts          # ⭐ BASE DE DATOS (36 botas)
+│   │   ├── score-fuentes.json# ⭐ Scores anclados a fuentes externas
+│   │   └── promos.ts         # Promos de afiliados (date-gated)
 │   ├── lib/
-│   │   ├── types.ts          # Todos los tipos TypeScript del dominio
-│   │   └── scoring.ts        # ⭐ MOTOR DE RECOMENDACIÓN (algoritmo de match)
-│   ├── layouts/
-│   │   └── Base.astro        # Layout HTML base con nav y footer
-│   ├── styles/
-│   │   └── global.css        # CSS global + variables de color
+│   │   ├── types.ts          # Tipos del dominio
+│   │   ├── scoring.ts        # ⭐ MOTOR DE RECOMENDACIÓN + score mostrado
+│   │   ├── scoreFuentes.ts   # Consenso de fuentes → score con confianza
+│   │   └── articles.ts       # ⭐ Artículos del blog (contenido editorial)
+│   ├── components/
+│   │   ├── ChatWidget.astro  # Burbuja del asistente IA
+│   │   ├── PromoBanner.astro # Franja rotativa de promos
+│   │   ├── CookieBanner.astro
+│   │   └── Analytics.astro   # Cloudflare Web Analytics (token PENDIENTE)
+│   ├── layouts/Base.astro    # Layout + monta Promo/Chat/Cookie/Analytics
 │   └── pages/
-│       ├── index.astro       # Homepage hero + CTA quiz
-│       ├── quiz.astro        # ⭐ Quiz interactivo (JS vanilla)
-│       ├── resultados.astro  # Página de resultados del quiz
-│       ├── botas.astro       # Catálogo completo con filtros
-│       ├── rankings.astro    # Rankings por categoría
-│       ├── comparar.astro    # Comparador de 2 botas
-│       ├── faq.astro         # Preguntas frecuentes
-│       ├── metodologia.astro # Cómo funciona el scoring
-│       ├── 404.astro         # Página de error
-│       └── bota/
-│           └── [slug].astro  # Ficha detalle de cada bota
-└── public/
-    └── favicon.svg           # Logo CAMPO.
+│       ├── index, quiz, resultados, botas, rankings, comparar, faq, metodologia
+│       ├── calculadora.astro # Coste por partido
+│       ├── financiacion.astro / privacidad.astro
+│       ├── blog/index.astro + blog/[slug].astro
+│       └── bota/[slug].astro # Ficha detalle
+└── vercel.json
 ```
 
 ---
 
-## 🚀 Cómo arrancar en local
+## 🚀 Arrancar
 
 ```bash
 cd "C:\Users\oswal\Desktop\AI\Proyectos\Football Shoe Tracker"
-npm install       # solo la primera vez
-npm run dev       # arranca en http://localhost:4321
-npm run build     # genera dist/ listo para deploy
+npm install
+npm run dev      # http://localhost:4325
+npm run build    # corre prebuild (gen-chat-catalog) + astro build
 ```
 
-**Nota:** Si el puerto 4321 está ocupado (por el basket tracker), usará el 4322 automáticamente.
+Dev server registrado en `C:\.claude\launch.json` como **`cancha-botas`** (puerto 4325).
 
 ---
 
-## 🧠 Cómo funciona el motor de scoring
+## 🌐 Despliegue
 
-Archivo: `src/lib/scoring.ts`
-
-El algoritmo toma las respuestas del quiz (`RespuestasQuiz`) y las compara contra cada bota del catálogo. Para cada bota calcula un `match_pct` (0-100) aplicando pesos sobre los atributos:
-
-| Criterio             | Peso |
-|----------------------|------|
-| Superficie           | 30%  |
-| Posición del jugador | 20%  |
-| Estilo de juego      | 15%  |
-| Prioridad declarada  | 15%  |
-| Presupuesto          | 10%  |
-| Peso del jugador     | 5%   |
-| Anchura del pie      | 5%   |
-
-El resultado es un array de `Recomendacion[]` ordenado por `match_pct` descendente. Se muestran las top 5.
+- **Repo:** github.com/Waldyx/campo-football-tracker (rama `main`)
+- **Vercel:** auto-deploy en cada push a `main`
+- Git identity ya configurada. El remote lleva el token embebido.
 
 ---
 
-## 👟 Base de datos de botas (estado actual)
+## 🧠 Sistemas portados desde CANCHA.ZAPA (sesión 2026-05-20)
 
-Archivo: `src/data/botas.ts` — **8 botas** incluidas:
+### 1. Score anclado a fuentes (`scoreFuentes.ts` + `score-fuentes.json`)
+El score que se muestra NO es el promedio crudo de los 8 ejes. Sigue esta cascada:
+1. `fbd` (FootballBootsDB) → ancla experta. Confianza **alta** si además hay `sb` o n≥4.
+2. `sb` (SoccerBible) → confianza **media**.
+3. `editorial` → estimación calibrada, confianza **editorial**.
+4. Si no hay nada → promedio de los 8 ejes.
 
-| # | Marca | Modelo | Categoría | Superficies |
-|---|-------|--------|-----------|-------------|
-| 1 | Nike | Mercurial Superfly 10 Elite | Velocidad | FG, AG |
-| 2 | Adidas | Predator 24 Elite | Control | FG, AG |
-| 3 | Adidas | Copa Pure 2 Elite | Técnica/Cuero | FG |
-| 4 | Nike | Phantom GX 2 Elite | Control | FG, AG |
-| 5 | Puma | Future 7 Ultimate | Equilibrada | FG, AG, SG |
-| 6 | New Balance | Furon v7 Pro | Velocidad | FG, AG |
-| 7 | Mizuno | Morelia Neo IV Beta | Técnica | FG, SG |
-| 8 | Under Armour | Magnetico Elite 3 | Equilibrada | FG, AG |
+Luego se aplica `agePenalty()`: −0.1 cada 2 años a partir de los 3 años, tope −0.3.
 
-**Para añadir más botas:** copia la estructura de cualquier bota existente en `botas.ts` y añádela al array `_rawBotas`. El motor la incluirá automáticamente.
+Funciones públicas en `scoring.ts`: `scoreDisplay()`, `scoreBadge()`, `scoreMeta()`
+(devuelve fuentes + confianza + desglose, se usa en la ficha), `compareByScore()`.
 
----
+**Para añadir un ancla:** edita `score-fuentes.json` con el id de la bota.
 
-## 🎨 Diseño y marca
+### 2. Estrategia "Ver precio"
+`mostramosPrecio(link)` — solo enseñamos precio NUMÉRICO de tiendas con afiliado
+activo o en `TIENDAS_PENDIENTES`. Del resto se muestra "Ver precio en [tienda]".
+`findMejorPrecioMostrado()` calcula el "desde X€".
+**OJO:** esto solo afecta a lo mostrado; el orden del catálogo sigue usando
+`findMejorPrecio()` (precio real más barato).
 
-- **Nombre:** CAMPO. (con punto)
-- **Esquema de color:** fondo negro (#0a0a0a), acento naranja (#f97316), texto blanco
-- **Tipografía:** Inter (Google Fonts), ultra-bold para headings
-- **Fondo hero:** campo de fútbol con líneas sutiles (SVG inline)
-- **Estilo:** oscuro, deportivo, directo — igual que el basket tracker
+### 3. Promos date-gated (`promos.ts` + `PromoBanner.astro`)
+Gating **en cliente** (la web es estática). Añadir una promo = copiar un objeto
+en `PROMOS`. Previsualizar antes de su fecha: `?promo=preview`.
+Ahora mismo solo hay una plantilla de ejemplo con fechas pasadas (no se muestra).
 
----
+### 4. Calculadora de coste por partido (`/calculadora`)
+Modelo: `vidaBaseFG = durabilidad × 40` partidos. AG/TF desgastan **~2×** más que FG.
+Deep-link soportado: `/calculadora?slug=<slug>`.
 
-## 📊 Páginas disponibles
+### 5. Blog / SEO (`articles.ts` + `/blog`)
+5 artículos editoriales propios (suelas, posición, calidad-precio, pie ancho,
+duración). Cada uno enlaza botas del catálogo (`relatedBotas`) y lleva JSON-LD
+Article + BreadcrumbList. Estilos del cuerpo en `.art-body` (en `blog/[slug].astro`).
 
-| Ruta | Descripción |
-|------|-------------|
-| `/` | Hero + CTA al quiz |
-| `/quiz` | Quiz interactivo 6 pasos |
-| `/resultados` | Top 5 botas recomendadas |
-| `/botas` | Catálogo completo con filtros por superficie/categoría |
-| `/rankings` | Rankings: más ligeras, mejor tracción FG, mejor cuero... |
-| `/comparar` | Comparar 2 botas head-to-head |
-| `/bota/[slug]` | Ficha detalle de cada bota |
-| `/metodologia` | Cómo funciona el sistema de scoring |
-| `/faq` | Preguntas frecuentes |
+### 6. Asistente IA (`api/chat.ts` + `ChatWidget.astro`)
+RAG por inyección: el system prompt lleva el catálogo entero precompilado.
+Cadena de modelos gratuitos de OpenRouter con fallback + rate limit en memoria.
+Marcadores `[[bota:slug]]` → el widget los convierte en mini-cards.
 
----
-
-## 🔮 Próximos pasos sugeridos (prioridad)
-
-### 1. 🌐 DESPLIEGUE (más urgente)
-Desplegar en Vercel para tener URL pública:
-```bash
-npm install -g vercel
-vercel login
-vercel --prod
-```
-O conectar el repo de GitHub a Vercel desde vercel.com.
-
-### 2. 📸 Imágenes reales de botas
-Las imágenes actuales son placeholders. Sustituir `imagen_principal` en `botas.ts` con URLs reales de las webs oficiales de Nike, Adidas, Puma, etc.
-
-### 3. 💰 Precios actualizados
-Los precios en `links_compra` son de referencia. Actualizar con precios reales de Amazon ES, Decathlon, etc.
-
-### 4. 👟 Ampliar catálogo
-Añadir al menos 10-15 botas más, especialmente:
-- Rango budget (< 60€): Adidas X Speedportal.3, Nike Mercurial Vapor 15 Club
-- Fútbol sala / IN: Adidas Copa, Nike Tiempo
-- Superficies blandas (SG): botas con tacos intercambiables
-
-### 5. 🔗 Links de afiliado reales
-Reemplazar URLs placeholder en `links_compra` con links reales de Amazon Associates u otro programa de afiliados.
-
-### 6. 📱 Optimización móvil
-Revisar que el quiz y las fichas de botas funcionen perfectamente en móvil (especialmente el comparador).
-
-### 7. 🔍 SEO
-- Añadir meta descriptions únicas por página
-- Añadir structured data (JSON-LD) en las fichas de botas
-- El sitemap ya se genera automáticamente (`/sitemap-index.xml`)
+**⚠️ Requiere `OPENROUTER_API_KEY` en Vercel** (Settings → Environment Variables).
+Sin ella devuelve un mensaje de "no configurado" y el resto de la web sigue igual.
 
 ---
 
-## ⚙️ Stack técnico
+## ⚠️ PENDIENTES / cosas a saber
 
-| Herramienta | Versión | Para qué |
-|-------------|---------|----------|
-| Astro | 6.3.x | Framework web (SSG) |
-| Tailwind CSS | 4.3.x | Estilos (vía plugin Vite) |
-| TypeScript | 6.x | Tipado del dominio |
-| @astrojs/sitemap | 3.7.x | Generación automática de sitemap |
-| Node.js | ≥22.12 | Runtime |
+### Alta prioridad
+1. **`OPENROUTER_API_KEY` en Vercel** — sin esto el chat no responde en producción.
+2. **Token de Cloudflare Web Analytics** — `src/components/Analytics.astro` tiene
+   `CF_TOKEN = ""`. Mientras esté vacío NO inyecta nada (no-op seguro).
+   NO reutilizar el token de canchazapa.com: mezclaría el tráfico de ambos sitios.
+3. **Enlaces de afiliado reales** — casi todos los `links_compra` son búsquedas de
+   Amazon (`amazon.es/s?k=...`) con `tiene_afiliado: false`. Hay que sustituirlos por
+   URLs de producto reales envueltas en el wrapper de afiliado. Referencia de
+   wrappers en el CLAUDE.md del proyecto de baloncesto (Awin `awinaffid=2908587`).
 
-**Nota importante:** Tailwind v4 se integra vía `@tailwindcss/vite` (no `@astrojs/tailwind`). No hay `tailwind.config.js` — la configuración es en CSS.
+### Media
+4. **Imágenes duplicadas** — al añadir las 8 botas nuevas se reutilizaron URLs de
+   Amazon de otros modelos. Comparten foto (revisar y sustituir):
+   - `asics-ds-light` usa la de New Balance Furon
+   - `pantofola-doro-lazzarini` usa la de Mizuno Morelia Neo IV
+   - `adidas-x-speedportal-in` usa la de X Crazyfast
+   - `nike-mercurial-vapor-15-tf` usa la de Vapor 15 Club
+   - `nike-phantom-gx-tf` usa la de Phantom GX 2 Elite
+   - `puma-future-7-pro` usa la de Future 7 Ultimate
+5. **Precios sin verificar** — los `precio_actual` son orientativos, no scrapeados.
+6. **Scores editoriales** — las botas sin `fbd`/`sb` en `score-fuentes.json` llevan
+   estimación editorial. Anclarlas si aparece review numérica.
+
+### Baja
+7. No hay scraper de precios (el de baloncesto sí tiene, en `web/scripts/scraper`).
+8. No hay OG images dinámicas (el de baloncesto tiene `/og/[slug].png.ts`).
+9. No hay página de accesorios ni "mis botas" (equivalentes a `/balones` y `/mis-zapas`).
 
 ---
 
-## 🐛 Bugs conocidos
+## 📝 Reglas de edición (heredadas de CANCHA.ZAPA)
 
-- Las URLs de imágenes son placeholders — las páginas muestran imágenes rotas
-- Los precios no se actualizan automáticamente (no hay scraper todavía)
-- El comparador necesita pulido en móvil
-
----
-
-## 📝 Contexto del dueño del proyecto
-
-- **Propietario:** Oswal (oswaldhs7@gmail.com)
-- **Nivel técnico:** Usuario, no desarrollador — necesita que la IA haga los cambios de código
-- **Referencia directa:** El Basketball Shoe Tracker en `C:\Users\oswal\Desktop\AI\Proyectos\Basketball Shoe Tracker` es el proyecto hermano ya terminado
-- **Idioma:** Español (Oswal habla español)
+1. **Cambios quirúrgicos.** Edita solo lo que pide la tarea. En `botas.ts` haz match
+   por `id:`, NUNCA por las líneas de comentario (tienen box-drawing chars que rompen
+   el match).
+2. **Simplicidad.** El mínimo código que resuelve lo pedido.
+3. **Piensa antes.** Si algo es ambiguo, dilo y pregunta.
+4. **Objetivos verificables.** Convierte tareas vagas en criterios comprobables y
+   verifica en el navegador antes de dar algo por hecho.
 
 ---
 
-*Última actualización: 2026-05-19*
+## 🎨 Marca
+
+- **Nombre:** CANCHA.BOTAS → `CANCHA<span class="text-lime-500">.</span>BOTAS`
+- **Fondo:** `#0a1f0f` (verde muy oscuro) · **Footer:** `#071408`
+- **Acento:** lime-500 `#84cc16`
+- **Tipografía:** Inter (cuerpo) + Barlow Condensed (titulares, `font-black`, uppercase)
+- **Tono:** directo, honesto, "sin humo". Tuteo.
+
+---
+
+## 👤 Contexto del dueño
+
+- **Propietario:** Oswal (oswaldhs7@gmail.com) — habla español.
+- **Nivel:** usuario, no desarrollador. Necesita que la IA haga los cambios.
+- **Forma de trabajar:** delega con autonomía; pasa URLs y precios y espera que la
+  IA actualice, compile y haga push.

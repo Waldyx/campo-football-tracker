@@ -1,0 +1,100 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Cómo nos financiamos | CANCHA.BOTAS"
+  description="Transparencia total: cómo gana dinero CANCHA.BOTAS, qué es un enlace de afiliado y por qué eso no cambia nuestras recomendaciones."
+>
+  <main class="min-h-screen text-white">
+    <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">CANCHA<span class="text-lime-500">.</span>BOTAS</a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/blog" class="hover:text-lime-500 transition-colors">Blog</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="px-6 pt-14 pb-8">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Transparencia</p>
+        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
+          Cómo nos<br /><span class="text-lime-500">financiamos</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="px-6 pb-20">
+      <div class="max-w-3xl mx-auto space-y-8 text-zinc-300 leading-relaxed">
+        <div class="border-l-2 border-lime-500 pl-5 text-lg text-zinc-200">
+          Resumen: ganamos una comisión si compras a través de nuestros enlaces.
+          <strong class="text-white"> Nunca cobramos por aparecer en el catálogo, por subir un score ni por salir en el quiz.</strong>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Qué es un enlace de afiliado</h2>
+          <p>
+            Algunos enlaces a tiendas (Amazon, Decathlon y otras) llevan un identificador nuestro.
+            Si compras después de hacer clic, la tienda nos paga una comisión pequeña —
+            normalmente entre el 3% y el 7%. <strong class="text-white">A ti no te cuesta ni un céntimo más</strong>:
+            el precio es exactamente el mismo que si entrases directo.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Qué NO hacemos</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>No cobramos a las marcas por incluir sus botas en el catálogo.</li>
+            <li>No aceptamos dinero por subir la puntuación de un modelo.</li>
+            <li>No colocamos una bota en el top del quiz porque pague más comisión.</li>
+            <li>No escondemos las botas malas: si un modelo no nos convence, lo decimos.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Cómo evitamos el sesgo</h2>
+          <p>
+            El motor de recomendación puntúa las botas por sus atributos técnicos y por cómo
+            encajan con tus respuestas del quiz — la comisión <strong class="text-white">no entra en el cálculo</strong>.
+            Puedes leer el algoritmo completo en <a href="/metodologia" class="text-lime-500 underline">la página de método</a>.
+          </p>
+          <p class="mt-3">
+            La comisión solo se usa como <em>desempate</em> cuando dos tiendas ofrecen el
+            <strong class="text-white"> mismo precio</strong> (diferencia menor de 0,50 €) para la misma bota.
+            Si una tienda es más barata, esa gana siempre, cobremos o no de ella.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Los precios</h2>
+          <p>
+            Mostramos el precio numérico de las tiendas cuyo dato verificamos y mantenemos.
+            Para el resto verás "Ver precio en [tienda]" sin número: preferimos no enseñarte
+            una cifra que se puede haber quedado vieja. Verifica siempre en la tienda antes de comprar.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/40 border border-zinc-800 border-t-2 border-t-lime-500/50 p-6">
+          <p class="text-sm">
+            ¿Ves algo que no cuadra —un precio desfasado, un enlace roto, una recomendación rara?
+            Es un fallo nuestro y queremos saberlo. La credibilidad es lo único que tenemos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="px-6 py-10 border-t border-green-900/60 bg-[#071408]">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        <p>CANCHA<span class="text-lime-500">.</span>BOTAS — Recomendador honesto de botas de fútbol.</p>
+        <nav class="flex gap-5 uppercase tracking-widest font-bold">
+          <a href="/privacidad" class="hover:text-lime-500 transition-colors">Privacidad</a>
+          <a href="/financiacion" class="hover:text-lime-500 transition-colors">Financiación</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+</Base>

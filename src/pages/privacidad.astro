@@ -1,0 +1,116 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Privacidad | CANCHA.BOTAS"
+  description="Qué datos recogemos (muy pocos), qué hacemos con ellos y qué cookies usamos. Sin letra pequeña."
+>
+  <main class="min-h-screen text-white">
+    <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">CANCHA<span class="text-lime-500">.</span>BOTAS</a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/blog" class="hover:text-lime-500 transition-colors">Blog</a>
+          <a href="/financiacion" class="hover:text-lime-500 transition-colors">Financiación</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="px-6 pt-14 pb-8">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Legal · Sin letra pequeña</p>
+        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">Privacidad</h1>
+      </div>
+    </section>
+
+    <section class="px-6 pb-20">
+      <div class="max-w-3xl mx-auto space-y-8 text-zinc-300 leading-relaxed">
+        <div class="border-l-2 border-lime-500 pl-5 text-lg text-zinc-200">
+          Resumen: <strong class="text-white">no tenemos cuentas, no pedimos tus datos y no vendemos nada a nadie.</strong>
+          Las respuestas de tu quiz no salen de tu navegador.
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Qué NO recogemos</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>No hay registro ni cuentas de usuario.</li>
+            <li>No pedimos email, nombre ni teléfono.</li>
+            <li>No vendemos ni cedemos datos a terceros.</li>
+            <li>No usamos cookies publicitarias ni píxeles de redes sociales.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">El quiz</h2>
+          <p>
+            Tus respuestas (posición, peso, estilo, superficie, presupuesto…) se procesan
+            <strong class="text-white">en tu propio navegador</strong> y se usan solo para calcular tu
+            recomendación. No se envían a ningún servidor nuestro ni se guardan en ninguna base de datos.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">El asistente IA</h2>
+          <p>
+            Si usas el chat, el texto que escribes se envía a nuestro servidor y de ahí al
+            proveedor del modelo de lenguaje para generar la respuesta.
+            <strong class="text-white">No guardamos el historial</strong> de esas conversaciones
+            ni las asociamos a ninguna identidad. No escribas datos personales en el chat.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Analítica</h2>
+          <p>
+            Si está activada, usamos Cloudflare Web Analytics: mide páginas vistas de forma
+            agregada, <strong class="text-white">sin cookies y sin rastrear personas</strong>.
+            No permite identificarte ni seguirte entre sitios.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Cookies</h2>
+          <p>
+            Las únicas cookies relevantes son las de <strong class="text-white">enlaces de afiliado</strong>:
+            cuando pulsas un enlace a una tienda, esa tienda puede poner su cookie para
+            atribuirnos la venta. Es la tienda quien la pone, según su propia política.
+            Te lo explicamos entero en <a href="/financiacion" class="text-lime-500 underline">cómo nos financiamos</a>.
+          </p>
+          <p class="mt-3">
+            Además guardamos alguna preferencia tuya en el <strong class="text-white">almacenamiento local</strong>
+            de tu navegador (por ejemplo, que ya cerraste un aviso). Eso nunca sale de tu dispositivo
+            y puedes borrarlo limpiando los datos del navegador.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tighter mb-3 text-white">Enlaces externos</h2>
+          <p>
+            Al salir hacia Amazon, Decathlon u otra tienda, se aplica la política de privacidad
+            de esa web, no la nuestra. No controlamos qué hacen con tus datos allí.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/40 border border-zinc-800 border-t-2 border-t-lime-500/50 p-6">
+          <p class="text-sm">
+            ¿Dudas sobre privacidad o quieres que corrijamos algo de esta página? Escríbenos.
+            Preferimos explicarlo claro a escondernos detrás de un texto legal ilegible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="px-6 py-10 border-t border-green-900/60 bg-[#071408]">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        <p>CANCHA<span class="text-lime-500">.</span>BOTAS — Recomendador honesto de botas de fútbol.</p>
+        <nav class="flex gap-5 uppercase tracking-widest font-bold">
+          <a href="/privacidad" class="hover:text-lime-500 transition-colors">Privacidad</a>
+          <a href="/financiacion" class="hover:text-lime-500 transition-colors">Financiación</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+</Base>
