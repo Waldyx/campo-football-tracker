@@ -68,8 +68,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 285,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/w?q=mercurial+superfly+10+elite&vst=mercurial+superfly+10+elite", precio_actual: 285.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+superfly+10+elite", precio_actual: 269.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+superfly+10+elite&tag=canchazapa-21", precio_actual: 269.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
       { tienda: "jd_sports_es", url: "https://www.jdsports.es/search/mercurial+superfly+10+elite", precio_actual: 285.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 285.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -139,9 +140,10 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 250,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/botas-de-futbol-predator-24-elite", precio_actual: 250.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+predator+24+elite+fg", precio_actual: 229.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fbotas-de-futbol-predator-24-elite", precio_actual: 250.00, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+predator+24+elite+fg&tag=canchazapa-21", precio_actual: 229.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
       { tienda: "zalando_es", url: "https://www.zalando.es/adidas-predator-24-elite/", precio_actual: 250.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 250.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -210,8 +212,9 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 230,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/copa-pure-2-elite", precio_actual: 230.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+2+elite", precio_actual: 209.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fcopa-pure-2-elite", precio_actual: 230.00, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+2+elite&tag=canchazapa-21", precio_actual: 209.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 230.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -282,7 +285,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 240,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/w?q=phantom+gx2+elite", precio_actual: 240.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx2+elite", precio_actual: 219.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx2+elite&tag=canchazapa-21", precio_actual: 219.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 240.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -352,8 +356,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 220,
     links_compra: [
       { tienda: "puma_es", url: "https://es.puma.com/es/es/pd/future-7-ultimate-fg-ag", precio_actual: 220.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+future+7+ultimate+fg", precio_actual: 199.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=puma+future+7", precio_actual: 0, disponible: false, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+future+7+ultimate+fg&tag=canchazapa-21", precio_actual: 199.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "decathlon", url: "https://www.awin1.com/cread.php?awinmid=105405&awinaffid=2908587&ued=https%3A%2F%2Fwww.decathlon.es%2Fes%2Fsearch%3FNtt%3Dpuma%2Bfuture%2B7", precio_actual: 0, disponible: false, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fpuma", precio_actual: 220.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -424,7 +429,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 175,
     links_compra: [
       { tienda: "nb_es", url: "https://www.newbalance.es/futbol/botas-de-futbol/?prefn1=division&prefv1=Furon", precio_actual: 175.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=new+balance+furon+v7+pro", precio_actual: 159.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=new+balance+furon+v7+pro&tag=canchazapa-21", precio_actual: 159.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnew-balance", precio_actual: 175.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -497,7 +503,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 299,
     links_compra: [
       { tienda: "mizuno_es", url: "https://shop.mizuno.com/es/football/football-boots/morelia-neo/", precio_actual: 299.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=mizuno+morelia+neo+iv", precio_actual: 279.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=mizuno+morelia+neo+iv&tag=canchazapa-21", precio_actual: 279.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fmizuno", precio_actual: 299.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -568,7 +575,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 160,
     links_compra: [
       { tienda: "ua_es", url: "https://www.underarmour.es/es-es/c/football/boots/", precio_actual: 160.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=under+armour+magnetico+pro+3", precio_actual: 144.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=under+armour+magnetico+pro+3&tag=canchazapa-21", precio_actual: 144.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Funder-armour", precio_actual: 160.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -640,9 +648,10 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 270,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/x-crazyfast-1", precio_actual: 270.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+crazyfast+1+fg", precio_actual: 249.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fx-crazyfast-1", precio_actual: 270.00, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+crazyfast+1+fg&tag=canchazapa-21", precio_actual: 249.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
       { tienda: "footlocker_es", url: "https://www.footlocker.es/es/search?query=adidas+x+crazyfast", precio_actual: 270.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 270.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -713,8 +722,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 180,
     links_compra: [
       { tienda: "puma_es", url: "https://es.puma.com/es/es/pd/king-platinum-21-fg-ag", precio_actual: 180.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+king+platinum+21", precio_actual: 159.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+king+platinum+21&tag=canchazapa-21", precio_actual: 159.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-18" },
       { tienda: "sprinter_es", url: "https://www.sprinter.es/busqueda?q=puma+king+platinum", precio_actual: 175.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-18" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fpuma", precio_actual: 180.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -786,8 +796,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 230,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/w?q=tiempo+legend+10+elite&vst=tiempo+legend+10+elite", precio_actual: 230.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+tiempo+legend+10+elite+fg", precio_actual: 209.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+tiempo+legend+10+elite+fg&tag=canchazapa-21", precio_actual: 209.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "jd_sports_es", url: "https://www.jdsports.es/search/nike+tiempo+legend+10+elite", precio_actual: 230.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 230.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -858,9 +869,10 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 180,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/x-speedportal", precio_actual: 180.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+speedportal+1+fg", precio_actual: 149.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fx-speedportal", precio_actual: 180.00, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+speedportal+1+fg&tag=canchazapa-21", precio_actual: 149.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "zalando_es", url: "https://www.zalando.es/adidas-x-speedportal/", precio_actual: 175.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 180.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -932,8 +944,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 54.99,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/w?q=mercurial+vapor+15+club&vst=mercurial+vapor+15+club", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+club+fg", precio_actual: 49.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=nike+mercurial+vapor+15+club", precio_actual: 0, disponible: false, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+club+fg&tag=canchazapa-21", precio_actual: 49.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.awin1.com/cread.php?awinmid=105405&awinaffid=2908587&ued=https%3A%2F%2Fwww.decathlon.es%2Fes%2Fsearch%3FNtt%3Dnike%2Bmercurial%2Bvapor%2B15%2Bclub", precio_actual: 0, disponible: false, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 54.99, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1002,9 +1015,10 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 44.99,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/predator-club-fg", precio_actual: 44.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+predator+club+fg", precio_actual: 39.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=adidas+predator+club", precio_actual: 44.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fpredator-club-fg", precio_actual: 44.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+predator+club+fg&tag=canchazapa-21", precio_actual: 39.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.awin1.com/cread.php?awinmid=105405&awinaffid=2908587&ued=https%3A%2F%2Fwww.decathlon.es%2Fes%2Fsearch%3FNtt%3Dadidas%2Bpredator%2Bclub", precio_actual: 44.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 44.99, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1077,7 +1091,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 250,
     links_compra: [
       { tienda: "mizuno_es", url: "https://shop.mizuno.com/es/football/football-boots/morelia-neo/", precio_actual: 250.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=mizuno+morelia+neo+iii+beta+jp", precio_actual: 229.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=mizuno+morelia+neo+iii+beta+jp&tag=canchazapa-21", precio_actual: 229.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fmizuno", precio_actual: 250.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1148,8 +1163,9 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 120,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=lotto+maestro+100+iv+fg", precio_actual: 109.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=lotto+maestro+100+iv+fg&tag=canchazapa-21", precio_actual: 109.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "idealo_es", url: "https://www.idealo.es/precios/lotto-maestro-100.html", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Flotto", precio_actual: 120.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1220,8 +1236,8 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 29.99,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=kelme+star+360+fg", precio_actual: 27.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=kelme+star+360", precio_actual: 29.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=kelme+star+360+fg&tag=canchazapa-21", precio_actual: 27.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.awin1.com/cread.php?awinmid=105405&awinaffid=2908587&ued=https%3A%2F%2Fwww.decathlon.es%2Fes%2Fsearch%3FNtt%3Dkelme%2Bstar%2B360", precio_actual: 29.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "sprinter_es", url: "https://www.sprinter.es/busqueda?q=kelme+star+360", precio_actual: 29.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
     ],
   },
@@ -1293,8 +1309,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 54.99,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/w?q=phantom+club+fg&vst=phantom+club+fg", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+club+fg", precio_actual: 49.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+club+fg&tag=canchazapa-21", precio_actual: 49.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "jd_sports_es", url: "https://www.jdsports.es/search/nike+phantom+club", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 54.99, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1364,9 +1381,10 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 200,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/copa-pure-1-fg", precio_actual: 200.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+1+fg", precio_actual: 179.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fcopa-pure-1-fg", precio_actual: 200.00, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+1+fg&tag=canchazapa-21", precio_actual: 179.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "zalando_es", url: "https://www.zalando.es/adidas-copa-pure/", precio_actual: 190.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 200.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
   // ───────────────────────────────────────────────
@@ -1434,8 +1452,9 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 80,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=joma+propulsion+cup+fg", precio_actual: 74.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=joma+propulsion+cup", precio_actual: 79.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=joma+propulsion+cup+fg&tag=canchazapa-21", precio_actual: 74.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.awin1.com/cread.php?awinmid=105405&awinaffid=2908587&ued=https%3A%2F%2Fwww.decathlon.es%2Fes%2Fsearch%3FNtt%3Djoma%2Bpropulsion%2Bcup", precio_actual: 79.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fjoma", precio_actual: 80.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1504,8 +1523,9 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 70,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=munich+g3+fg+futbol", precio_actual: 64.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=munich+g3+fg+futbol&tag=canchazapa-21", precio_actual: 64.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "sprinter_es", url: "https://www.sprinter.es/busqueda?q=munich+g3", precio_actual: 69.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fmunich", precio_actual: 70.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1575,7 +1595,8 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 150,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=diadora+brasil+elite+2+fg", precio_actual: 139.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=diadora+brasil+elite+2+fg&tag=canchazapa-21", precio_actual: 139.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fdiadora", precio_actual: 150.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1646,8 +1667,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 130,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/w?q=mercurial+vapor+15+pro+fg", precio_actual: 130.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+pro+fg", precio_actual: 114.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+pro+fg&tag=canchazapa-21", precio_actual: 114.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "jd_sports_es", url: "https://www.jdsports.es/search/mercurial+vapor+15+pro", precio_actual: 130.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 130.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1716,9 +1738,10 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 60,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/copa-pure-2-3-fg", precio_actual: 59.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+2.3+fg", precio_actual: 54.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=adidas+copa+pure+2.3", precio_actual: 59.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fcopa-pure-2-3-fg", precio_actual: 59.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+copa+pure+2.3+fg&tag=canchazapa-21", precio_actual: 54.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.awin1.com/cread.php?awinmid=105405&awinaffid=2908587&ued=https%3A%2F%2Fwww.decathlon.es%2Fes%2Fsearch%3FNtt%3Dadidas%2Bcopa%2Bpure%2B2.3", precio_actual: 59.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 60.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1789,8 +1812,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 100,
     links_compra: [
       { tienda: "puma_es", url: "https://es.puma.com/es/es/pd/ultra-5-pro-fg-ag", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+ultra+5+pro+fg", precio_actual: 89.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+ultra+5+pro+fg&tag=canchazapa-21", precio_actual: 89.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
       { tienda: "footlocker_es", url: "https://www.footlocker.es/es/search?query=puma+ultra+5+pro", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fpuma", precio_actual: 100.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1861,8 +1885,9 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 65,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/w?q=phantom+gx+2+academy+fg", precio_actual: 64.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx+2+academy+fg", precio_actual: 59.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "decathlon", url: "https://www.decathlon.es/es/search?Ntt=nike+phantom+gx+2+academy", precio_actual: 0, disponible: false, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx+2+academy+fg&tag=canchazapa-21", precio_actual: 59.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "decathlon", url: "https://www.awin1.com/cread.php?awinmid=105405&awinaffid=2908587&ued=https%3A%2F%2Fwww.decathlon.es%2Fes%2Fsearch%3FNtt%3Dnike%2Bphantom%2Bgx%2B2%2Bacademy", precio_actual: 0, disponible: false, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 65.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1932,7 +1957,8 @@ const _rawBotas: Bota[] = [
 
     precio_msrp_eur: 90,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=umbro+tocco+iii+pro+fg", precio_actual: 84.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=umbro+tocco+iii+pro+fg&tag=canchazapa-21", precio_actual: 84.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-19" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fumbro", precio_actual: 90.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -1996,8 +2022,9 @@ const _rawBotas: Bota[] = [
     ultima_actualizacion: "2026-05-20",
     precio_msrp_eur: 280,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/botas-f50", precio_actual: 280.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+f50+2024+fg", precio_actual: 259.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fbotas-f50", precio_actual: 280.00, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+f50+2024+fg&tag=canchazapa-21", precio_actual: 259.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 280.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -2061,7 +2088,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 130,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/t/mercurial-vapor-15-tf", precio_actual: 130.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+tf", precio_actual: 119.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+tf&tag=canchazapa-21", precio_actual: 119.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 130.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -2124,8 +2152,9 @@ const _rawBotas: Bota[] = [
     ultima_actualizacion: "2026-05-20",
     precio_msrp_eur: 110,
     links_compra: [
-      { tienda: "adidas_es", url: "https://www.adidas.es/botas-de-futbol-x-speedportal-in", precio_actual: 110.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+speedportal+in", precio_actual: 99.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "adidas_es", url: "https://www.awin1.com/cread.php?awinmid=77008&awinaffid=2908587&ued=https%3A%2F%2Fwww.adidas.es%2Fbotas-de-futbol-x-speedportal-in", precio_actual: 110.00, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=adidas+x+speedportal+in&tag=canchazapa-21", precio_actual: 99.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fadidas", precio_actual: 110.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -2189,7 +2218,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 120,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/t/phantom-gx-tf", precio_actual: 120.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx+tf", precio_actual: 109.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+phantom+gx+tf&tag=canchazapa-21", precio_actual: 109.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 120.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -2254,7 +2284,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 220,
     links_compra: [
       { tienda: "nike_es", url: "https://www.nike.com/es/t/mercurial-vapor-15-elite-fg", precio_actual: 220.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+elite+fg", precio_actual: 199.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=nike+mercurial+vapor+15+elite+fg&tag=canchazapa-21", precio_actual: 199.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fnike", precio_actual: 220.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -2317,7 +2348,8 @@ const _rawBotas: Bota[] = [
     precio_msrp_eur: 160,
     links_compra: [
       { tienda: "puma_es", url: "https://es.puma.com/future-7-pro-fg", precio_actual: 160.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+future+7+pro+fg", precio_actual: 144.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+future+7+pro+fg&tag=canchazapa-21", precio_actual: 144.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
+      { tienda: "futbolemotion_es", url: "https://tc.tradetracker.net/?c=35939&m=12&a=511170&r=&u=https%3A%2F%2Fwww.futbolemotion.com%2Fes%2Fcategoria%2Fbotas-de-futbol%2Fpuma", precio_actual: 160.00, disponible: true, tiene_afiliado: true, precio_verificado: false, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -2381,7 +2413,7 @@ const _rawBotas: Bota[] = [
     ultima_actualizacion: "2026-05-20",
     precio_msrp_eur: 130,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=asics+ds+light+fg", precio_actual: 119.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=asics+ds+light+fg&tag=canchazapa-21", precio_actual: 119.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
     ],
   },
 
@@ -2446,7 +2478,7 @@ const _rawBotas: Bota[] = [
     ultima_actualizacion: "2026-05-20",
     precio_msrp_eur: 200,
     links_compra: [
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=pantofola+d'oro+lazzarini+fg", precio_actual: 189.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-20" },
+      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=pantofola+d'oro+lazzarini+fg&tag=canchazapa-21", precio_actual: 189.99, disponible: true, tiene_afiliado: true, ultima_verificacion: "2026-05-20" },
     ],
   },
 ];

@@ -51,10 +51,21 @@ export type MaterialSuperior =
   | "mesh+tpu";
 
 export type Tienda =
+  // ── Con afiliado ACTIVO (ver lib/afiliados.ts) ──
   | "amazon_es"
   | "decathlon"
-  | "nike_es"
   | "adidas_es"
+  | "aliexpress"
+  | "atmosfera_es"
+  | "elcorteingles_es"
+  | "forumsport_es"
+  | "snipes_es"
+  | "fuikaomar_es"
+  | "futbolemotion_es"
+  // ── Pendientes de aprobación ──
+  | "prodirect_es"
+  // ── Sin programa (rechazado o inexistente): enlace directo ──
+  | "nike_es"
   | "puma_es"
   | "ua_es"
   | "nb_es"
@@ -124,6 +135,14 @@ export interface LinkCompra {
   precio_actual: number;
   disponible: boolean;
   tiene_afiliado: boolean;
+  /**
+   * ¿Hemos verificado este precio a mano?
+   * `false` → el enlace funciona y monetiza, pero NO enseñamos un número:
+   * la ficha muestra "Ver precio en [tienda]". Se usa para deeplinks de
+   * categoría, donde el precio depende del modelo concreto.
+   * Si se omite, se asume `true` (comportamiento histórico).
+   */
+  precio_verificado?: boolean;
   ultima_verificacion: string;
 }
 

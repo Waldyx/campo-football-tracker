@@ -1,7 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { botas } from "../../data/botas";
-import { findMejorPrecio, scoreDisplay, scoreMeta, compareByScore } from "../../lib/scoring";
+import { findMejorPrecio, findMejorPrecioMostrado, mostramosPrecio, scoreDisplay, scoreMeta, compareByScore } from "../../lib/scoring";
 import type { Puntuaciones } from "../../lib/types";
 
 export async function getStaticPaths() {
@@ -14,6 +14,9 @@ export async function getStaticPaths() {
 const { bota: b } = Astro.props;
 
 const LABELS_TIENDA: Record<string, string> = {
+  futbolemotion_es: "Fútbol Emotion", elcorteingles_es: "El Corte Inglés",
+  atmosfera_es: "Atmósfera Sport", forumsport_es: "Forum Sport", snipes_es: "Snipes",
+  aliexpress: "AliExpress", fuikaomar_es: "FuikaOmar", prodirect_es: "Pro:Direct",
   amazon_es: "Amazon", decathlon: "Decathlon", nike_es: "Nike",
   adidas_es: "Adidas", puma_es: "Puma", ua_es: "Under Armour",
   nb_es: "New Balance", mizuno_es: "Mizuno", footlocker_es: "Foot Locker",
@@ -39,7 +42,8 @@ const ATRIBUTOS: { key: keyof Puntuaciones; label: string }[] = [
   { key: "confort", label: "Confort" },
 ];
 
-const mejorPrecio = findMejorPrecio(b.links_compra);
+// El "desde X€" solo puede salir de un precio que respaldamos.
+const mejorPrecio = findMejorPrecioMostrado(b.links_compra);
 const linksOrdenados = [...b.links_compra]
   .filter((l) => l.disponible)
   .sort((a, c) => a.precio_actual - c.precio_actual);
@@ -80,7 +84,8 @@ const jsonLd = {
         bestRating: "10",
         ratingCount: b.fuentes.length || 1,
       },
-      offers: linksOrdenados.map((link) => ({
+      // Solo declaramos a Google los precios que hemos verificado.
+      offers: linksOrdenados.filter(mostramosPrecio).map((link) => ({
         "@type": "Offer",
         url: link.url,
         priceCurrency: "EUR",
@@ -361,7 +366,9 @@ const jsonLd = {
             <p class="p-6 text-zinc-500 text-center">Sin precios disponibles en este momento.</p>
           )}
           {linksOrdenados.map((link, idx) => {
-            const diffPct = idx === 0 && link.precio_actual < b.precio_msrp_eur
+            // Solo enseñamos NÚMERO si respaldamos ese precio (ver lib/scoring.ts).
+            const conPrecio = mostramosPrecio(link);
+            const diffPct = conPrecio && idx === 0 && link.precio_actual < b.precio_msrp_eur
               ? Math.round((1 - link.precio_actual / b.precio_msrp_eur) * 100)
               : 0;
             return (
@@ -375,7 +382,11 @@ const jsonLd = {
                 </div>
                 <div class="flex items-center gap-3 ml-auto">
                   <div class="text-right">
-                    <p class={`text-xl font-black ${idx === 0 ? "text-lime-500" : "text-white"}`}>{link.precio_actual}€</p>
+                    {conPrecio ? (
+                      <p class={`text-xl font-black ${idx === 0 ? "text-lime-500" : "text-white"}`}>{link.precio_actual}€</p>
+                    ) : (
+                      <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Ver precio</p>
+                    )}
                     {diffPct > 0 && <p class="text-[10px] text-green-400 font-bold">-{diffPct}% vs MSRP</p>}
                   </div>
                   <a

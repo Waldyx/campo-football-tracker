@@ -322,21 +322,11 @@ export function aplicarDiversidad(
 // 5. Mejor precio disponible
 // ─────────────────────────────────────────────────────────
 
-export const COMISIONES_TIENDA: Record<string, number> = {
-  puma_es: 6,
-  ua_es: 5,
-  nb_es: 5,
-  nike_es: 5,
-  adidas_es: 5,
-  jd_sports_es: 5,
-  zalando_es: 5,
-  sprinter_es: 5,
-  footlocker_es: 4,
-  mizuno_es: 4,
-  amazon_es: 4,
-  idealo_es: 4,
-  decathlon: 3,
-};
+// Comisiones reales por tienda. Fuente única en lib/afiliados.ts.
+// Solo se usan para DESEMPATAR precios iguales (±0,50 €), nunca para ordenar.
+export { COMISIONES as COMISIONES_TIENDA } from "./afiliados";
+import { COMISIONES } from "./afiliados";
+const COMISIONES_TIENDA = COMISIONES;
 
 const PRECIO_TIE_THRESHOLD = 0.5;
 
@@ -364,13 +354,20 @@ export function findMejorPrecio(links: LinkCompra[]): LinkCompra | undefined {
 // siguen usando findMejorPrecio (precio real más barato), que NO se toca.
 // ─────────────────────────────────────────────────────────
 
-// Tiendas pendientes de aprobación: mostramos su precio porque convertirán pronto.
+// Tiendas PENDIENTES de aprobación: mostramos su precio porque convertirán pronto.
+// (Fútbol Emotion ya está ACEPTADA en TradeTracker → monetiza vía tiene_afiliado.)
 const TIENDAS_PENDIENTES = new Set<string>([
-  "prodirect_es", "futbolemotion_es",
+  "prodirect_es", "joom", "reebok_es",
 ]);
 
-/** ¿Mostramos el precio numérico de este enlace? (afiliado activo o pendiente) */
+/**
+ * ¿Mostramos el precio numérico de este enlace?
+ * Requiere DOS cosas: que monetice (afiliado activo o pendiente) y que el
+ * precio esté verificado. Un deeplink de categoría monetiza pero no tiene un
+ * precio concreto → se muestra "Ver precio en [tienda]" sin número.
+ */
 export function mostramosPrecio(link: LinkCompra): boolean {
+  if (link.precio_verificado === false) return false;
   return link.tiene_afiliado === true || TIENDAS_PENDIENTES.has(link.tienda);
 }
 
