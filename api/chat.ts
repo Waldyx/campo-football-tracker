@@ -60,7 +60,9 @@ type Msg = { role: string; content: string };
 
 export default async function handler(req: any, res: any) {
   const origin = (req.headers["origin"] || "").toString();
-  if (/^https:\/\/([a-z0-9-]+\.)*vercel\.app$/.test(origin) || /^https:\/\/(www\.)?canchabotas\.com$/.test(origin)) {
+  // Orígenes permitidos: cualquier despliegue *.vercel.app (producción y previews).
+  // Al comprar dominio propio, añadirlo aquí.
+  if (/^https:\/\/([a-z0-9-]+\.)*vercel\.app$/.test(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
     res.setHeader("Vary", "Origin");
   }
