@@ -1,0 +1,211 @@
+---
+// PromoBanner.astro — franja ÚNICA rotativa de promos activas (afiliados).
+// Renderiza un contenedor vacío; un script monta UNA sola franja que va
+// rotando entre las promos vigentes hoy (carrusel, cambio cada 5s, pausa al
+// pasar el ratón). Gating por fecha en cliente (web estática).
+// ?promo=preview fuerza mostrarlas todas (para previsualizar antes de su fecha).
+import { PROMOS } from "../data/promos";
+
+const promosData = PROMOS.map((p) => ({
+  id: p.id,
+  tiendaLabel: p.tiendaLabel,
+  titulo: p.titulo,
+  desde: p.desde,
+  hasta: p.hasta,
+  url: p.url ?? null,
+  maxDesc: p.codigos?.length ? Math.max(...p.codigos.map((c) => c.descuento)) : null,
+  codigo: p.codigo ?? null,
+  descuentoTexto: p.descuentoTexto ?? null,
+  color: p.color ?? "#84cc16",
+}));
+---
+
+<div id="cb-promo-banner" class="cb-promo-banner"></div>
+
+<style is:global>
+  .cb-promo-banner { position: relative; z-index: 30; }
+  .cb-promo-strip {
+    position: relative;
+    color: #0a1f0f;
+    transition: background-color 0.4s ease;
+  }
+  .cb-promo-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8px 44px 8px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 14px;
+    flex-wrap: wrap;
+    transition: opacity 0.22s ease;
+  }
+  .cb-promo-inner.is-fading { opacity: 0; }
+  .cb-promo-text {
+    font-size: 12.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+  .cb-promo-cta {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #0a1f0f;
+    text-decoration: underline;
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+  .cb-promo-dots {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  .cb-promo-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(10, 31, 15, 0.35);
+    transition: background 0.2s ease;
+  }
+  .cb-promo-dot.is-active { background: #0a1f0f; }
+  .cb-promo-close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #0a1f0f;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 700;
+    opacity: 0.7;
+  }
+  .cb-promo-close:hover { opacity: 1; }
+  @media (max-width: 600px) {
+    .cb-promo-inner { padding: 8px 36px 8px 34px; gap: 4px 8px; }
+    .cb-promo-text { font-size: 11px; }
+    .cb-promo-dots { left: 10px; gap: 4px; }
+    .cb-promo-dot { width: 5px; height: 5px; }
+  }
+</style>
+
+<script is:inline define:vars={{ promosData }}>
+  (function () {
+    try {
+      var now = Date.now();
+      var preview = (new URLSearchParams(location.search).get("promo") || "").indexOf("preview") === 0;
+      var list = promosData.filter(function (p) {
+        if (preview) return true;
+        return now >= new Date(p.desde).getTime() && now <= new Date(p.hasta).getTime();
+      });
+      var cont = document.getElementById("cb-promo-banner");
+      if (!cont || !list.length) return;
+      if (!preview) {
+        list = list.filter(function (p) {
+          return !localStorage.getItem("cb.promo.dismissed." + p.id);
+        });
+      }
+      if (!list.length) return;
+
+      function resumen(p) {
+        if (p.maxDesc) return "hasta −" + p.maxDesc + "€ con código";
+        if (p.codigo) return (p.descuentoTexto || "descuento") + " · código " + p.codigo;
+        return p.descuentoTexto || "oferta activa";
+      }
+      function fin(p) {
+        return new Date(p.hasta).toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+      }
+
+      var strip = document.createElement("div");
+      strip.className = "cb-promo-strip";
+      var inner = document.createElement("div");
+      inner.className = "cb-promo-inner";
+      var txt = document.createElement("span");
+      txt.className = "cb-promo-text";
+      var cta = document.createElement("a");
+      cta.className = "cb-promo-cta";
+      cta.target = "_blank";
+      cta.rel = "sponsored noopener";
+      inner.appendChild(txt);
+      inner.appendChild(cta);
+      var dots = document.createElement("div");
+      dots.className = "cb-promo-dots";
+      var close = document.createElement("button");
+      close.className = "cb-promo-close";
+      close.setAttribute("aria-label", "Cerrar aviso");
+      close.textContent = "×";
+      strip.appendChild(dots);
+      strip.appendChild(inner);
+      strip.appendChild(close);
+      cont.appendChild(strip);
+
+      var i = 0;
+      var timer = null;
+
+      function buildDots() {
+        dots.innerHTML = "";
+        if (list.length < 2) return;
+        for (var k = 0; k < list.length; k++) {
+          var d = document.createElement("span");
+          d.className = "cb-promo-dot" + (k === i ? " is-active" : "");
+          dots.appendChild(d);
+        }
+      }
+      function paint() {
+        var p = list[i];
+        strip.style.background = p.color;
+        txt.textContent = "🔥 " + p.tiendaLabel + " · " + p.titulo + ": " + resumen(p) + " · hasta " + fin(p);
+        if (p.url) {
+          cta.style.display = "";
+          cta.href = p.url;
+          cta.textContent = "Ver en tienda →";
+        } else {
+          cta.style.display = "none";
+        }
+        var ds = dots.children;
+        for (var k = 0; k < ds.length; k++) {
+          ds[k].className = "cb-promo-dot" + (k === i ? " is-active" : "");
+        }
+      }
+      function advance() {
+        inner.classList.add("is-fading");
+        setTimeout(function () {
+          i = (i + 1) % list.length;
+          paint();
+          inner.classList.remove("is-fading");
+        }, 220);
+      }
+      function start() {
+        if (list.length > 1 && !timer) timer = setInterval(advance, 5000);
+      }
+      function stop() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+
+      buildDots();
+      paint();
+      start();
+
+      strip.addEventListener("mouseenter", stop);
+      strip.addEventListener("mouseleave", start);
+
+      close.addEventListener("click", function () {
+        var p = list[i];
+        try { localStorage.setItem("cb.promo.dismissed." + p.id, "1"); } catch (e) {}
+        list.splice(i, 1);
+        if (!list.length) { stop(); strip.remove(); return; }
+        if (i >= list.length) i = 0;
+        buildDots();
+        paint();
+      });
+    } catch (e) {}
+  })();
+</script>

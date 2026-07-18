@@ -1,0 +1,231 @@
+---
+// /calculadora — coste por partido de una bota según tu uso real.
+// El desgaste de los tacos depende de la superficie: la hierba artificial (AG)
+// y el turf (TF) desgastan la suela ~2× más rápido que la hierba natural (FG).
+import Base from "../layouts/Base.astro";
+import { botas } from "../data/botas";
+import { findMejorPrecioMostrado, findMejorPrecio } from "../lib/scoring";
+
+const index = botas.map((b) => ({
+  slug: b.slug,
+  marca: b.marca,
+  modelo: b.modelo,
+  dura: b.puntuaciones.durabilidad,
+  precio:
+    findMejorPrecioMostrado(b.links_compra)?.precio_actual ??
+    findMejorPrecio(b.links_compra)?.precio_actual ??
+    b.precio_msrp_eur,
+  cat: b.categoria_principal,
+  img: b.imagen_principal,
+}));
+
+const def = index[0];
+---
+
+<Base
+  title="Calculadora de coste por partido | CANCHA.BOTAS"
+  description="¿Cuánto te cuesta de verdad una bota de fútbol? Calcula el coste por partido según tu uso real y la superficie donde juegas. Sin humo."
+>
+  <main class="min-h-screen text-white">
+    <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">
+          CANCHA<span class="text-lime-500">.</span>BOTAS
+        </a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/calculadora" class="text-lime-500" aria-current="page">Calculadora</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="px-6 pt-14 pb-8">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Calculadora · Sin humo</p>
+        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
+          Coste<br /><span class="text-lime-500">por partido</span>
+        </h1>
+        <p class="text-zinc-400 mt-5 max-w-xl leading-relaxed">
+          Una bota de 250€ que aguanta 3 temporadas sale más barata que una de 80€ que
+          revientas en 4 meses. Calcula lo que de verdad te cuesta según tu uso real.
+        </p>
+      </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section class="px-6 pb-16">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+        <!-- Controles -->
+        <div class="space-y-7 bg-zinc-900/40 border border-zinc-800 p-6">
+          <div>
+            <label class="flex items-center justify-between text-xs font-black uppercase tracking-widest text-zinc-400 mb-2">
+              Tu bota <span class="text-zinc-600">{index.length} en catálogo</span>
+            </label>
+            <div class="relative">
+              <input id="cost-search" autocomplete="off" placeholder="Busca marca o modelo…"
+                value={`${def.marca} ${def.modelo}`}
+                class="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-700 focus:border-lime-500 rounded-full text-white text-sm font-medium outline-none transition-colors placeholder-zinc-600" />
+              <div id="cost-dropdown" class="hidden absolute top-full left-0 right-0 mt-1 z-50 max-h-80 overflow-y-auto grid grid-cols-2 gap-2 p-2 bg-zinc-900 border border-zinc-700 shadow-2xl"></div>
+            </div>
+            <div id="cost-selected" class="flex items-center gap-3 mt-3"></div>
+          </div>
+
+          <div>
+            <label class="flex items-center justify-between text-xs font-black uppercase tracking-widest text-zinc-400 mb-2">
+              Partidos + entrenos / semana <strong id="out-semana" class="text-lime-500 text-base">3</strong>
+            </label>
+            <input type="range" min="1" max="10" step="1" value="3" id="in-semana" class="w-full accent-lime-500" />
+          </div>
+
+          <div>
+            <label class="flex items-center justify-between text-xs font-black uppercase tracking-widest text-zinc-400 mb-2">
+              Juego en hierba artificial (AG/turf) <strong id="out-ag" class="text-lime-500 text-base">30%</strong>
+            </label>
+            <input type="range" min="0" max="100" step="10" value="30" id="in-ag" class="w-full accent-lime-500" />
+            <p class="text-xs text-zinc-500 mt-2">La hierba artificial y el turf desgastan los tacos ~2× más rápido que la hierba natural.</p>
+          </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="bg-zinc-900/40 border border-zinc-800 border-t-2 border-t-lime-500/50 p-6 flex flex-col">
+          <div class="flex items-baseline gap-2">
+            <span id="out-coste" class="text-5xl font-black text-lime-500">—</span>
+            <span class="text-zinc-500 font-bold text-sm uppercase tracking-widest">por partido</span>
+          </div>
+          <p id="out-veredicto" class="text-lg font-black mt-1">—</p>
+
+          <div class="grid grid-cols-3 gap-2 mt-6">
+            <div class="bg-zinc-900/60 border border-zinc-800 p-3 text-center">
+              <strong id="out-partidos" class="block text-xl font-black">—</strong>
+              <span class="text-[10px] uppercase tracking-widest text-zinc-500">partidos de vida</span>
+            </div>
+            <div class="bg-zinc-900/60 border border-zinc-800 p-3 text-center">
+              <strong id="out-vida" class="block text-xl font-black">—</strong>
+              <span class="text-[10px] uppercase tracking-widest text-zinc-500">a tu ritmo</span>
+            </div>
+            <div class="bg-zinc-900/60 border border-zinc-800 p-3 text-center">
+              <strong id="out-precio" class="block text-xl font-black">—</strong>
+              <span class="text-[10px] uppercase tracking-widest text-zinc-500">precio actual</span>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <div class="flex items-center justify-between text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">
+              <span>Desgaste estimado a 6 meses</span>
+              <strong id="out-desgaste">—</strong>
+            </div>
+            <div class="h-2.5 bg-zinc-800 overflow-hidden">
+              <div id="out-desgaste-bar" class="h-full transition-all" style="width:0%"></div>
+            </div>
+          </div>
+
+          <div id="cr-ag-warn" class="hidden mt-4 p-3 border border-red-500/40 border-l-2 border-l-red-500 bg-red-500/10 text-xs leading-relaxed text-zinc-300">
+            ⚠ A este ritmo en hierba artificial la desgastas en <strong id="out-warn-meses" class="text-white">—</strong>. Si juegas tanto en AG, busca una bota con suela específica AG (más taco, más resistente).
+            <a href="/botas" class="block mt-2 text-lime-500 font-black uppercase tracking-widest text-[11px] hover:underline">Ver catálogo →</a>
+          </div>
+
+          <a href="#" id="cr-cta" class="mt-auto pt-5 inline-block text-lime-500 font-black uppercase tracking-widest text-xs hover:underline">Ver review de la bota →</a>
+        </div>
+      </div>
+
+      <p class="max-w-5xl mx-auto text-xs text-zinc-600 mt-6 leading-relaxed">
+        ⚠ Estimación basada en el score de durabilidad de cada bota y tu uso declarado.
+        El desgaste real depende de superficie, técnica y cuidado. No es una garantía,
+        es una guía honesta para decidir.
+      </p>
+    </section>
+  </main>
+
+  <script define:vars={{ index, defSlug: def.slug }}>
+    let current = index.find((z) => z.slug === defSlug) ?? index[0];
+    const $ = (id) => document.getElementById(id);
+    const search = $("cost-search");
+
+    function recompute() {
+      const semana = Number($("in-semana").value);
+      const ag = Number($("in-ag").value);
+      $("out-semana").textContent = semana;
+      $("out-ag").textContent = ag + "%";
+
+      // Vida base en hierba natural: durabilidad × 40 partidos-equivalentes.
+      const vidaBaseFG = current.dura * 40;
+      const agFrac = ag / 100;
+      // AG/turf desgasta ~2× más rápido que FG.
+      const desgasteMedio = (1 - agFrac) * 1 + agFrac * 2;
+      const partidos = Math.round(vidaBaseFG / desgasteMedio);
+      const meses = semana > 0 ? partidos / (semana * 4.33) : 0;
+      const coste = partidos > 0 ? current.precio / partidos : 0;
+      const partidos6m = semana * 4.33 * 6;
+      const desgaste6m = Math.min(100, Math.round((partidos6m / partidos) * 100));
+
+      const verdict = coste < 0.5 ? ["Chollo. Se amortiza sola.", "#84cc16"]
+        : coste < 1.2 ? ["Compra sensata.", "#a3e635"]
+        : coste < 2.5 ? ["Cara por partido.", "#facc15"]
+        : ["Solo si la exprimes.", "#ef4444"];
+      const gColor = desgaste6m < 50 ? "#84cc16" : desgaste6m < 85 ? "#facc15" : "#ef4444";
+
+      $("out-coste").textContent = coste.toFixed(2) + "€";
+      $("out-coste").style.color = verdict[1];
+      $("out-veredicto").textContent = verdict[0];
+      $("out-veredicto").style.color = verdict[1];
+      $("out-partidos").textContent = partidos;
+      $("out-vida").textContent = meses.toFixed(0) + "m";
+      $("out-precio").textContent = Math.round(current.precio) + "€";
+      $("out-desgaste").textContent = desgaste6m + "%";
+      $("out-desgaste").style.color = gColor;
+      $("out-desgaste-bar").style.width = desgaste6m + "%";
+      $("out-desgaste-bar").style.background = gColor;
+
+      const warn = $("cr-ag-warn");
+      const showWarn = desgaste6m >= 85;
+      warn.classList.toggle("hidden", !showWarn);
+      if (showWarn) $("out-warn-meses").textContent = `~${meses.toFixed(0)} meses`;
+
+      $("cr-cta").href = `/bota/${current.slug}`;
+      $("cost-selected").innerHTML =
+        `<img src="${current.img}" alt="" loading="lazy" class="w-12 h-12 object-contain bg-white/5" onerror="this.style.visibility='hidden'">` +
+        `<span class="text-sm text-zinc-300 leading-tight"><strong class="font-black">${current.marca}</strong> ${current.modelo}</span>`;
+    }
+
+    const dropdown = $("cost-dropdown");
+    const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+    function buildDropdown(q) {
+      const query = (q || "").trim().toLowerCase();
+      const list = index
+        .filter((z) => !query || (z.marca + " " + z.modelo).toLowerCase().includes(query))
+        .slice(0, 40);
+      if (!list.length) { dropdown.innerHTML = '<p class="col-span-2 p-4 text-center text-zinc-500 text-sm">Sin resultados</p>'; return; }
+      dropdown.innerHTML = list.map((z) => `
+        <button type="button" class="flex items-center gap-2 p-2 text-left border ${z.slug === current.slug ? "border-lime-500 bg-lime-500/10" : "border-zinc-800 hover:border-zinc-600"}" data-slug="${esc(z.slug)}">
+          <img src="${esc(z.img)}" alt="" loading="lazy" class="w-9 h-9 object-contain bg-white/5 flex-shrink-0" onerror="this.style.visibility='hidden'">
+          <span class="text-xs text-zinc-300 leading-tight min-w-0"><strong class="font-black block">${esc(z.marca)}</strong>${esc(z.modelo)}</span>
+        </button>`).join("");
+      dropdown.querySelectorAll("button[data-slug]").forEach((it) => {
+        it.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          const m = index.find((z) => z.slug === it.dataset.slug);
+          if (m) { current = m; search.value = `${m.marca} ${m.modelo}`; recompute(); }
+          dropdown.classList.add("hidden");
+        });
+      });
+    }
+
+    search.addEventListener("focus", () => { buildDropdown(""); dropdown.classList.remove("hidden"); search.select(); });
+    search.addEventListener("input", () => { buildDropdown(search.value); dropdown.classList.remove("hidden"); });
+    search.addEventListener("blur", () => { setTimeout(() => dropdown.classList.add("hidden"), 150); });
+    $("in-semana").addEventListener("input", recompute);
+    $("in-ag").addEventListener("input", recompute);
+
+    const urlSlug = new URLSearchParams(location.search).get("slug");
+    if (urlSlug) {
+      const m = index.find((z) => z.slug === urlSlug);
+      if (m) { current = m; search.value = `${m.marca} ${m.modelo}`; }
+    }
+    recompute();
+  </script>
+</Base>
