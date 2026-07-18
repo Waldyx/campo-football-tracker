@@ -1,0 +1,77 @@
+---
+import Base from "../../layouts/Base.astro";
+import { ARTICLES_SORTED } from "../../lib/articles";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Blog de CANCHA.BOTAS",
+  description: "Guías y análisis honestos sobre botas de fútbol.",
+  url: new URL("/blog", Astro.site).toString(),
+};
+---
+
+<Base
+  title="Blog — Guías y análisis de botas de fútbol | CANCHA.BOTAS"
+  description="Guías honestas sobre botas de fútbol: suelas FG/AG/SG, elección por posición, calidad-precio, pie ancho y mantenimiento. Sin marketing."
+  jsonLd={jsonLd}
+>
+  <main class="min-h-screen text-white">
+    <header class="px-6 py-5 border-b border-green-900/60 bg-[#0a1f0f]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">CANCHA<span class="text-lime-500">.</span>BOTAS</a>
+        <nav class="hidden sm:flex gap-6 text-xs font-bold text-zinc-400 uppercase tracking-widest">
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/calculadora" class="hover:text-lime-500 transition-colors">Calculadora</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/blog" class="text-lime-500" aria-current="page">Blog</a>
+          <a href="/faq" class="hover:text-lime-500 transition-colors">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="px-6 pt-14 pb-10">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-black uppercase tracking-widest text-lime-500 mb-4">★ Blog · Sin humo</p>
+        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
+          Guías<br /><span class="text-lime-500">honestas</span>
+        </h1>
+        <p class="text-zinc-400 mt-5 max-w-xl leading-relaxed">
+          Lo que necesitas saber antes de gastarte el dinero. Sin patrocinios, sin
+          "la bota del momento", sin copiar la nota de prensa de la marca.
+        </p>
+      </div>
+    </section>
+
+    <section class="px-6 pb-20">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-5">
+        {ARTICLES_SORTED.map((a) => (
+          <a href={`/blog/${a.slug}`}
+            class="group bg-zinc-900/40 border-2 border-zinc-800 hover:border-lime-500 transition-all p-6 flex flex-col gap-3">
+            <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest">
+              <span class="text-lime-500">{a.categoria}</span>
+              <span class="text-zinc-600">{a.readMinutes} min</span>
+            </div>
+            <h2 class="text-xl font-black uppercase tracking-tight leading-tight group-hover:text-lime-500 transition-colors">
+              {a.title}
+            </h2>
+            <p class="text-sm text-zinc-400 leading-relaxed flex-1">{a.description}</p>
+            <p class="text-[10px] uppercase tracking-widest text-zinc-600">{a.fechaLabel}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <footer class="px-6 py-10 border-t border-green-900/60 bg-[#071408]">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        <p>CANCHA<span class="text-lime-500">.</span>BOTAS — Recomendador honesto de botas de fútbol.</p>
+        <nav class="flex gap-5 uppercase tracking-widest font-bold">
+          <a href="/botas" class="hover:text-lime-500 transition-colors">Catálogo</a>
+          <a href="/calculadora" class="hover:text-lime-500 transition-colors">Calculadora</a>
+          <a href="/rankings" class="hover:text-lime-500 transition-colors">Rankings</a>
+          <a href="/metodologia" class="hover:text-lime-500 transition-colors">Método</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+</Base>
