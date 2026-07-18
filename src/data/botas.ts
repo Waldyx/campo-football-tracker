@@ -654,7 +654,7 @@ const _rawBotas: Bota[] = [
     slug: "puma-king-platinum-21",
     marca: "Puma",
     modelo: "King Platinum 21",
-    año_lanzamiento: 2024,
+    año_lanzamiento: 2021,
     genero: "unisex",
     tecnologia_clave: ["Soft kangaroo leather", "EvoFlex suela", "K-Better outsole"],
     peso_real_g: 240,
@@ -865,78 +865,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 13. PUMA KING PLATINUM 21 FG — Cuero clásico técnico
-  // ───────────────────────────────────────────────
-  {
-    id: "puma-king-platinum-21-fg",
-    slug: "puma-king-platinum-21-fg",
-    marca: "Puma",
-    modelo: "King Platinum 21 FG",
-    año_lanzamiento: 2021,
-    genero: "unisex",
-    tecnologia_clave: ["Premium kangaroo leather", "EvoFlex suela", "K-Better outsole", "OrthoLite sockliner"],
-    peso_real_g: 255,
-    horma: "normal",
-    superficies_compatibles: ["fg"],
-    material_superior: "cuero",
-
-    puntuaciones: {
-      traccion: 8,
-      amortiguacion: 7,
-      control_balon: 9,
-      soporte_lateral: 7,
-      estabilidad: 8,
-      peso_score: 5,
-      durabilidad: 9,
-      confort: 10,
-    },
-    categoria_principal: "control",
-    tags: ["cuero-canguro", "clasica", "fg", "tecnico", "confort", "durabilidad"],
-
-    ideal_para: {
-      posiciones: ["mediocentro", "mediapunta", "defensa"],
-      peso_jugador_kg: [65, 95],
-      estilos: ["tecnico", "equilibrado"],
-      superficies: ["fg"],
-      lesiones_compatibles: ["fascia", "tobillos"],
-    },
-    no_recomendada_para: {
-      estilos: ["velocidad"],
-    },
-
-    resumen:
-      "La King Platinum 21 FG es la versión más técnica de la icónica King de Puma. Con cuero de canguro premium y suela FG clásica, está diseñada para mediocampistas técnicos que buscan máximo confort y tacto. Una bota para jugadores que hacen del pase y la precisión su seña de identidad.",
-    pros: [
-      "Cuero de canguro de altísima calidad — confort 10/10",
-      "Control de balón excepcional para técnicos",
-      "Durabilidad superior a cualquier sintético",
-      "Precio más razonable que Copa/Copa Pure de Adidas",
-    ],
-    contras: [
-      "Solo FG — no sirve en hierba artificial",
-      "Bota más pesada del mercado actual",
-      "No apta para estilos de juego de velocidad",
-    ],
-    veredicto:
-      "La alternativa Puma a la Copa Pure para técnicos que juegan en hierba natural. Si ya tienes la Copa y quieres explorar otra marca con la misma filosofía, la King Platinum es tu opción.",
-
-    imagen_principal: "https://m.media-amazon.com/images/I/41+pq+cMSkL._AC_SY500_.jpg",
-    imagenes: [],
-
-    fuentes: [
-      { tipo: "evaluacion-propia" },
-    ],
-    ultima_actualizacion: "2026-05-19",
-
-    precio_msrp_eur: 160,
-    links_compra: [
-      { tienda: "puma_es", url: "https://es.puma.com/es/es/pd/king-platinum-21-fg", precio_actual: 160.00, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-      { tienda: "amazon_es", url: "https://www.amazon.es/s?k=puma+king+platinum+21+fg", precio_actual: 139.99, disponible: true, tiene_afiliado: false, ultima_verificacion: "2026-05-19" },
-    ],
-  },
-
-  // ───────────────────────────────────────────────
-  // 14. NIKE MERCURIAL VAPOR 15 CLUB — Mercurial económica
+  // 13. NIKE MERCURIAL VAPOR 15 CLUB — Mercurial económica
   // ───────────────────────────────────────────────
   {
     id: "nike-mercurial-vapor-15-club",
@@ -1009,7 +938,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 15. ADIDAS PREDATOR CLUB — Predator económica
+  // 14. ADIDAS PREDATOR CLUB — Predator económica
   // ───────────────────────────────────────────────
   {
     id: "adidas-predator-club",
@@ -1080,7 +1009,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 16. MIZUNO MORELIA NEO III BETA JP — Cuero japonés premium
+  // 15. MIZUNO MORELIA NEO III BETA JP — Cuero japonés premium
   // ───────────────────────────────────────────────
   {
     id: "mizuno-morelia-neo-iii-beta-jp",
@@ -1153,7 +1082,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 17. LOTTO MAESTRO 100 IV — Cuero italiano nicho
+  // 16. LOTTO MAESTRO 100 IV — Cuero italiano nicho
   // ───────────────────────────────────────────────
   {
     id: "lotto-maestro-100-iv",
@@ -1225,7 +1154,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 18. KELME STAR 360 — Presupuesto bajo, popular en España
+  // 17. KELME STAR 360 — Presupuesto bajo, popular en España
   // ───────────────────────────────────────────────
   {
     id: "kelme-star-360",
@@ -1298,7 +1227,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 19. NIKE PHANTOM CLUB — Phantom económica
+  // 18. NIKE PHANTOM CLUB — Phantom económica
   // ───────────────────────────────────────────────
   {
     id: "nike-phantom-club",
@@ -1370,7 +1299,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 20. ADIDAS COPA PURE .1 — Copa cuero premium
+  // 19. ADIDAS COPA PURE .1 — Copa cuero premium
   // ───────────────────────────────────────────────
   {
     id: "adidas-copa-pure-1",
@@ -1441,7 +1370,7 @@ const _rawBotas: Bota[] = [
     ],
   },
   // ───────────────────────────────────────────────
-  // 21. JOMA PROPULSION CUP FG — Marca española técnica
+  // 20. JOMA PROPULSION CUP FG — Marca española técnica
   // ───────────────────────────────────────────────
   {
     id: "joma-propulsion-cup-fg",
@@ -1511,7 +1440,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 22. MUNICH G-3 FG — Icono del fútbol amateur español
+  // 21. MUNICH G-3 FG — Icono del fútbol amateur español
   // ───────────────────────────────────────────────
   {
     id: "munich-g3-fg",
@@ -1581,7 +1510,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 23. DIADORA BRASIL ELITE 2 FG — Cuero italiano premium
+  // 22. DIADORA BRASIL ELITE 2 FG — Cuero italiano premium
   // ───────────────────────────────────────────────
   {
     id: "diadora-brasil-elite-2-fg",
@@ -1651,7 +1580,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 24. NIKE MERCURIAL VAPOR 15 PRO FG — Nivel intermedio Mercurial
+  // 23. NIKE MERCURIAL VAPOR 15 PRO FG — Nivel intermedio Mercurial
   // ───────────────────────────────────────────────
   {
     id: "nike-mercurial-vapor-15-pro-fg",
@@ -1723,7 +1652,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 25. ADIDAS COPA PURE 2.3 FG — Versión económica Copa
+  // 24. ADIDAS COPA PURE 2.3 FG — Versión económica Copa
   // ───────────────────────────────────────────────
   {
     id: "adidas-copa-pure-2-3-fg",
@@ -1794,7 +1723,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 26. PUMA ULTRA 5 PRO FG — Velocidad media gama
+  // 25. PUMA ULTRA 5 PRO FG — Velocidad media gama
   // ───────────────────────────────────────────────
   {
     id: "puma-ultra-5-pro-fg",
@@ -1866,7 +1795,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 27. NIKE PHANTOM GX 2 ACADEMY FG — Phantom económica
+  // 26. NIKE PHANTOM GX 2 ACADEMY FG — Phantom económica
   // ───────────────────────────────────────────────
   {
     id: "nike-phantom-gx2-academy-fg",
@@ -1938,7 +1867,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 28. UMBRO TOCCO III PRO FG — Cuero clásico británico
+  // 27. UMBRO TOCCO III PRO FG — Cuero clásico británico
   // ───────────────────────────────────────────────
   {
     id: "umbro-tocco-iii-pro-fg",
@@ -2008,7 +1937,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 29. ADIDAS F50 (2024) — Velocidad next-gen
+  // 28. ADIDAS F50 (2024) — Velocidad next-gen
   // ───────────────────────────────────────────────
   {
     id: "adidas-f50-2024",
@@ -2073,7 +2002,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 30. NIKE MERCURIAL VAPOR 15 TF — Velocidad en moqueta
+  // 29. NIKE MERCURIAL VAPOR 15 TF — Velocidad en moqueta
   // ───────────────────────────────────────────────
   {
     id: "nike-mercurial-vapor-15-tf",
@@ -2137,7 +2066,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 31. ADIDAS X SPEEDPORTAL IN — Fútbol sala
+  // 30. ADIDAS X SPEEDPORTAL IN — Fútbol sala
   // ───────────────────────────────────────────────
   {
     id: "adidas-x-speedportal-in",
@@ -2201,7 +2130,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 32. NIKE PHANTOM GX TF — Control en turf
+  // 31. NIKE PHANTOM GX TF — Control en turf
   // ───────────────────────────────────────────────
   {
     id: "nike-phantom-gx-tf",
@@ -2265,7 +2194,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 33. NIKE MERCURIAL VAPOR 15 ELITE — Velocidad gama alta
+  // 32. NIKE MERCURIAL VAPOR 15 ELITE — Velocidad gama alta
   // ───────────────────────────────────────────────
   {
     id: "nike-mercurial-vapor-15-elite",
@@ -2330,7 +2259,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 34. PUMA FUTURE 7 PRO — Equilibrada gama alta
+  // 33. PUMA FUTURE 7 PRO — Equilibrada gama alta
   // ───────────────────────────────────────────────
   {
     id: "puma-future-7-pro",
@@ -2393,7 +2322,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 35. ASICS DS LIGHT — El secreto de los técnicos
+  // 34. ASICS DS LIGHT — El secreto de los técnicos
   // ───────────────────────────────────────────────
   {
     id: "asics-ds-light",
@@ -2457,7 +2386,7 @@ const _rawBotas: Bota[] = [
   },
 
   // ───────────────────────────────────────────────
-  // 36. PANTOFOLA D'ORO LAZZARINI — Cuero italiano artesanal
+  // 35. PANTOFOLA D'ORO LAZZARINI — Cuero italiano artesanal
   // ───────────────────────────────────────────────
   {
     id: "pantofola-doro-lazzarini",
