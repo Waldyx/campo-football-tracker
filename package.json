@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "tsx scripts/gen-chat-catalog.ts",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "tsx": "^4.19.2",
     "typescript": "^6.0.3"
   },
   "overrides": {

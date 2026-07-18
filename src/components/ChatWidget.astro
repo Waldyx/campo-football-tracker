@@ -1,0 +1,351 @@
+---
+// ChatWidget.astro — asistente IA flotante de CANCHA.BOTAS
+//
+// Burbuja esquina inferior-derecha en todas las páginas (montado en Base.astro).
+// Backend: POST /api/chat con { messages: [{role, content}, ...] }.
+// Acepta { reply: "..." } (JSON) o streaming de texto plano.
+//
+// Mini-cards: si la respuesta incluye [[bota:<slug>]], se sustituye por una card
+// con foto + score + precio + link. Los datos se inyectan en build (BOTA_INDEX).
+
+import { botas } from "../data/botas";
+import { findMejorPrecioMostrado, findMejorPrecio, scoreDisplay } from "../lib/scoring";
+
+const BOTA_INDEX = Object.fromEntries(
+  botas.map((b) => {
+    const precio =
+      findMejorPrecioMostrado(b.links_compra)?.precio_actual ??
+      findMejorPrecio(b.links_compra)?.precio_actual ??
+      b.precio_msrp_eur;
+    return [
+      b.slug,
+      {
+        marca: b.marca,
+        modelo: b.modelo,
+        img: b.imagen_principal,
+        score: scoreDisplay(b),
+        precio: Math.round(precio),
+      },
+    ];
+  })
+);
+
+const SUGERENCIAS = [
+  "Juego en artificial, ¿qué bota?",
+  "Tengo el pie ancho",
+  "Mejor bota para extremo <150€",
+  "¿Predator o Tiempo?",
+];
+---
+
+<div id="cb-chat" class="cb-chat" data-open="false">
+  <button id="cb-chat-bubble" class="cb-chat-bubble" aria-label="Abrir asistente CANCHA.BOTAS" aria-expanded="false">
+    <span class="ccb-icon ccb-icon-open" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 9 9 0 0 1-4-1L3 20l1.5-5.5a8.38 8.38 0 0 1-1-4A8.5 8.5 0 0 1 12 2a8.38 8.38 0 0 1 9 9.5Z"/>
+      </svg>
+    </span>
+    <span class="ccb-icon ccb-icon-close" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </span>
+    <span class="ccb-pulse" aria-hidden="true"></span>
+  </button>
+
+  <div id="cb-chat-panel" class="cb-chat-panel" role="dialog" aria-label="Asistente CANCHA.BOTAS">
+    <header class="ccp-head">
+      <div class="ccp-head-id">
+        <span class="ccp-avatar" aria-hidden="true">★</span>
+        <div>
+          <p class="ccp-title">Experto CANCHA<span class="dot">.</span></p>
+          <p class="ccp-status"><span class="ccp-dot"></span>Pregúntame sin humo</p>
+        </div>
+      </div>
+      <button id="cb-chat-min" class="ccp-min" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+
+    <div id="cb-chat-log" class="ccp-log" aria-live="polite">
+      <div class="cc-msg cc-msg-bot">
+        <div class="cc-bubble">
+          Soy el experto de CANCHA.BOTAS. Dime dónde juegas (hierba, artificial, sala),
+          tu posición y tu presupuesto — te respondo recto, con datos de nuestro catálogo.
+        </div>
+      </div>
+    </div>
+
+    <div id="cb-chat-suggest" class="ccp-suggest">
+      {SUGERENCIAS.map((s) => <button class="ccp-chip" data-suggest={s}>{s}</button>)}
+    </div>
+
+    <form id="cb-chat-form" class="ccp-form">
+      <input id="cb-chat-input" class="ccp-input" type="text" placeholder="Escribe tu pregunta…" autocomplete="off" maxlength="500" />
+      <button type="submit" class="ccp-send" aria-label="Enviar" id="cb-chat-send">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
+      </button>
+    </form>
+
+    <p class="ccp-disclaimer">IA · puede equivocarse. Verifica precios en la ficha.</p>
+  </div>
+</div>
+
+<style is:global>
+  .cb-chat { position: fixed; right: 18px; bottom: 18px; z-index: 60; font-family: 'Inter', system-ui, sans-serif; }
+
+  .cb-chat-bubble {
+    position: relative; width: 56px; height: 56px; border-radius: 50%;
+    background: #84cc16; color: #0a1f0f; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,.45); transition: transform .18s ease, background .18s ease;
+  }
+  .cb-chat-bubble:hover { background: #a3e635; transform: translateY(-2px); }
+  .ccb-icon { display: flex; }
+  .ccb-icon-close { display: none; }
+  .cb-chat[data-open="true"] .ccb-icon-open { display: none; }
+  .cb-chat[data-open="true"] .ccb-icon-close { display: flex; }
+  .ccb-pulse {
+    position: absolute; inset: -4px; border-radius: 50%;
+    border: 2px solid #84cc16; animation: ccbPulse 2.2s ease-out infinite; pointer-events: none;
+  }
+  .ccb-pulse.hidden { display: none; }
+  @keyframes ccbPulse { 0% { opacity:.7; transform: scale(1);} 100% { opacity:0; transform: scale(1.35);} }
+  @media (prefers-reduced-motion: reduce) { .ccb-pulse { animation: none; display: none; } }
+
+  .cb-chat-panel {
+    position: absolute; right: 0; bottom: 68px; width: min(370px, calc(100vw - 32px));
+    max-height: min(560px, calc(100vh - 120px));
+    background: #0a1f0f; border: 1px solid #27272a; border-top: 2px solid #84cc16;
+    display: none; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  }
+  .cb-chat[data-open="true"] .cb-chat-panel { display: flex; }
+
+  .ccp-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #27272a; }
+  .ccp-head-id { display: flex; align-items: center; gap: 10px; }
+  .ccp-avatar { width: 34px; height: 34px; border-radius: 50%; background: #84cc16; color: #0a1f0f; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+  .ccp-title { font-weight: 900; text-transform: uppercase; font-size: 13px; letter-spacing: .02em; color: #fff; }
+  .ccp-title .dot { color: #84cc16; }
+  .ccp-status { font-size: 11px; color: #a1a1aa; display: flex; align-items: center; gap: 5px; }
+  .ccp-dot { width: 6px; height: 6px; border-radius: 50%; background: #84cc16; }
+  .ccp-min { background: none; border: none; color: #71717a; cursor: pointer; padding: 4px; }
+  .ccp-min:hover { color: #fff; }
+
+  .ccp-log { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .cc-msg { display: flex; }
+  .cc-msg-user { justify-content: flex-end; }
+  .cc-bubble { max-width: 86%; padding: 10px 12px; font-size: 13.5px; line-height: 1.55; }
+  .cc-msg-bot .cc-bubble { background: #18181b; color: #d4d4d8; border-left: 2px solid #84cc16; }
+  .cc-msg-user .cc-bubble { background: #84cc16; color: #0a1f0f; font-weight: 600; }
+  .cc-bubble strong { color: #fff; font-weight: 700; }
+  .cc-msg-user .cc-bubble strong { color: #0a1f0f; }
+
+  .cc-bota {
+    display: flex; align-items: center; gap: 10px; margin: 8px 0;
+    padding: 8px; background: #0a1f0f; border: 1px solid #3f3f46; text-decoration: none;
+    transition: border-color .15s ease;
+  }
+  .cc-bota:hover { border-color: #84cc16; }
+  .cc-bota-photo img { width: 44px; height: 44px; object-fit: contain; background: rgba(255,255,255,.04); }
+  .cc-bota-info { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+  .cc-bota-marca { font-size: 9.5px; text-transform: uppercase; letter-spacing: .1em; color: #71717a; font-weight: 700; }
+  .cc-bota-modelo { font-size: 12.5px; font-weight: 900; text-transform: uppercase; color: #fff; line-height: 1.2; }
+  .cc-bota-meta { display: flex; gap: 8px; margin-top: 2px; font-size: 11px; }
+  .cc-bota-score { color: #84cc16; font-weight: 900; }
+  .cc-bota-price { color: #a1a1aa; }
+  .cc-bota-arrow { color: #84cc16; font-weight: 900; }
+
+  .cc-typing { display: flex; gap: 4px; align-items: center; }
+  .cc-typing span { width: 6px; height: 6px; border-radius: 50%; background: #84cc16; animation: ccType 1.2s infinite ease-in-out; }
+  .cc-typing span:nth-child(2) { animation-delay: .15s; }
+  .cc-typing span:nth-child(3) { animation-delay: .3s; }
+  @keyframes ccType { 0%,60%,100% { opacity:.3; transform: translateY(0);} 30% { opacity:1; transform: translateY(-3px);} }
+
+  .ccp-suggest { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 10px; }
+  .ccp-chip {
+    font-size: 11px; padding: 5px 9px; background: #18181b; border: 1px solid #3f3f46;
+    color: #a1a1aa; cursor: pointer; transition: all .15s ease;
+  }
+  .ccp-chip:hover { border-color: #84cc16; color: #84cc16; }
+
+  .ccp-form { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid #27272a; }
+  .ccp-input {
+    flex: 1; background: #18181b; border: 1px solid #3f3f46; color: #fff;
+    padding: 9px 12px; font-size: 13px; outline: none; border-radius: 999px;
+  }
+  .ccp-input:focus { border-color: #84cc16; }
+  .ccp-send {
+    width: 38px; height: 38px; border-radius: 50%; background: #84cc16; color: #0a1f0f;
+    border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .ccp-send:hover { background: #a3e635; }
+  .ccp-send:disabled { opacity: .5; cursor: not-allowed; }
+  .ccp-disclaimer { font-size: 10px; color: #52525b; text-align: center; padding: 0 14px 10px; }
+</style>
+
+<script define:vars={{ BOTA_INDEX }}>
+  const root = document.getElementById("cb-chat");
+  const bubble = document.getElementById("cb-chat-bubble");
+  const log = document.getElementById("cb-chat-log");
+  const form = document.getElementById("cb-chat-form");
+  const input = document.getElementById("cb-chat-input");
+  const sendBtn = document.getElementById("cb-chat-send");
+  const suggestWrap = document.getElementById("cb-chat-suggest");
+  const minBtn = document.getElementById("cb-chat-min");
+
+  const messages = [];
+  let busy = false;
+
+  function setOpen(open) {
+    root.dataset.open = String(open);
+    bubble.setAttribute("aria-expanded", String(open));
+    if (open) {
+      setTimeout(() => input.focus(), 240);
+      try { localStorage.setItem("cb.chat.seen", "1"); } catch {}
+      root.querySelector(".ccb-pulse")?.classList.add("hidden");
+    }
+  }
+  bubble.addEventListener("click", () => setOpen(root.dataset.open !== "true"));
+  minBtn.addEventListener("click", () => setOpen(false));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && root.dataset.open === "true") setOpen(false);
+  });
+  try { if (localStorage.getItem("cb.chat.seen")) root.querySelector(".ccb-pulse")?.classList.add("hidden"); } catch {}
+
+  function esc(s) {
+    const d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function renderBotContent(text) {
+    const frag = document.createElement("div");
+    const parts = text.split(/(\[\[bota:[a-z0-9-]+\]\])/gi);
+    for (const part of parts) {
+      const m = part.match(/^\[\[bota:([a-z0-9-]+)\]\]$/i);
+      if (m) {
+        const card = botaCard(m[1]);
+        if (card) { frag.appendChild(card); continue; }
+      } else if (part) {
+        const span = document.createElement("span");
+        span.innerHTML = esc(part)
+          .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+          .replace(/\n/g, "<br>");
+        frag.appendChild(span);
+      }
+    }
+    return frag;
+  }
+
+  function botaCard(slug) {
+    const b = BOTA_INDEX[slug];
+    if (!b) return null;
+    const a = document.createElement("a");
+    a.href = `/bota/${slug}`;
+    a.className = "cc-bota";
+    a.innerHTML = `
+      <span class="cc-bota-photo"><img src="${esc(b.img)}" alt="" loading="lazy" onerror="this.style.display='none'"></span>
+      <span class="cc-bota-info">
+        <span class="cc-bota-marca">${esc(b.marca)}</span>
+        <span class="cc-bota-modelo">${esc(b.modelo)}</span>
+        <span class="cc-bota-meta"><span class="cc-bota-score">${b.score}</span><span class="cc-bota-price">${b.precio}€</span></span>
+      </span>
+      <span class="cc-bota-arrow">→</span>`;
+    return a;
+  }
+
+  function addMsg(role, contentNodeOrText) {
+    const wrap = document.createElement("div");
+    wrap.className = `cc-msg cc-msg-${role === "user" ? "user" : "bot"}`;
+    const bubbleEl = document.createElement("div");
+    bubbleEl.className = "cc-bubble";
+    if (typeof contentNodeOrText === "string") {
+      bubbleEl.innerHTML = esc(contentNodeOrText).replace(/\n/g, "<br>");
+    } else {
+      bubbleEl.appendChild(contentNodeOrText);
+    }
+    wrap.appendChild(bubbleEl);
+    log.appendChild(wrap);
+    log.scrollTop = log.scrollHeight;
+    return bubbleEl;
+  }
+
+  function showTyping() {
+    const wrap = document.createElement("div");
+    wrap.className = "cc-msg cc-msg-bot";
+    wrap.innerHTML = `<div class="cc-bubble cc-typing"><span></span><span></span><span></span></div>`;
+    log.appendChild(wrap);
+    log.scrollTop = log.scrollHeight;
+    return wrap;
+  }
+
+  async function send(text) {
+    if (busy || !text.trim()) return;
+    busy = true;
+    sendBtn.disabled = true;
+    suggestWrap.style.display = "none";
+
+    addMsg("user", text);
+    messages.push({ role: "user", content: text });
+    input.value = "";
+
+    const typing = showTyping();
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages }),
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+
+      const ctype = res.headers.get("content-type") || "";
+      let reply = "";
+
+      if (ctype.includes("application/json")) {
+        const data = await res.json();
+        reply = data.reply ?? data.message ?? "";
+        typing.remove();
+        const bubbleEl = addMsg("bot", "");
+        bubbleEl.innerHTML = "";
+        bubbleEl.appendChild(renderBotContent(reply));
+      } else if (res.body && res.body.getReader) {
+        typing.remove();
+        const bubbleEl = addMsg("bot", "");
+        bubbleEl.innerHTML = "";
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          reply += decoder.decode(value, { stream: true });
+          bubbleEl.innerHTML = "";
+          bubbleEl.appendChild(renderBotContent(reply));
+          log.scrollTop = log.scrollHeight;
+        }
+      } else {
+        reply = await res.text();
+        typing.remove();
+        const bubbleEl = addMsg("bot", "");
+        bubbleEl.innerHTML = "";
+        bubbleEl.appendChild(renderBotContent(reply));
+      }
+
+      messages.push({ role: "assistant", content: reply });
+      log.scrollTop = log.scrollHeight;
+    } catch (err) {
+      typing.remove();
+      addMsg("bot", "Uy, no he podido responder ahora mismo. Reintenta en un momento — o usa el quiz mientras tanto.");
+      console.error("[cb-chat]", err);
+    } finally {
+      busy = false;
+      sendBtn.disabled = false;
+      input.focus();
+    }
+  }
+
+  form.addEventListener("submit", (e) => { e.preventDefault(); send(input.value); });
+  suggestWrap.querySelectorAll("[data-suggest]").forEach((btn) => {
+    btn.addEventListener("click", () => send(btn.dataset.suggest));
+  });
+</script>
